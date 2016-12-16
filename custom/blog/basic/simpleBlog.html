@@ -1,0 +1,236 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en">        <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en">               <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="{{ meta_author }}">
+	<meta name="description" content="{{ page_meta.meta_description }}">
+	<meta name="generator" content="HubSpot">
+	<title>{{ page_meta.html_title }}</title>
+	{% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+
+
+	{{ standard_header_includes }}
+	{% style include_default_custom_css="true" %}
+</head>
+
+<body class="blog {{ builtin_body_classes }}">
+
+	{% include 'custom/system/global/header.html' %}
+
+	<div class="pageBanner">
+		<div class="container">
+			<h1>{{ group.public_title }}</h1>
+			<div class="breadcrumbs">
+				{% menu "module_1481210264472942" flow='horizontal', max_levels='2', overrideable=false, root_type='breadcrumb', flyouts='true', site_map_name='default', label='Advanced Menu' %}
+			</div> <!-- .breadcrumbs -->
+		</div> <!-- .container -->
+	</div> <!-- .pageBanner -->
+
+	<div class="container">
+		<div class="row-fluid">
+			<div class="span8">
+
+				{% if is_listing_view %}
+				<div class="blog-section">
+
+					{# simple_list_page indicates the "blog/all" page, which is a list of links to every blog post #}
+					<div class="post-listing{% if simple_list_page %}-simple{% endif %}">
+						{% if blog_author %}
+							<div class="hs-author-profile">
+								<h2 class="hs-author-name">{{ blog_author.display_name }}</h2>
+								{# {% if blog_author.avatar %} <div class="hs-author-avatar"> <img width="35 px" src="{{ blog_author.avatar }}" alt="{{ blog_author.display_name }}"> </div> {% endif %} #}
+								<div class="hs-author-bio">{{ blog_author.bio }}</div>
+								{% if blog_author.has_social_profiles %}
+									<div class="hs-author-social-section">
+										<span class="hs-author-social-label">Find me on:</span>
+										<div class="hs-author-social-links">
+											{% if blog_author.facebook %}
+												<a href="{{ blog_author.facebook }}" target="_blank" class="hs-author-social-link hs-social-facebook">[fa icon="facebook-square"]</a>
+											{% endif %}
+											{% if blog_author.linkedin %}
+												<a href="{{ blog_author.linkedin }}" target="_blank" class="hs-author-social-link hs-social-linkedin">[fa icon="linkedin-square"]</a>
+											{% endif %}
+											{% if blog_author.twitter %}
+												<a href="{{ blog_author.twitter }}" target="_blank" class="hs-author-social-link hs-social-twitter">[fa icon="twitter-square"]</a>
+											{% endif %}
+											{% if blog_author.google_plus %}
+												<a href="{{ blog_author.google_plus }}?rel=author" target="_blank" class="hs-author-social-link hs-social-google-plus">[fa icon="google-plus-square"]</a>
+											{% endif %}
+										</div>
+									</div>
+								{% endif %}
+							</div> <!-- .author-bio -->
+							<br />
+							<h2 class="hs-author-listing-header">Recent Posts</h2>
+						{% endif %}
+
+						<div class="post-group">
+						{% for content in contents %}
+							<div class="post-item">
+								{% if not simple_list_page %}
+									<a href="{{content.absolute_url}}">
+										<span class="postImg">
+											<img src="{{ content.post_list_summary_featured_image }}" alt="{{ content.featured_image_alt_text }}">
+											
+										</span>
+										<span class="postText">
+											<h3 class="postTitle">{{ content.name }}</h3>
+											<p>{{ content.post_list_content|safe }}</p>
+											<p class="postDate">{{ content.publish_date|datetimeformat('%d %b %Y') }} / {{ content.topic_list|cut('[')|cut(']') }}</p>
+											<p class="simpleAngleLink">Read More <i class="fa fa-angle-right"></i></p>
+										</span>
+									</a>
+
+								{% else %}
+									<h2 class="post-listing-simple"><a href="{{content.absolute_url}}">{{ content.name }}</a></h2>
+								{% endif %}
+							</div> <!-- .post-item -->
+						{% endfor %}
+						</div> <!-- .post-group -->
+
+					</div> <!-- .post-listing -->
+
+					<div class="blog-pagination">
+						{% set total_pages = contents.total_page_count %} <!-- sets variable for total pages -->
+						{% set more_pages = total_pages - current_page_num %} <!-- sets variable for how many more pages are past the current pages -->
+						{% if total_pages > 1 %}
+						<nav>
+						<ul class="pagination">
+						<li class="{% if current_page_num == 1 %}disabled{% endif %}"><a href="{% if last_page_num=="1" %}{{ group.absolute_url }}{% else %}{{blog_page_link(last_page_num)}}{% endif %}"><i class="fa fa-angle-double-left"></i></a></li>
+						                        
+						{% if more_pages == 0 %}
+						    {% if current_page_num - 4 == 1 %}<li><a href="{{ group.absolute_url }}">{{ current_page_num - 4 }}</a></li>{% endif %}
+						    {% if current_page_num - 4 > 1 %}<li><a href="{{ blog_page_link(current_page_num - 4) }}">{{ current_page_num - 4 }}</a></li>{% endif %}
+						{% endif %}
+						{% if more_pages <= 1 %}
+						    {% if current_page_num - 3 == 1 %}<li><a href="{{ group.absolute_url }}">{{ current_page_num - 3 }}</a></li>{% endif %}
+						    {% if current_page_num - 3 > 1 %}<li><a href="{{ blog_page_link(current_page_num - 3) }}">{{ current_page_num - 3 }}</a></li>{% endif %}
+						{% endif %}
+						{% if current_page_num - 2 == 1 %}<li><a href="{{ group.absolute_url }}">{{ current_page_num - 2 }}</a></li>{% endif %}
+						{% if current_page_num - 2 > 1 %}<li><a href="{{ blog_page_link(current_page_num - 2) }}">{{ current_page_num - 2 }}</a></li>{% endif %}
+						{% if current_page_num - 1 == 1 %}<li><a href="{{ group.absolute_url }}">{{ current_page_num - 1 }}</a></li>{% endif %}
+						{% if current_page_num - 1 > 1 %}<li><a href="{{ blog_page_link(current_page_num - 1) }}">{{ current_page_num - 1 }}</a></li>{% endif %}
+						<li class="active"><a href="{% if current_page_num==1 %}{{ group.absolute_url }}{% else %}{{ blog_page_link(current_page_num) }}{% endif %}">{{ current_page_num }}</a></li>
+						{% if current_page_num + 1 <= total_pages %}<li><a href="{{ blog_page_link(current_page_num + 1) }}">{{ current_page_num + 1 }}</a></li>{% endif %}
+						{% if current_page_num + 2 <= total_pages %}<li><a href="{{ blog_page_link(current_page_num + 2) }}">{{ current_page_num + 2 }}</a></li>{% endif %}
+						{% if current_page_num <= 2 %}
+						    {% if current_page_num + 3 <= total_pages %}<li><a href="{{ blog_page_link(current_page_num + 3) }}">{{ current_page_num + 3 }}</a></li>{% endif %}
+						{% endif %}
+						{% if current_page_num == 1 %}
+						    {% if current_page_num + 4 <= total_pages %}<li><a href="{{ blog_page_link(current_page_num + 4) }}">{{ current_page_num + 4 }}</a></li>{% endif %}
+						{% endif %}
+						<li class="{% if current_page_num == total_pages %}disabled{% endif %}"><a href="{{blog_page_link(next_page_num)}}"><i class="fa fa-angle-double-right"></i></a></li>
+						</ul>
+						</nav>
+						{% endif %}
+					</div> <!-- .blog-pagination -->
+
+				</div> <!-- if is_listing_view .blog-section -->
+
+	{% else %}<div class="blog-section"> <!-- full blog page -->
+			<div class="section post-header clearfix">
+				<h2>
+					<a href="{{ content.absolute_url }}" id="hubspot-name" class="link hubspot-editable" data-hubspot-form-id="name" data-hubspot-name="Blog Title">{{ content.name }}</a>
+				</h2>
+				<p id="hubspot-author_data" class="hubspot-editable" data-hubspot-form-id="author_data" data-hubspot-name="Blog Author" >
+						{{ content.publish_date_localized }} / by
+						{% if content.blog_post_author %}
+							<a class="author-link" href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{ content.blog_post_author.display_name }}</a>
+							{# {% if content.blog_post_author.avatar %} <div class="hs-author-avatar"> <img width="35 px" src="{{ content.blog_post_author.avatar }}" alt="{{ content.blog_post_author.display_name }}"> </div> {% endif %} #}
+
+						{% endif %}
+				</p>
+				<div class="social-sharing-wrapper">
+					{% blog_social_sharing "blog_social_sharing" overrideable=False, label='Blog Social Sharing' %}
+				</div>
+			</div> <!-- .post-header -->
+
+			<div class="section post-body">
+				{{ content.post_body }}
+			</div>
+
+			{% if content.topic_list %}
+				 <p id="hubspot-topic_data" > Topics:
+					{% for topic in content.topic_list %}
+						<a class="topic-link" href="{{ group.absolute_url }}/topic/{{ topic.slug }}">{{ topic.name }}</a>{% if not loop.last %},{% endif %}
+					{% endfor %}
+				 </p>
+			{% endif %}
+
+			<div class="about-author-sec row-fluid">
+				<div class="span2">
+					<img width="100" height="100" alt="{{ content.blog_post_author.display_name }}" src="{{ content.blog_post_author.avatar }}">
+				</div>
+				<div class="span10">
+					<h4>Written by <a class="author-link" href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{ content.blog_post_author.display_name }}</a></h4>
+					<p>{{ content.blog_post_author.bio }}</p>
+					{% if content.blog_post_author.has_social_profiles %}
+						<div class="hs-author-social-section">
+						   <!-- <span class="hs-author-social-label">Find me on:</span> -->
+							<div class="hs-author-social-links">
+								{% if content.blog_post_author.facebook %}
+									<a href="{{ content.blog_post_author.facebook }}" target="_blank" class="hs-author-social-link accentColor1">[fa icon="facebook-square"]</a>
+								{% endif %}
+								{% if content.blog_post_author.linkedin %}
+									<a href="{{ content.blog_post_author.linkedin }}" target="_blank" class="hs-author-social-link accentColor1">[fa icon="linkedin-square"]</a>
+								{% endif %}
+								{% if content.blog_post_author.twitter %}
+									<a href="{{ content.blog_post_author.twitter }}" target="_blank" class="hs-author-social-link accentColor1">[fa icon="twitter-square"]</a>
+								{% endif %}
+								{% if content.blog_post_author.google_plus %}
+									<a href="{{ content.blog_post_author.google_plus }}?rel=author" target="_blank" class="hs-author-social-link accentColor1">[fa icon="google-plus-square"]</a>
+								{% endif %}
+							</div>
+						</div>
+					{% endif %}
+				</div>
+			</div> <!-- .about-author -->
+
+			<div class="blog-comments">
+				<h3>Comments</h3>
+				{% blog_comments "blog_comments" overrideable=True, label='Blog Comments' %}
+			</div>
+	</div>{% endif %}
+			
+				
+			</div> <!-- .span8 -->
+
+			<div class="span4 sidebar">
+				<div class="sidebar-subscribe">
+					{% blog_subscribe "wizard_module_174879318294069485433966607304122937098" select_blog='default', label='Blog Email Subscription', overrideable=False, response_message='Thanks for Subscribing!', title='Subscribe' %}
+				</div>
+
+				<div class="sidebar-recent">
+					<h3>Latest News</h3>
+					{% set posts = blog_recent_posts('default', 3) %}
+					{% for post in posts %}
+							<a href="{{ post.absolute_url }}">
+								<span class="row-fluid">
+									<span class="span4 postImg">
+										<img src="{{ post.featured_image }}" alt="{{ post.name }}">
+									</span>
+									<span class="span8 postText">
+										<h4 class="postTitle">{{ post.name }}</h3>
+										<p class="postDate">{{ post.publish_date|datetimeformat('%d %b %Y') }} / {{ post.topic_list|cut('[')|cut(']') }}</p>
+									</span>
+								</span>
+							</a>
+					{% endfor %}
+				</div>
+
+				<div class="sidebar-topic">
+					{% post_filter "post_filter" select_blog='default', expand_link_text='see all', overrideable=False, list_title='Categories', max_links=5, filter_type='topic', label='Categories' %}
+				</div>
+
+			</div> <!-- .span4 -->
+		</div> <!-- .row-fluid -->
+	</div> <!-- .container -->
+
+	{% include 'custom/system/global/footer.html' %}
+	{{ standard_footer_includes }}
+</body>
+</html>

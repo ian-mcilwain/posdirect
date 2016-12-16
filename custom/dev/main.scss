@@ -1,0 +1,57 @@
+/*-----------------------------------------------------
+
+[TABLE OF CONTENTS]
+
+1. Imports
+2. Boilerplate
+3. Variables
+4. General Styles
+5. Header
+	5.1 Navigation
+6. Footer
+7. Home
+8. ..Other partials
+9. Media Queries
+
+-------------------------------------------------------*/
+
+// ===== //
+// 1. Imports //
+// ===== //
+// Import fonts, plugins here
+// @import url('http://example.com/example_style.css');
+
+// ===== //
+// 2. Boilerplate (HS COS v1.3.0) //
+// ===== //
+@import 'base/hubtheme-modules';
+@import 'base/recommended';
+@import 'base/required_base';
+@import 'base/theme-foundation-v1-0';
+
+// ===== //
+// 3. Variables //
+// ===== //
+
+// Typography
+// $variable: value;
+
+// Colours
+// $variable: value;
+
+// ===== //
+// 4. General Styles //
+// ===== //
+
+// Enter general styles here
+
+
+// ===== //
+// Partials //
+// ===== //
+
+@import 'global/header';
+@import 'global/footer';
+@import 'pages/home';
+// Include other partials located in 'dev/pages' here
+@import 'global/mediaQueries';
