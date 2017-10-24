@@ -9,8 +9,8 @@ var reload = browserSync.reload;
 gulp.task('styles', function () {
   return gulp.src('./custom/dev/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-    .pipe(concat('hs_default_custom_style.css'))
+    .pipe(autoprefixer('last 5 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+    .pipe(concat('styles.css'))
     .pipe(gulp.dest('./custom/styles/default/'))
     .pipe(reload({stream: true}));
 });
@@ -18,7 +18,7 @@ gulp.task('styles', function () {
 gulp.task('scripts', function() {
   return gulp.src('./custom/dev/*.js')
     .pipe(babel({
-      presets: ['es2015']
+      presets: ['env']
     }))
     .pipe(gulp.dest('./custom/styles/default/'))
     .pipe(reload({stream: true}));

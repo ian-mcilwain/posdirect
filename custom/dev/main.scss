@@ -3,55 +3,73 @@
 [TABLE OF CONTENTS]
 
 1. Imports
-2. Boilerplate
-3. Variables
-4. General Styles
-5. Header
-	5.1 Navigation
-6. Footer
-7. Home
-8. ..Other partials
-9. Media Queries
+2. Variables
+3. General Styles
+4. Header
+5. Footer
+6. Home
+7. Inner Pages
+10. Media Queries
 
 -------------------------------------------------------*/
 
-// ===== //
-// 1. Imports //
-// ===== //
-// Import fonts, plugins here
-// @import url('http://example.com/example_style.css');
+/*--------
+1. Imports
+----------*/
+/*Import fonts, plugins here*/
+/*@import url('http://example.com/example_style.css');*/
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
 
-// ===== //
-// 2. Boilerplate (HS COS v1.3.0) //
-// ===== //
-@import 'base/hubtheme-modules';
-@import 'base/recommended';
-@import 'base/required_base';
-@import 'base/theme-foundation-v1-0';
+/*--------
+2. Variables
+----------*/
 
-// ===== //
-// 3. Variables //
-// ===== //
+/*Typography*/
+$fontTitle: 'Open Sans', sans-serif;
+$fontMain: 'Lato', sans-serif;
+$transition: all 0.3s ease;
 
-// Typography
-// $variable: value;
+/*Colours*/
+/*$variable: value;*/
 
-// Colours
-// $variable: value;
+/*--------
+3. General Styles
+----------*/
+@import 'global/setup';
 
-// ===== //
-// 4. General Styles //
-// ===== //
+body,
+html {
+	font-family: $fontMain;
+}
 
-// Enter general styles here
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: $fontTitle;
+}
+
+a {
+	transition: $transition;
+}
+
+.container {
+	padding: 6% 8%;
+	max-width: 1400px;
+	margin: auto;
+}
 
 
-// ===== //
-// Partials //
-// ===== //
+/*--------
+Partials
+----------*/
 
 @import 'global/header';
 @import 'global/footer';
 @import 'pages/home';
-// Include other partials located in 'dev/pages' here
+@import 'pages/innerPages';
+@import 'pages/blog';
 @import 'global/mediaQueries';

@@ -13,13 +13,23 @@
 	{% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
 
 	{{ standard_header_includes }}
-	{% style include_default_custom_css="true" %}
+	<link rel="stylesheet" href="/file_manager/custom/styles/default/styles.css">
 
 </head>
-<body class="home">
+<body>
 	{% include 'custom/system/global/header.html' %}
 
-	
+	<div class="thankYou">
+		<div class="container">
+			<h1>{% text "tyTitle" overrideable=true, cell=false, cells='[]', ending_html='', root=false, row=false, starting_html='', value='Thank You!', label='Title' %}</h1>
+			{% widget_block rich_text "tyText" overrideable=True, label='Details' %}
+				{% widget_attribute "html" %}
+					<p>Thank you for submitting the form.</p>
+				{% end_widget_attribute %}
+			{% end_widget_block %}
+			{% custom_widget "tyButton" widget_name='Custom Button', label='Custom Button' %}
+		</div>
+	</div>
 
 	{% include 'custom/system/global/footer.html' %}
 	{{ standard_footer_includes }}

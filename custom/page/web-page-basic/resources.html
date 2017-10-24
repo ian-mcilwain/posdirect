@@ -16,10 +16,29 @@
 	{% style include_default_custom_css="true" %}
 
 </head>
-<body class="home">
+<body>
 	{% include 'custom/system/global/header.html' %}
 
-	
+	{% custom_widget "Resource Banner" widget_name='Resource Banner', label='Resource Banner' %}
+
+	<div class="resourceTagsGroup">
+		<div class="container">
+			<ul class="resourceTags">
+				<li><a href="#" class="all active" data-filter="all">All</a></li>
+				<li><a href="#" class="caseStudy" data-filter="caseStudy">Case Studies</a></li>
+				<li><a href="#" class="whitePaper" data-filter="whitePaper">White Papers</a></li>
+				<li><a href="#" class="video" data-filter="video">Videos</a></li>
+			</ul>
+		</div> <!-- .container -->
+	</div> <!-- .resourcesTagsGroup -->
+
+	<div class="resources">
+		<div class="container">
+			{% widget_container "Resources" %}
+				<div class="content"></div>
+			{% end_widget_container %}
+		</div> <!-- .container -->
+	</div> <!-- .resources -->
 
 	{% include 'custom/system/global/footer.html' %}
 	{{ standard_footer_includes }}

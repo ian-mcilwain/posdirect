@@ -1,0 +1,168 @@
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 850px) {
+
+	/* Blog */
+	.post-item {
+		width: 46%;
+	}
+
+	/* Resources */
+	span#hs_cos_wrapper_Resources > div {
+		width: 47%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	/* Blog */
+
+	.listingPageContent .blog-section {
+		width: 100%;
+	}
+
+	.postHeader {
+		display: block;
+	}
+
+	.about-author-sec {
+		display: block;
+
+		.authorDesc {
+			width: 100%;
+			margin: 20px 0 0;
+		}
+	}
+
+	/* Blog */
+	.blogSubscribeBar {
+
+		p {
+			text-align: center;
+			font-size: 14px;
+			margin: 0;
+			padding: 5px 10px;
+			color: white;
+			border: none;
+			background: $green;
+
+			.fa {
+				display: inline-block;
+				transition: $transition;
+			}
+
+			&.formOpen {
+				.fa {
+					transform: rotate(180deg);
+				}
+			}
+		}
+
+		form {
+			flex-wrap: wrap;
+			display: none;
+			margin-top: 30px;
+		}
+
+		.hs_email,
+		.hs_notification_frequency {
+			width: 100%;
+			margin: 0 0 20px !important;
+		}
+
+		.hs_submit {
+			width: 200px;
+			text-align: left;
+		}
+
+		&.stickyBar {
+			position: relative;
+			box-shadow: none;
+
+			.container {
+				padding: 3% 8%;
+			}
+
+			p {
+				font-size: 14px;
+				padding-bottom: 5px;
+				margin: 0;
+			}
+		}
+	}
+
+	/* Landing Page */
+	.lpContentSection {
+		.container {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	.readMoreLP {
+		display: inline-block;
+	}
+
+	.lpContent {
+		width: 100%;
+		display: none;
+	}
+
+	.lpForm {
+		width: 100%;
+		max-width: 500px;
+	}
+} /* End max-width: 767px */
+
+@media screen and (max-width: 530px) {
+
+	/* Blog */
+	.post-group {
+		display: block;
+	}
+
+	.post-item {
+		width: initial;
+		margin: 6% auto;
+
+		.postImg {
+			height: 150px;
+		}
+	}
+
+	.authorPageSection {
+		display: block;
+
+		img {
+			margin: 0 0 20px;
+		}
+	}
+
+	/* Resources */
+
+	span#hs_cos_wrapper_Resources > div {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	/* Error Pages */
+
+	.error {
+		h1 {
+			font-size: 100px;
+		}
+
+		h2 {
+			font-size: 22px;
+		}
+	}
+
+	/* Landing Page */
+
+	.lpBanner {
+		h1 {
+			font-size: 22px;
+		}
+	}
+
+} /* End max-width: 530px */

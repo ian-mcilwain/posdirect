@@ -4,24 +4,73 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="{{ html_lang }}" {{ html_lang_dir }}>               <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="{{ html_lang }}" {{ html_lang_dir }}> <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="author" content="{{ meta_author }}">
-    <meta name="description" content="{{ page_meta.meta_description }}">
-    <meta name="generator" content="HubSpot">
-    <title>{{ page_meta.html_title }}</title>
-    {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="{{ meta_author }}">
+	<meta name="description" content="{{ page_meta.meta_description }}">
+	<meta name="generator" content="HubSpot">
+	<title>{{ page_meta.html_title }}</title>
+	{% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
 
-    {{ standard_header_includes }}
-    {% style include_default_custom_css="true" %}
-
+	{{ standard_header_includes }}
+	<link rel="stylesheet" href="/file_manager/custom/styles/default/styles.css">
 </head>
-<body>
-    {% include 'custom/system/global/header.html' %}
+<body class="landingPage">
 
-<!-- Start HTML layout here. All pages should the surrounding tags. -->
+	<header>
+		<a href="https://aleafiainc.com" class="lpLogo"><img src="https://aleafiainc.com/wp-content/uploads/2017/05/aleafialogo.png" alt="Aleafia Total Health Network"></a>
+	</header>
 
-    {% include 'custom/system/global/footer.html' %}
-    {{ standard_footer_includes }}
+	<div class="lpBanner">
+		<div class="container">
+			<h1>{% text "lpTitle" overrideable=true, cell=false, cells='[]', ending_html='', root=false, row=false, starting_html='', value='Landing Page Title', label='Landing Page Title' %}</h1>
+		</div>
+	</div>
+
+	<div class="lpContentSection">
+		<div class="container">
+			<a href="#" class="readMoreLP">Read More</a>
+			<div class="lpContent">
+				{% widget_block rich_text "lpContent" overrideable=True, label='Content' %}
+					{% widget_attribute "html" %}
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus aut quo, inventore iure dignissimos totam ipsam id assumenda placeat pariatur.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint exercitationem fugit explicabo in quaerat repellendus repellat neque error, maiores, animi vel, ipsam iusto sunt. Maxime in facilis odit. Fugit unde numquam deleniti nostrum et eligendi reprehenderit consequatur. Quasi cum nemo, dolores quod sint distinctio ratione dicta quas itaque quaerat amet!</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores deserunt, totam sint, explicabo voluptatibus magnam veniam. Placeat rem, ea ut?</p>
+					{% end_widget_attribute %}
+				{% end_widget_block %}
+			</div>
+			<div class="lpForm">
+				<!-- {% form "Form" form_to_use='08bd9f0d-3be9-41c2-93b6-231a3a71b143', title='Form Title' %} -->
+				
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+<script>
+  hbspt.forms.create({ 
+    css: '',
+    portalId: '3928022',
+    formId: 'cb53c2b9-1c09-4d9b-83b8-92f047d5fa51'
+  });
+</script>
+
+			</div>
+		</div> <!-- .container -->
+	</div> <!-- .lpContentSection -->
+
+	<footer>
+		<div class="bottomBar">
+			<div class="container">
+				<p>&copy; Copyright - Aleafia Inc.</p>
+			</div> <!-- .container -->
+		</div> <!-- .bottomBar -->
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<!-- Main.js : all custom js -->
+	<script type="text/javascript" src='{{ get_public_template_url("custom/styles/default/main.js") }}'></script>
+
+	{{ standard_footer_includes }}
 </body>
 </html>
