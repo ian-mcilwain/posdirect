@@ -3,19 +3,22 @@
 var app = {};
 
 app.init = function () {
-	app.navigation();
 	app.readMore();
 	app.filter();
 	app.blogSubscribe();
 	app.changeSize();
+	app.slide();
+	// console.log("it's working!");
 };
 
-app.navigation = function () {
-	$('.mobileToggle').click(function (e) {
-		e.preventDefault();
-
-		$('body').toggleClass('showMenu');
-		$('header nav').toggleClass('showMenu');
+app.slide = function () {
+	$(".slickContainer").slick({
+		dots: true,
+		infinite: true,
+		speed: 500,
+		fade: true,
+		cssEase: 'linear'
+		// arrows: falses
 	});
 };
 

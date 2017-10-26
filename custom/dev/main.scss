@@ -19,7 +19,7 @@
 /*Import fonts, plugins here*/
 /*@import url('http://example.com/example_style.css');*/
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Playfair+Display:400,700');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
 
 /*--------
@@ -27,13 +27,19 @@
 ----------*/
 
 /*Typography*/
-$fontTitle: 'Open Sans', sans-serif;
-$fontMain: 'Lato', sans-serif;
+$fontTitle: 'Playfair Display', serif;
+$fontMain: 'Open Sans', sans-serif;
 $transition: all 0.3s ease;
+
 
 /*Colours*/
 /*$variable: value;*/
-
+$turqoise: #1bbab9;
+$green: #98ca3b;
+$fontGrey: #464646;
+$lightGrey: #f9f9f9;
+$darkGrey: #8c989c;
+$lightBlue: #d4e6ed;
 /*--------
 3. General Styles
 ----------*/
@@ -50,6 +56,8 @@ h3,
 h4,
 h5 {
 	font-family: $fontTitle;
+	color: $fontGrey;
+	font-weight: 400;
 }
 
 a {
@@ -57,10 +65,79 @@ a {
 }
 
 .container {
-	padding: 6% 8%;
-	max-width: 1400px;
+	// padding: 6% 8%;
+	max-width: 1200px;
 	margin: auto;
 }
+
+.button {
+	font-size: 18px;
+	color: white;
+	padding: 8px 32px;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 10px;
+	border: 1px solid transparent;
+	min-width: 240px;
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
+	text-align: center;
+	font-weight: 300;
+}
+
+.button.turqoise {
+	background-color: $turqoise;
+}
+
+.button.turqoise:hover {
+	background-color: white;
+	color: $turqoise;
+	border: 1px solid $turqoise;
+}
+
+.button.black {
+	background-color: black;
+}
+
+.button.black:hover {
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+}
+
+.button.green {
+	background-color: $green;
+}
+
+.button.green:hover {
+	background-color: white;
+	color: $green;
+	border: 1px solid $green;
+}
+
+.button.white {
+	border: 1px solid white;
+}
+
+.button.white:hover {
+	border: 1px solid black;
+	color: black;
+}
+
+.bookAppointment {
+	color: $turqoise;
+	text-decoration: none;
+	border-bottom: 1px dashed $turqoise;
+	padding-bottom: 5px;	
+	font-size: 18px;
+}
+
+.bookAppointment:hover {
+	color: $green;
+	border-bottom: 1px dashed $green;
+}
+
 
 
 /*--------

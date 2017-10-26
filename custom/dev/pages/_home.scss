@@ -1,2 +1,187 @@
 /* HOME */
 
+.hero {
+	.container {
+		background-image: url("https://cdn2.hubspot.net/hubfs/3424896/saleshub/heroBackground.png");
+		background-size: cover;
+		background-position: center;
+		.overlay{
+			background-color: rgba(0,0,0,0.4);
+			height: 100%;
+			h1 {
+				font-size: 42px;
+				color: white;
+				font-weight: 400;
+				max-width: 640px;
+				padding-top: 300px;
+				padding-left: 60px;
+				padding-bottom: 30px;
+
+			}
+
+			h2 {
+				font-family: $fontMain;
+				color: white;
+				font-weight: 300;
+				padding-left: 60px;
+				max-width: 600px;
+				font-size: 22px;
+				padding-bottom: 100px;
+			}
+			
+		}
+	}
+}
+
+.whiteBanner {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	.container {
+		text-align: center;
+		h2 {
+			font-size: 40px;
+		}
+
+		p {
+			max-width: 480px;
+			margin: 30px auto;
+			font-size: 20px;
+			font-weight: 300;
+		}
+
+		h2.large {
+			font-size: 50px;
+			text-align: center;	
+			// margin-top: 80px;
+			// margin-bottom: 80px;
+			font-weight: 400;
+		}
+
+	}
+}
+
+.imageGrid {
+	.container {
+		display: flex;
+		height: 660px;
+		.leftColumn {
+			width: 33.3%;
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			.textBox {
+				height: 40%;
+			}
+			.imageBox {
+				height: 60%;
+				background-image: url("https://cdn2.hubspot.net/hubfs/3424896/saleshub/boySmilePlaceholder.png");
+				background-size: cover;
+				background-position: center;
+			}
+
+		}
+		.rightColumn {
+			width: 66.6%;
+			display: flex;
+			flex-direction: column;
+			.upper, .lower {
+				display: flex;
+				.imageBox {
+					width: 40%;
+				}
+				.textBox {
+					width: 60%;
+				}
+			}
+
+			.upper {
+				height: 55%;
+				.imageBox {
+					background-image: url("https://cdn2.hubspot.net/hubfs/3424896/saleshub/teen-braces.png");
+					background-size: cover;
+					background-position: center;
+				}
+			}
+			.lower {
+				height: 45%;
+				.imageBox {
+					background-image: url("https://cdn2.hubspot.net/hubfs/3424896/saleshub/olderWomanSmile.png");
+					background-size: cover;
+					background-position: center;
+				}
+			}
+		}
+
+		.textBox {
+			background-color: $lightGrey;
+			margin: 5px;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			p {
+				max-width: 300px;
+				margin-bottom: 20px;
+			}
+		}
+
+		.imageBox {
+			// padding: 5px;
+			margin: 5px;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.imageSlider .container {
+	background-color: $lightBlue;
+	padding: 20px;
+	position: relative;
+	.slick-dots {
+		position: absolute;
+		bottom: 30px;
+		left: 24%;
+		// display: flex;
+		li {
+			list-style: none;
+			display: inline-block;
+			button {
+				margin-right: 10px;	
+				background-color: $lightBlue;
+				border: 1px solid $darkGrey;
+				color: transparent;	
+				padding: 7px 7px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 1px;
+				border-radius: 50%;
+			}
+			button:focus {
+				outline: none;	
+			}
+		}
+
+		li.slick-active button {
+			background-color: $darkGrey;
+		}
+	}
+	.slide {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.textBox {
+			width: 60%;
+		}
+
+		.imageBox {
+			width: 40%;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}

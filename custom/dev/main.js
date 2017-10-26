@@ -5,7 +5,20 @@ app.init = function(){
 	app.filter();
 	app.blogSubscribe();
 	app.changeSize();
+	app.slide();
+	// console.log("it's working!");
 };
+
+app.slide = function() {
+	$(".slickContainer").slick({
+		dots: true,
+		infinite: true,
+		speed: 500,
+		fade: true,
+		cssEase: 'linear',
+		// arrows: falses
+	});
+}
 
 // Mobile landing page button to show more content
 app.readMore = function(){
