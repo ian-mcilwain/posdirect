@@ -245,6 +245,64 @@ a {
 Partials
 ----------*/
 /* Header */
+.mobileTrigger {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  transition: all 1s ease; }
+  .mobileTrigger .upperBar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+    .mobileTrigger .upperBar .logo {
+      padding-left: 10px;
+      padding-top: 10px; }
+    .mobileTrigger .upperBar .hamburger {
+      display: block;
+      padding-top: 20px;
+      padding-right: 20px;
+      position: relative;
+      width: 60px; }
+      .mobileTrigger .upperBar .hamburger span {
+        width: 40px;
+        height: 5px;
+        margin-bottom: 10px;
+        background-color: #464646;
+        display: block;
+        border-radius: 5px;
+        transition: all 0.3s ease; }
+    .mobileTrigger .upperBar .hamburger:hover span {
+      opacity: 0.6; }
+    .mobileTrigger .upperBar .hamburger:focus {
+      outline: none; }
+  .mobileTrigger .mobileMenu {
+    height: 0;
+    max-height: 0;
+    overflow: hidden; }
+
+.mobileTrigger.active {
+  bottom: 0; }
+  .mobileTrigger.active .upperBar .hamburger span {
+    margin-bottom: 0; }
+  .mobileTrigger.active .upperBar .hamburger span:nth-child(1) {
+    position: absolute;
+    top: 35px;
+    -ms-transform: rotate(45deg);
+        transform: rotate(45deg); }
+  .mobileTrigger.active .upperBar .hamburger span:nth-child(2) {
+    display: none; }
+  .mobileTrigger.active .upperBar .hamburger span:nth-child(3) {
+    position: absolute;
+    top: 35px;
+    -ms-transform: rotate(135deg);
+        transform: rotate(135deg); }
+  .mobileTrigger.active .mobileMenu {
+    height: auto;
+    max-height: 100%; }
+
 header .upper {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -310,7 +368,7 @@ header .divider {
   opacity: 0.7; }
 
 header .lower {
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 10px;
   padding-left: 30px;
   padding-right: 30px; }
@@ -341,10 +399,12 @@ header .lower {
           header .lower .container .mainNav ul li a {
             color: #464646;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
             text-transform: uppercase;
             padding-right: 8px;
             padding-left: 8px; }
+          header .lower .container .mainNav ul li a:hover {
+            opacity: 0.5; }
         header .lower .container .mainNav ul li.hasChild ul {
           display: none; }
     header .lower .container .bookAppointment {
@@ -357,6 +417,84 @@ header .lower {
       border-bottom: none; }
 
 /* Footer */
+footer .container {
+  margin-top: 60px; }
+  footer .container .dividerBar {
+    width: 100%;
+    height: 2px;
+    background-color: #8c989c;
+    opacity: 0.4;
+    width: 80%;
+    margin: 0 auto; }
+  footer .container .footerNav {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 80px;
+    padding-right: 80px; }
+    footer .container .footerNav .box {
+      width: 25%;
+      max-height: 300px; }
+      footer .container .footerNav .box ul li {
+        list-style: none; }
+        footer .container .footerNav .box ul li a {
+          color: #464646;
+          text-decoration: none;
+          text-transform: uppercase; }
+    footer .container .footerNav .box.logins {
+      padding-right: 30px; }
+      footer .container .footerNav .box.logins ul li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 30px; }
+        footer .container .footerNav .box.logins ul li img {
+          position: absolute;
+          top: 0;
+          left: -10px; }
+    footer .container .footerNav .box.nav li {
+      margin-bottom: 15px; }
+    footer .container .footerNav .box.twitter {
+      border: 2px solid #f9f9f9;
+      border-radius: 5px; }
+  footer .container .socialMedia ul {
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
+    footer .container .socialMedia ul li {
+      list-style: none; }
+      footer .container .socialMedia ul li a {
+        background-color: #464646;
+        color: white;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        display: inline-block;
+        font-size: 24px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+            justify-content: center;
+        -ms-flex-align: center;
+            align-items: center;
+        text-decoration: none;
+        margin-right: 10px;
+        border: 1px solid transparent; }
+      footer .container .socialMedia ul li a:hover {
+        color: #464646;
+        border: 1px solid #464646;
+        background-color: white;
+        opacity: 0.5; }
+  footer .container .copyright {
+    text-align: center;
+    margin-top: 20px; }
+    footer .container .copyright p {
+      font-size: 12px; }
+
 /* HOME */
 .hero .container {
   background-image: url("https://cdn2.hubspot.net/hubfs/3424896/saleshub/heroBackground.png");
@@ -496,11 +634,89 @@ header .lower {
     -ms-flex-align: center;
         align-items: center; }
     .imageSlider .container .slide .textBox {
-      width: 60%; }
+      width: 50%;
+      padding-left: 30px;
+      padding-right: 30px; }
+      .imageSlider .container .slide .textBox h2 {
+        font-size: 38px;
+        margin-bottom: 30px; }
     .imageSlider .container .slide .imageBox {
       width: 40%; }
       .imageSlider .container .slide .imageBox img {
         width: 100%; }
+
+.imageTwoTextSections {
+  padding-top: 60px; }
+  .imageTwoTextSections .container {
+    display: -ms-flexbox;
+    display: flex; }
+    .imageTwoTextSections .container .textBox {
+      width: 60%;
+      padding-left: 60px;
+      padding-right: 60px; }
+      .imageTwoTextSections .container .textBox div {
+        margin-bottom: 30px; }
+        .imageTwoTextSections .container .textBox div h2 {
+          margin-bottom: 20px;
+          font-size: 32px; }
+        .imageTwoTextSections .container .textBox div p {
+          font-size: 20px; }
+
+.imageRightTextLeft .container {
+  display: -ms-flexbox;
+  display: flex; }
+  .imageRightTextLeft .container .textBox {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    padding-left: 60px;
+    padding-right: 60px; }
+    .imageRightTextLeft .container .textBox h2 {
+      font-size: 32px; }
+    .imageRightTextLeft .container .textBox p {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-size: 20px; }
+
+.videoBanner .container {
+  height: 580px;
+  background-image: url("https://cdn2.hubspot.net/hubfs/3424896/saleshub/brushingTeeth.png");
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+  .videoBanner .container a i {
+    color: white;
+    font-size: 60px;
+    border-radius: 50%;
+    border: 4px solid white;
+    padding: 5px 20px 5px 30px;
+    transition: all 0.3s; }
+  .videoBanner .container a:hover i {
+    color: #1bbab9;
+    border-color: #1bbab9; }
+
+.turqoiseBanner {
+  padding-top: 30px; }
+  .turqoiseBanner .container {
+    background-color: #1bbab9;
+    text-align: center;
+    padding: 60px 0; }
+    .turqoiseBanner .container h2 {
+      color: white;
+      font-size: 48px; }
+    .turqoiseBanner .container p {
+      color: white;
+      font-size: 20px;
+      width: 30%;
+      margin: 30px auto; }
 
 /* LANDING PAGE */
 .landingPage header {
@@ -1203,6 +1419,14 @@ ul.pagination li.active a {
     padding: 0 0 5px 10px; }
 
 /* MEDIA QUERIES */
+@media screen and (max-width: 1150px) {
+  header {
+    display: none; }
+  .mobileTrigger {
+    display: block; }
+  body {
+    padding-top: 80px; } }
+
 @media screen and (max-width: 850px) {
   /* Blog */
   .post-item {

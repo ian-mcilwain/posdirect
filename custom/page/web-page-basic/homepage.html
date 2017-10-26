@@ -26,16 +26,16 @@
 	<div class="hero">
 		<div class="container">
 			<div class="overlay">
-			<h1>Edmonton’s Orthodontic and Pediatric Dentistry Practice</h1>
-			<h2>As a parent, you want what’s best for your kid’s teeth. We prioritize top-quality care that fulfills our young patients’ unique needs.</h2>
-				
+			<h1>{% text "heroHeader" label="Hero Header Text", no_wrapper=True, value="Edmonton’s Orthodontic and Pediatric Dentistry Practice" %}</h1>
+
+			<h2>{% text "heroSubHeader" label="Hero Subheader Text", no_wrapper=True, value="As a parent, you want what’s best for your kid’s teeth. We prioritize top-quality care that fulfills our young patients’ unique needs." %}</h2>				
 			</div>
 		</div>
 	</div>
 
 	<div class="whiteBanner">
 		<div class="container">
-			<h2 class="large">Healthy, Beautiful Teeth <br>Start Here</h2>
+			<h2 class="large">{% text "whiteBannerCopy" label="White Banner Copy", no_wrapper=True, value="Healthy, Beautiful Teeth <br>Start Here" %}</h2>
 		</div>
 	</div>
 
@@ -43,7 +43,11 @@
 		<div class="container">
 			<div class="leftColumn">
 				<div class="textBox">
-					<p> Book your child’s dentist appointment at our conveniently located office. Pave the way for a lifetime of healthy teeth and avoid future dental problems.</p>
+					<p>
+					{% text "gridLeftText" label="Grid Left Copy", no_wrapper=True, value="
+					 Book your child’s dentist appointment at our conveniently located office. Pave the way for a lifetime of healthy teeth and avoid future dental problems.
+" %}
+					</p>
 					<a href="/book-an-appointment" class="bookAppointment">Book an Appointment</a>
 				</div>
 				<div class="imageBox">
@@ -54,13 +58,23 @@
 					<div class="imageBox">
 					</div>
 					<div class="textBox">
-						<p>Remain confident your child’s preventive dental care is in good hands. With both pediatric dentists and orthodontists available, you can stay with our practice well into the future.</p>
+						<p>
+						{% text "gridRightUpperText" label="Grid Right Upper Copy", no_wrapper=True, value="
+												 Remain confident your child’s preventive dental care is in good hands. With both pediatric dentists and orthodontists available, you can stay with our practice well into the future.
+							" %}							
+						</p>
 						<a href="/book-an-appointment" class="bookAppointment">Book an Appointment</a>
 					</div>
 				</div>
 				<div class="lower">
 					<div class="textBox">
-						<p>Rest assured your child feels comfortable at our relaxing practice environment. Visit our pediatric dentist for regular check-ups and get tips for daily oral care at home.</p>
+
+						<p>
+						{% text "gridRightlowerText" label="Grid Right lower Copy", no_wrapper=True, value="
+												Rest assured your child feels comfortable at our relaxing practice environment. Visit our pediatric dentist for regular check-ups and get tips for daily oral care at home.
+							" %}	
+
+						</p>
 						<a href="/book-an-appointment" class="bookAppointment">Book an Appointment</a>
 					</div>
 					<div class="imageBox">
@@ -113,7 +127,7 @@
 		</div>
 	</div>
 
-	<div class="whiteBanner">
+	<div class="imageTwoTextSections">
 		<div class="container">
 			<div class="imageBox">
 				<img src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/momDadChild.png" alt="">
@@ -131,12 +145,12 @@
 		</div>
 	</div>
 	
-	<div class="whiteBanner">
+	<div class="imageRightTextLeft">
 		<div class="container">
 			<div class="textBox">
 				<h2>Virtual Smile Assesment</h2>
 				<p>Too busy to book an appointment or not sure if braces are for you?</p>
-				<a href="/virtual-smile-assessment" class="button turqoise">Virtual Smile Assessment</a>
+				<a href="/virtual-smile-assessment" class="button turqoise">Start Your Assessment</a>
 			</div>
 			<div class="imageBox">
 				<img src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/lookBackSmile.png" alt="">
@@ -146,7 +160,8 @@
 
 	<div class="videoBanner">
 		<div class="container">
-			<script src="https://fast.wistia.com/embed/medias/snw9nvx73f.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><span class="wistia_embed wistia_async_snw9nvx73f popover=true popoverContent=link" style=""><a href="#"><i class="fa fa-play-circle-o" aria-hidden="true"></i></a></span>
+			<script src="https://fast.wistia.com/embed/medias/snw9nvx73f.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><span class="wistia_embed wistia_async_snw9nvx73f popover=true popoverContent=link" style=""><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>
+			</a></span>
 		</div>
 	</div>
 	<div class="turqoiseBanner">
