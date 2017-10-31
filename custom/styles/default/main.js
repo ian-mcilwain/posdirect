@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var app = {};
 
@@ -12,6 +12,18 @@ app.init = function () {
 	app.exampleImage();
 	app.displayPreview();
 	app.mobileMenu();
+	app.formFieldCount();
+};
+
+app.formFieldCount = function () {
+	var numFields = $(".hs-form-field").length;
+	if (numFields % 2 == 0) {
+		console.log('is even');
+	} else {
+		console.log('is odd');
+	}
+	console.log("there are " + numFields + " form fields");
+	$(".hs-form-field").last().addClass("fullWidth");
 };
 
 app.mobileMenu = function () {

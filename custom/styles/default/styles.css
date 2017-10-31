@@ -169,7 +169,8 @@ p, a, li {
 
 body,
 html {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px; }
 
 h1,
 h2,
@@ -178,7 +179,10 @@ h4,
 h5 {
   font-family: "Playfair Display", serif;
   color: #464646;
-  font-weight: 400; }
+  font-weight: 300; }
+
+p {
+  font-size: 1.6em; }
 
 a {
   transition: all 0.3s ease; }
@@ -188,7 +192,7 @@ a {
   margin: auto; }
 
 .button {
-  font-size: 18px;
+  font-size: 1.7em;
   color: white;
   padding: 8px 32px;
   text-decoration: none;
@@ -206,6 +210,15 @@ a {
   background-color: white;
   color: #1bbab9;
   border: 1px solid #1bbab9; }
+
+.button.turqoiseReverse {
+  background-color: white;
+  color: #1bbab9;
+  border: 1px solid #1bbab9; }
+
+.button.turqoiseReverse:hover {
+  background-color: #1bbab9;
+  color: white; }
 
 .button.black {
   background-color: black; }
@@ -227,19 +240,70 @@ a {
   border: 1px solid white; }
 
 .button.white:hover {
-  border: 1px solid black;
-  color: black; }
+  background-color: white;
+  color: #464646; }
 
 .bookAppointment {
   color: #1bbab9;
   text-decoration: none;
   border-bottom: 1px dashed #1bbab9;
   padding-bottom: 5px;
-  font-size: 18px; }
+  font-size: 1.8em; }
 
 .bookAppointment:hover {
   color: #98ca3b;
   border-bottom: 1px dashed #98ca3b; }
+
+form.hs-form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  form.hs-form .field.fullWidth {
+    width: 100%; }
+  form.hs-form .field {
+    width: 50%;
+    padding-right: 20px; }
+    form.hs-form .field label {
+      display: none; }
+    form.hs-form .field .input {
+      width: 100%;
+      margin-bottom: 10px; }
+      form.hs-form .field .input input, form.hs-form .field .input select {
+        width: 100%;
+        border: none;
+        background-color: #f9f9f9;
+        font-size: 1.6em;
+        color: #464646;
+        padding-left: 15px;
+        height: 2.4em;
+        border-radius: 5px; }
+    form.hs-form .field .hs-error-msgs li {
+      list-style: none; }
+      form.hs-form .field .hs-error-msgs li label {
+        display: block;
+        padding-left: 15px;
+        padding-bottom: 10px; }
+  form.hs-form .hs_submit {
+    width: 100%; }
+    form.hs-form .hs_submit .actions input {
+      font-size: 1.7em;
+      color: white;
+      padding: 8px 32px;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      min-width: 240px;
+      text-align: center;
+      font-weight: 300;
+      background-color: #1bbab9;
+      transition: all 0.3s ease;
+      margin-top: 20px; }
+    form.hs-form .hs_submit .actions input:hover {
+      background-color: white;
+      color: #1bbab9;
+      border: 1px solid #1bbab9; }
 
 /*--------
 Partials
@@ -250,53 +314,60 @@ Partials
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: white;
-  transition: all 1s ease; }
-  .mobileTrigger .upperBar {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
-    .mobileTrigger .upperBar .logo {
-      padding-left: 10px;
-      padding-top: 10px; }
-    .mobileTrigger .upperBar .hamburger {
-      display: block;
-      padding-top: 20px;
-      padding-right: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 0.5s ease;
+  z-index: 99999999; }
+  .mobileTrigger .hamburger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px; }
+    .mobileTrigger .hamburger .inner {
       position: relative;
-      width: 60px; }
-      .mobileTrigger .upperBar .hamburger span {
-        width: 40px;
+      width: 100%;
+      height: 100%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+      .mobileTrigger .hamburger .inner span {
+        width: 30px;
         height: 5px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         background-color: #464646;
         display: block;
         border-radius: 5px;
-        transition: all 0.3s ease; }
-    .mobileTrigger .upperBar .hamburger:hover span {
-      opacity: 0.6; }
-    .mobileTrigger .upperBar .hamburger:focus {
-      outline: none; }
+        transition: all 0.3s ease;
+        box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.84); }
+  .mobileTrigger .hamburger:hover span {
+    opacity: 0.6; }
+  .mobileTrigger .hamburger:focus {
+    outline: none; }
   .mobileTrigger .mobileMenu {
     height: 0;
     max-height: 0;
     overflow: hidden; }
 
 .mobileTrigger.active {
-  bottom: 0; }
+  bottom: 0;
+  background-color: white; }
   .mobileTrigger.active .upperBar .hamburger span {
     margin-bottom: 0; }
   .mobileTrigger.active .upperBar .hamburger span:nth-child(1) {
     position: absolute;
-    top: 35px;
+    top: 30px;
     -ms-transform: rotate(45deg);
         transform: rotate(45deg); }
   .mobileTrigger.active .upperBar .hamburger span:nth-child(2) {
     display: none; }
   .mobileTrigger.active .upperBar .hamburger span:nth-child(3) {
     position: absolute;
-    top: 35px;
+    top: 30px;
     -ms-transform: rotate(135deg);
         transform: rotate(135deg); }
   .mobileTrigger.active .mobileMenu {
@@ -327,7 +398,7 @@ header .upper {
         header .upper .container .phoneAndSocial .phone a {
           text-decoration: none;
           color: #464646;
-          font-size: 20px; }
+          font-size: 2em; }
       header .upper .container .phoneAndSocial .socialLinks ul {
         display: -ms-flexbox;
         display: flex;
@@ -341,11 +412,11 @@ header .upper {
           header .upper .container .phoneAndSocial .socialLinks ul li a {
             background-color: #464646;
             color: white;
-            height: 40px;
-            width: 40px;
+            height: 30px;
+            width: 30px;
             border-radius: 50%;
             display: inline-block;
-            font-size: 24px;
+            font-size: 2em;
             display: -ms-flexbox;
             display: flex;
             -ms-flex-pack: center;
@@ -376,7 +447,9 @@ header .lower {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
-        justify-content: space-between; }
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center; }
     header .lower .container .logo {
       display: -ms-flexbox;
       display: flex;
@@ -399,7 +472,7 @@ header .lower {
           header .lower .container .mainNav ul li a {
             color: #464646;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 1.6em;
             text-transform: uppercase;
             padding-right: 8px;
             padding-left: 8px; }
@@ -433,6 +506,8 @@ footer .container {
     display: flex;
     padding-left: 80px;
     padding-right: 80px; }
+    footer .container .footerNav a {
+      font-size: 1.5em; }
     footer .container .footerNav .box {
       width: 25%;
       max-height: 300px; }
@@ -470,11 +545,11 @@ footer .container {
       footer .container .socialMedia ul li a {
         background-color: #464646;
         color: white;
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
         border-radius: 50%;
         display: inline-block;
-        font-size: 24px;
+        font-size: 20px;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-pack: center;
@@ -504,7 +579,7 @@ footer .container {
     background-color: rgba(0, 0, 0, 0.4);
     height: 100%; }
     .hero .container .overlay h1 {
-      font-size: 42px;
+      font-size: 4.2em;
       color: white;
       font-weight: 400;
       max-width: 640px;
@@ -517,7 +592,7 @@ footer .container {
       font-weight: 300;
       padding-left: 60px;
       max-width: 600px;
-      font-size: 22px;
+      font-size: 2.2em;
       padding-bottom: 100px; }
 
 .whiteBanner {
@@ -526,21 +601,24 @@ footer .container {
   .whiteBanner .container {
     text-align: center; }
     .whiteBanner .container h2 {
-      font-size: 40px; }
+      font-size: 4em; }
     .whiteBanner .container p {
       max-width: 480px;
       margin: 30px auto;
-      font-size: 20px;
+      font-size: 2em;
       font-weight: 300; }
     .whiteBanner .container h2.large {
-      font-size: 50px;
+      font-size: 5em;
       text-align: center;
       font-weight: 400; }
 
 .imageGrid .container {
   display: -ms-flexbox;
   display: flex;
-  height: 660px; }
+  height: 900px; }
+  .imageGrid .container h2 {
+    font-size: 2.6em;
+    margin-bottom: 20px; }
   .imageGrid .container .leftColumn {
     width: 33.3%;
     display: -ms-flexbox;
@@ -549,9 +627,9 @@ footer .container {
         flex-direction: column;
     height: 100%; }
     .imageGrid .container .leftColumn .textBox {
-      height: 40%; }
+      height: 50%; }
     .imageGrid .container .leftColumn .imageBox {
-      height: 60%;
+      height: 50%;
       background-image: url("https://cdn2.hubspot.net/hubfs/3424896/saleshub/boySmilePlaceholder.png");
       background-size: cover;
       background-position: center; }
@@ -638,8 +716,10 @@ footer .container {
       padding-left: 30px;
       padding-right: 30px; }
       .imageSlider .container .slide .textBox h2 {
-        font-size: 38px;
+        font-size: 3.8em;
         margin-bottom: 30px; }
+      .imageSlider .container .slide .textBox h3 {
+        font-size: 2.2em; }
     .imageSlider .container .slide .imageBox {
       width: 40%; }
       .imageSlider .container .slide .imageBox img {
@@ -658,9 +738,7 @@ footer .container {
         margin-bottom: 30px; }
         .imageTwoTextSections .container .textBox div h2 {
           margin-bottom: 20px;
-          font-size: 32px; }
-        .imageTwoTextSections .container .textBox div p {
-          font-size: 20px; }
+          font-size: 3.2em; }
 
 .imageRightTextLeft .container {
   display: -ms-flexbox;
@@ -677,11 +755,11 @@ footer .container {
     padding-left: 60px;
     padding-right: 60px; }
     .imageRightTextLeft .container .textBox h2 {
-      font-size: 32px; }
+      font-size: 3.2em; }
     .imageRightTextLeft .container .textBox p {
       margin-top: 30px;
       margin-bottom: 30px;
-      font-size: 20px; }
+      font-size: 2em; }
 
 .videoBanner .container {
   height: 580px;
@@ -694,7 +772,7 @@ footer .container {
       align-items: center; }
   .videoBanner .container a i {
     color: white;
-    font-size: 60px;
+    font-size: 6em;
     border-radius: 50%;
     border: 4px solid white;
     padding: 5px 20px 5px 30px;
@@ -708,15 +786,110 @@ footer .container {
   .turqoiseBanner .container {
     background-color: #1bbab9;
     text-align: center;
-    padding: 60px 0; }
+    padding: 80px 0; }
+    .turqoiseBanner .container h1 {
+      color: white;
+      font-size: 4.8em;
+      font-weight: 300; }
     .turqoiseBanner .container h2 {
       color: white;
-      font-size: 48px; }
+      font-size: 4.8em; }
     .turqoiseBanner .container p {
       color: white;
-      font-size: 20px;
-      width: 30%;
+      font-size: 2em;
+      width: 50%;
       margin: 30px auto; }
+
+.addressForm .container {
+  display: -ms-flexbox;
+  display: flex; }
+  .addressForm .container .leftSide, .addressForm .container .rightSide {
+    width: 50%;
+    padding: 30px; }
+  .addressForm .container .leftSide ul li {
+    list-style: none;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    color: #464646;
+    max-width: 300px; }
+    .addressForm .container .leftSide ul li .liLogo {
+      position: absolute;
+      left: 0;
+      width: 20px;
+      top: 5px; }
+    .addressForm .container .leftSide ul li a {
+      text-decoration: none;
+      color: #464646; }
+    .addressForm .container .leftSide ul li span {
+      font-weight: 600; }
+  .addressForm .container .rightSide h3 {
+    font-size: 3.4em;
+    text-align: center;
+    margin-bottom: 20px; }
+
+.map {
+  padding-bottom: 60px; }
+  .map #map {
+    height: 300px; }
+
+.linkBar {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .linkBar .container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
+    .linkBar .container .button {
+      margin-right: 20px; }
+
+.contact .imageRightTextLeft {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .contact .imageRightTextLeft .textBox, .contact .imageRightTextLeft .imageBox {
+    width: 50%; }
+
+.twoPhotoLeftTextRight {
+  padding-top: 30px; }
+  .twoPhotoLeftTextRight .container {
+    display: -ms-flexbox;
+    display: flex; }
+    .twoPhotoLeftTextRight .container .imageBox {
+      width: 50%;
+      position: relative;
+      margin-right: 30px; }
+      .twoPhotoLeftTextRight .container .imageBox img {
+        width: 60%;
+        height: auto;
+        position: absolute; }
+      .twoPhotoLeftTextRight .container .imageBox img:nth-child(1) {
+        top: 10%;
+        left: 10%; }
+      .twoPhotoLeftTextRight .container .imageBox img:nth-child(2) {
+        bottom: 10%;
+        right: 10%; }
+    .twoPhotoLeftTextRight .container .textBox {
+      width: 50%;
+      margin-left: 30px; }
+      .twoPhotoLeftTextRight .container .textBox h2 {
+        font-size: 2.4em;
+        margin-bottom: 30px; }
+      .twoPhotoLeftTextRight .container .textBox p {
+        font-size: 1.6em;
+        margin-bottom: 20px; }
+      .twoPhotoLeftTextRight .container .textBox .button {
+        margin-top: 30px; }
+
+.imageSlider.white .container {
+  background-color: white; }
+  .imageSlider.white .container .slick-dots li button {
+    background-color: white; }
+  .imageSlider.white .container .slick-dots li.slick-active button {
+    background-color: #8c989c; }
 
 /* LANDING PAGE */
 .landingPage header {
@@ -1421,11 +1594,19 @@ ul.pagination li.active a {
 /* MEDIA QUERIES */
 @media screen and (max-width: 1150px) {
   header {
+    font-size: 9px; } }
+
+@media screen and (max-width: 1070px) {
+  .button {
+    min-width: 200px; } }
+
+@media screen and (max-width: 950px) {
+  header {
     display: none; }
   .mobileTrigger {
     display: block; }
   body {
-    padding-top: 80px; } }
+    font-size: 9px; } }
 
 @media screen and (max-width: 850px) {
   /* Blog */

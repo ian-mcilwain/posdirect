@@ -2,6 +2,22 @@
 
 @media screen and (max-width: 1150px) {
 	header {
+		font-size: 9px;
+	}
+}
+
+@media screen and (max-width: 1070px) {
+	body {
+		// font-size: 11px;
+	}
+
+	.button	{
+		min-width: 200px;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	header {
 		display: none;
 	}
 	.mobileTrigger {
@@ -9,7 +25,8 @@
 	}
 
 	body {
-		padding-top: 80px;
+		// padding-top: 60px;
+		font-size: 9px;
 	}
 }
 

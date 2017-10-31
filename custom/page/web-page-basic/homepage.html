@@ -28,7 +28,7 @@
 			<div class="overlay">
 			<h1>{% text "heroHeader" label="Hero Header Text", no_wrapper=True, value="Edmonton’s Orthodontic and Pediatric Dentistry Practice" %}</h1>
 
-			<h2>{% text "heroSubHeader" label="Hero Subheader Text", no_wrapper=True, value="As a parent, you want what’s best for your kid’s teeth. We prioritize top-quality care that fulfills our young patients’ unique needs." %}</h2>				
+			<h2>{% text "heroSubHeader" label="Hero Subheader Text", no_wrapper=True, value="As a caring parent, you want what’s best for your family’s teeth. We prioritize the comfort of our patients, ensuring everyone leaves our practice with a bright smile." %}</h2>				
 			</div>
 		</div>
 	</div>
@@ -43,11 +43,16 @@
 		<div class="container">
 			<div class="leftColumn">
 				<div class="textBox">
+					<h2>{% text "gridLeftTextHeader" label="Grid Left Header", no_wrapper=True, value="Pediatric Dentistry" %}</h2>
 					<p>
-					{% text "gridLeftText" label="Grid Left Copy", no_wrapper=True, value="
-					 Book your child’s dentist appointment at our conveniently located office. Pave the way for a lifetime of healthy teeth and avoid future dental problems.
-" %}
+					{% text "gridLeftText" label="Grid Left Copy Upper", no_wrapper=True, value="
+					 Visit our pediatric dentist for regular check-ups and get tips for daily oral care at home. Rest assured your child feels comfortable at our relaxing practice environment." %}
 					</p>
+					<p>
+					{% text "gridLeftText2" label="Grid Left Copy Lower", no_wrapper=True, value="
+					 Pave the way for a lifetime of healthy teeth. Our doctors are specially trained to treat children, so you can remain confident your child’s preventive dental care is in good hands." %}
+					</p>
+
 					<a href="/book-an-appointment" class="bookAppointment">Book an Appointment</a>
 				</div>
 				<div class="imageBox">
@@ -58,10 +63,15 @@
 					<div class="imageBox">
 					</div>
 					<div class="textBox">
+						<h2>{% text "gridRightUpperHeader" label="Grid Right Upper", no_wrapper=True, value="Orthodontics" %}</h2>
 						<p>
-						{% text "gridRightUpperText" label="Grid Right Upper Copy", no_wrapper=True, value="
-												 Remain confident your child’s preventive dental care is in good hands. With both pediatric dentists and orthodontists available, you can stay with our practice well into the future.
-							" %}							
+						{% text "gridRightUpperTextUpper" label="Grid Right Upper Copy Upper", no_wrapper=True, value="
+												 Help your child or teenager achieve a perfect smile. We offer a range of orthodontic treatments to straighten their teeth, improve their overall health, and prevent future dental problems." %}							
+						</p>
+						<p>
+						{% text "gridRightUpperTextLower" label="Grid Right Upper Copy Lower", no_wrapper=True, value="It’s never too late to start orthodontic treatment! Advances
+technology make it easier than ever to gain a beautiful smile and
+improve your overall health with little impact to your daily life." %}							
 						</p>
 						<a href="/book-an-appointment" class="bookAppointment">Book an Appointment</a>
 					</div>
@@ -86,7 +96,7 @@
 	<div class="whiteBanner">
 		<div class="container">
 			<h2>Book an Appointment</h2>
-			<p>Does your child need to see one of our highly trained dentists or orthodontists?</p>
+			<p>{% text "bookAppointmentBanner" label="Book an Appointment Banner", no_wrapper=True, value="Does your child need to see one of our highly trained dentists or orthodontists?" %}</p>
 			<a href="/book-an-appointment" class="button black">Book Now</a>
 		</div>
 
@@ -107,8 +117,8 @@
 			<div class="slide">
 				<div class="textBox">
 					<h2>Committed to Caring for Your Child’s Growing Smile</h2>
-					<h3>Dedicated Doctors</h3>
-					<p>Our pediatric dental specialists are trained to interact with children of all ages and provide the highest standard of care.</p>
+					<h3>Compassionate Service</h3>
+					<p>We’re committed to treating you and your children with the utmost compassion to provide positive dental specialist-patient relationships.</p>
 				</div>
 				<div class="imageBox">
 					<img src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/olderWomanSmile.png" alt="">
@@ -117,11 +127,21 @@
 			<div class="slide">
 				<div class="textBox">
 					<h2>Committed to Caring for Your Child’s Growing Smile</h2>
-					<h3>Dedicated Doctors</h3>
-					<p>Our pediatric dental specialists are trained to interact with children of all ages and provide the highest standard of care.</p>
+					<h3>Customized to Your Needs</h3>
+					<p>We’re happy to answer all your oral care questions and help you find the best solution to improve your child’s smile.</p>
 				</div>
 				<div class="imageBox">
 					<img src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/family.png" alt="">
+				</div>
+			</div>
+			<div class="slide">
+				<div class="textBox">
+					<h2>Committed to Caring for Your Child’s Growing Smile</h2>
+					<h3>Child-Friendly Office</h3>
+					<p>With gaming station, televisions, and a baby play area, we ensure that your children are comfortable in our fun and interactive practice.</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/olderWomanSmile.png" alt="">
 				</div>
 			</div>
 		</div>
@@ -134,27 +154,31 @@
 			</div>
 			<div class="textBox">
 				<div class="upperText">
-					<h2>Modern Office</h2>
-					<p>We use top-of- the-line equipment and technology and ensure your children are comfortable in our fun and interactive practice.</p>
+					<h2>Convenient Location</h2>
+					<p>Our conveniently located practice on the south side is just south of the Whitemud on Gateway Blvd. Our location is easy to find and there is plenty of free parking.</p>
 				</div>
 				<div class="lowerText">
-					<h2>Convenient Hours</h2>
-					<p>With flexible hours at our conveniently located South Edmonton office, we aim to accommodate your busy schedule.</p>
+					<h2>Flexible Payment Options</h2>
+					<p>Getting dental and orthodontic treatment has never been easier—take advantage of our direct billing and no-interest, easy financing options.</p>
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	<div class="imageRightTextLeft">
+	<!-- <div class="imageRightTextLeft"> -->
+	<div class="whiteBanner">
 		<div class="container">
-			<div class="textBox">
+			<h2>Virtual Smile Assesment</h2>
+			<p>Too busy to book an appointment or not sure if braces are for you?</p>
+			<a href="/virtual-smile-assessment" class="button turqoise">Start Your Assessment</a>
+			<!-- <div class="textBox">
 				<h2>Virtual Smile Assesment</h2>
 				<p>Too busy to book an appointment or not sure if braces are for you?</p>
 				<a href="/virtual-smile-assessment" class="button turqoise">Start Your Assessment</a>
 			</div>
 			<div class="imageBox">
 				<img src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/lookBackSmile.png" alt="">
-			</div>
+			</div> -->
 		</div>
 	</div>
 

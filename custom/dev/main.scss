@@ -48,6 +48,7 @@ $lightBlue: #d4e6ed;
 body,
 html {
 	font-family: $fontMain;
+	font-size: 10px;
 }
 
 h1,
@@ -57,7 +58,12 @@ h4,
 h5 {
 	font-family: $fontTitle;
 	color: $fontGrey;
-	font-weight: 400;
+	// font-weight: 400;
+	font-weight: 300;
+}
+
+p {
+	font-size: 1.6em
 }
 
 a {
@@ -71,7 +77,7 @@ a {
 }
 
 .button {
-	font-size: 18px;
+	font-size: 1.7em;
 	color: white;
 	padding: 8px 32px;
 	text-decoration: none;
@@ -94,6 +100,17 @@ a {
 	background-color: white;
 	color: $turqoise;
 	border: 1px solid $turqoise;
+}
+
+.button.turqoiseReverse {
+	background-color: white;
+	color: $turqoise;
+	border: 1px solid $turqoise;
+}
+
+.button.turqoiseReverse:hover {
+	background-color: $turqoise;
+	color: white;
 }
 
 .button.black {
@@ -121,8 +138,9 @@ a {
 }
 
 .button.white:hover {
-	border: 1px solid black;
-	color: black;
+	// border: 1px solid black;
+	background-color: white;
+	color: $fontGrey;
 }
 
 .bookAppointment {
@@ -130,7 +148,7 @@ a {
 	text-decoration: none;
 	border-bottom: 1px dashed $turqoise;
 	padding-bottom: 5px;	
-	font-size: 18px;
+	font-size: 1.8em;
 }
 
 .bookAppointment:hover {
@@ -138,6 +156,76 @@ a {
 	border-bottom: 1px dashed $green;
 }
 
+
+form.hs-form {
+	// background-color: pink;
+	display: flex;
+	flex-wrap: wrap;
+	.field.fullWidth {
+		width: 100%;
+	}
+	.field {
+		width: 50%;
+		padding-right: 20px;
+		label {
+			display: none;
+		}
+		.input {
+			width: 100%;
+			input, select {
+				width: 100%;
+				border: none;
+				background-color: $lightGrey;
+				font-size: 1.6em;
+				color: $fontGrey;
+				padding-left: 15px;
+				height: 2.4em;
+				border-radius: 5px;
+				// text-transform: capitalize;
+			}
+			margin-bottom: 10px;
+		}
+		.hs-error-msgs {
+			li {
+				list-style: none;
+				label {
+					display: block;
+					padding-left: 15px;
+					padding-bottom: 10px;
+				}
+			}
+		}
+	}
+
+	.hs_submit {
+		width: 100%;
+		.actions input {
+			font-size: 1.7em;
+			color: white;
+			padding: 8px 32px;
+			text-decoration: none;
+			display: inline-block;
+			border-radius: 10px;
+			border: 1px solid transparent;
+			min-width: 240px;
+			text-align: center;
+			font-weight: 300;
+			background-color: $turqoise;
+			transition: all 0.3s ease;
+			margin-top: 20px;
+		}
+
+		.actions input:hover {
+			background-color: white;
+			color: $turqoise;
+			border: 1px solid $turqoise;
+		}
+	}
+}
+
+#hs_form_target_contactForm form.hs-form .field {
+	// width: 50%;	
+}
 
 
 /*--------

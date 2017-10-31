@@ -1,3 +1,142 @@
+// Contact Page
+
+.addressForm {
+	.container {
+		display: flex;
+		.leftSide, .rightSide {
+			width: 50%;
+			padding: 30px;
+		}
+
+		.leftSide {
+			// padding-left: 30px;
+			ul {
+				li {
+					list-style: none;
+					position: relative;
+					padding-left: 40px;
+					margin-bottom: 20px;
+					font-size: 1.6em;
+					color: $fontGrey;
+					max-width: 300px;
+
+
+					.liLogo {
+						position: absolute;
+						left: 0;
+						width: 20px;
+						top: 5px;
+					}
+					a {
+						text-decoration: none;
+						color: $fontGrey;
+					}
+					span {
+							font-weight: 600;
+						}
+				}
+			}
+		}
+
+		.rightSide {
+			h3 {
+				font-size: 3.4em;
+				text-align: center;
+				margin-bottom: 20px;
+
+			}
+
+		}
+	}
+}
+
+.map {
+	padding-bottom: 60px;
+	#map {
+		height: 300px;
+	}
+}
+
+// Contact Page Ends
+
+// Invisalign Page
+
+.linkBar {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.button {
+			margin-right: 20px;
+		}
+	}
+}
+
+.contact .imageRightTextLeft {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	.textBox, .imageBox {
+		width: 50%;
+	}
+}
+
+.twoPhotoLeftTextRight {
+	padding-top: 30px;
+	.container {
+		display: flex;
+		.imageBox{
+			width: 50%;
+			position: relative;
+			margin-right: 30px;
+			img {
+				width: 60%;
+				height: auto;
+				position: absolute;
+			}
+
+			img:nth-child(1) {
+				top: 10%;
+				left: 10%;
+			}
+
+			img:nth-child(2) {
+				bottom: 10%;
+				right: 10%;
+			}
+		}
+		.textBox {
+			width: 50%;
+			margin-left: 30px;
+			h2 {
+				font-size: 2.4em;
+				margin-bottom: 30px;
+			}
+			p {
+				font-size: 1.6em;
+				margin-bottom: 20px;
+			}
+
+			.button {
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
+.imageSlider.white {
+	.container {
+		background-color: white;
+		.slick-dots li button {
+			background-color: white;
+		}
+		.slick-dots li.slick-active button {
+			background-color: $darkGrey;
+		}
+	}
+}
+
 /* LANDING PAGE */
 
 .landingPage {
