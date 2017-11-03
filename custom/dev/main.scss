@@ -113,6 +113,17 @@ a {
 	color: white;
 }
 
+.button.turqoiseWhite {
+	background-color: $turqoise;
+	border: 1px solid white;
+	color: white;
+}
+
+.button.turqoiseWhite:hover {
+	color: $turqoise;
+	background-color: white;
+}
+
 .button.black {
 	background-color: black;
 }

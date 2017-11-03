@@ -220,6 +220,15 @@ a {
   background-color: #1bbab9;
   color: white; }
 
+.button.turqoiseWhite {
+  background-color: #1bbab9;
+  border: 1px solid white;
+  color: white; }
+
+.button.turqoiseWhite:hover {
+  color: #1bbab9;
+  background-color: white; }
+
 .button.black {
   background-color: black; }
 
@@ -800,6 +809,13 @@ footer .container {
       width: 50%;
       margin: 30px auto; }
 
+.turqoiseBanner.fullWidth p {
+  width: 90%; }
+
+.turqoiseBanner.constrained h2 {
+  width: 60%;
+  margin: 0 auto; }
+
 .addressForm .container {
   display: -ms-flexbox;
   display: flex; }
@@ -843,9 +859,12 @@ footer .container {
     -ms-flex-pack: center;
         justify-content: center;
     -ms-flex-align: center;
-        align-items: center; }
+        align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
     .linkBar .container .button {
-      margin-right: 20px; }
+      margin-right: 20px;
+      margin-bottom: 20px; }
 
 .contact .imageRightTextLeft {
   padding-top: 30px;
@@ -890,6 +909,30 @@ footer .container {
     background-color: white; }
   .imageSlider.white .container .slick-dots li.slick-active button {
     background-color: #8c989c; }
+
+.imageLeftTextRight .container {
+  display: -ms-flexbox;
+  display: flex; }
+  .imageLeftTextRight .container .textBox, .imageLeftTextRight .container .imageBox {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    width: 50%; }
+    .imageLeftTextRight .container .textBox h2, .imageLeftTextRight .container .imageBox h2 {
+      font-size: 2.4em;
+      margin-bottom: 30px; }
+    .imageLeftTextRight .container .textBox p, .imageLeftTextRight .container .imageBox p {
+      font-size: 1.6em;
+      margin-bottom: 20px; }
+    .imageLeftTextRight .container .textBox .button, .imageLeftTextRight .container .imageBox .button {
+      margin-top: 30px; }
+  .imageLeftTextRight .container .textBox {
+    margin-left: 30px; }
 
 /* LANDING PAGE */
 .landingPage header {
