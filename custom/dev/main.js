@@ -11,7 +11,63 @@ app.init = function(){
 	app.displayPreview();
 	app.mobileMenu();
 	app.formFieldCount();
+	app.ourTeam();
+	app.doctorDescription();
 };
+
+app.doctorDescription = function() {
+	$(".doctorDescriptionButton").click(function(e){
+		e.preventDefault();
+		$(this).parent().parent().parent().parent().addClass("descriptionOpen");
+	})
+
+	$(".closeDescription").click(function(e){
+		e.preventDefault();
+		$(this).parent().parent('.descriptionOpen').removeClass("descriptionOpen");
+	})
+}
+
+app.ourTeam = function() {
+	$("#hs_cos_wrapper_ourTeamFlexibleColumn").children().addClass("teamMember");
+
+	var teamMember = $(".teamMember");
+
+	$.each(teamMember, function(){
+		console.log(this);
+
+		var isDoctor = $(this).find(".doctor").length;
+		// console.log(isDoctor);
+		if (isDoctor != 0) {
+			$(this).removeClass("teamMember");
+			$(this).addClass("teamMemberDoctor");
+		}
+	})
+	// var numOfDoctors = $(".teamMemberDoctor").length;
+	// console.log("number of doctors is " + numOfDoctors);
+
+	var numOfTeamMembers = $(".teamMember").length;
+	console.log("number of teamMembers is " + numOfTeamMembers);
+
+	// console.log("division = " + numOfDoctors%3);
+
+	// if (numOfDoctors%2 == 0) {
+	// 	console.log("even Doctors")
+	// } else {
+	// 	console.log("odd Doctors");
+	// 	$(".teamMemberDoctor").last().addClass("lastOne");
+	// }
+
+	if (numOfTeamMembers%3 == 0) {
+		console.log("team members is divisible by 3");
+	} else if (numOfTeamMembers%3 == 1) {
+		console.log("team members has a remainder of 1");
+		$(".teamMember:nth-last-of-type(1)").addClass("lastOne");
+	} else if (numOfTeamMembers%3 == 2) {
+		console.log("team members has a remainder of 2");
+		$(".teamMember:nth-last-of-type(1)").addClass("secondLastTwo");
+		$(".teamMember:nth-last-of-type(2)").addClass("lastTwo");
+	}
+}
 
 app.formFieldCount = function() {
 	var numFields = $(".hs-form-field").length;

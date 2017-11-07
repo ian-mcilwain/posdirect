@@ -1,3 +1,81 @@
+// pediatric dentistry starts
+
+.pediatricDentistry, .orthodontics {
+	.whiteBanner {
+		p {
+			max-width: none;	
+		}
+	}
+
+
+
+	.imageLeftTextRight, .imageRightTextLeft {
+		.container .textBox {
+			text-align: left;
+			align-items: flex-start;
+			h2 {
+				font-size: 3.8em;
+				margin-bottom: 20px;
+			}
+
+			h2.large {
+				font-size: 4em;
+			}
+			h3 {
+				font-size: 2.2em;
+			}
+			p {
+				margin-top: 20px;
+				font-size: 2em;
+			}
+			ul {
+				padding-left: 20px;
+			}
+
+			li {
+				font-size: 1.8em;
+			}
+
+		} 
+
+		.container .imageBox {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	.imageSlider .container .slide .textBox h2 {
+		font-size: 2.8em;
+	}
+
+	.imageSlider .container .slide .textBox {
+		ul {
+			padding-left: 20px;
+		}
+
+		li {
+			font-size: 1.8em;
+		}
+	}
+
+	.twoPhotoLeftTextRight {
+		margin-top: 30px;
+		margin-bottom: 30px;
+		.container .textBox {
+			text-align: center;
+			h2.large {
+				font-size: 4em;
+
+			}
+		}
+
+	} 
+
+}
+
+// pediatric dentistry ends
+
 // Contact Page
 
 .addressForm {
@@ -76,7 +154,7 @@
 	}
 }
 
-.contact .imageRightTextLeft {
+.imageRightTextLeft {
 	padding-top: 30px;
 	padding-bottom: 30px;
 	.textBox, .imageBox {
@@ -99,12 +177,12 @@
 			}
 
 			img:nth-child(1) {
-				top: 10%;
+				top: 0;
 				left: 10%;
 			}
 
 			img:nth-child(2) {
-				bottom: 10%;
+				bottom: 0;
 				right: 10%;
 			}
 		}
@@ -471,4 +549,96 @@ p.itemTag {
 	.mainBtn {
 		margin-top: 20px;
 	}
+}
+
+
+
+#hs_cos_wrapper_ourTeamFlexibleColumn {
+	display: flex;
+	flex-wrap: wrap;
+	.teamMemberDoctor {
+		width: 100%;
+		.teamMemberInner {
+			border: 5px solid white;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+			height: 400px;
+			.overlay {
+				height: 100%;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				justify-content: flex-end;
+				padding-bottom: 30px;
+				.textSection {
+					h2, p {
+						color: white;
+					}
+				}
+			}
+		}
+		.doctorDescription {
+			height: 0;
+			max-height: 0;
+			overflow: hidden;
+			width: 100%;
+			transition: all 1s;	
+		}
+	}
+
+	.descriptionOpen {
+		.doctorDescription {
+			height: auto;
+			max-height: 600px;
+			overflow: scroll
+		}
+	}
+
+	.teamMember {
+		width: 33.3%;
+		// background-color: blue;
+		height: 440px;
+		.teamMemberInner {
+			border: 5px solid white;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+			.overlay {
+				background-color: rgba(0,0,0,0.3);
+				height: 100%;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				justify-content: center;
+				padding-bottom: 30px;
+				.textSection {
+					h2, p {
+						color: white;
+					}
+				}
+			}
+		} 
+
+	}
+
+	.teamMember.lastOne {
+		margin-left: 33.3%;
+		margin-right: 33.3%;
+		width: 100%;
+	}
+
+	.teamMember.secondLastTwo {
+		margin-right: 16.65%
+	}
+	.teamMember.lastTwo {
+		// width: 50%;
+		margin-left: 16.65%
+	}
+
+
 }

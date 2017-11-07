@@ -2,7 +2,7 @@
 
 .hero {
 	.container {
-		background-image: url("https://cdn2.hubspot.net/hubfs/3424896/saleshub/heroBackground.png");
+		background-image: url("https://cdn2.hubspot.net/hubfs/3424896/saleshub/home-banner.jpg");
 		background-size: cover;
 		background-position: center;
 		.overlay{
@@ -83,7 +83,7 @@
 			}
 			.imageBox {
 				height: 50%;
-				background-image: url("https://cdn2.hubspot.net/hubfs/3424896/saleshub/boySmilePlaceholder.png");
+				background-image: url("https://cdn2.hubspot.net/hubfs/3424896/saleshub/boySmilePlaceholder.jpg");
 				background-size: cover;
 				background-position: center;
 			}
@@ -106,7 +106,7 @@
 			.upper {
 				height: 55%;
 				.imageBox {
-					background-image: url("https://cdn2.hubspot.net/hubfs/3424896/saleshub/teen-braces.png");
+					background-image: url("https://cdn2.hubspot.net/hubfs/3424896/saleshub/2.jpg");
 					background-size: cover;
 					background-position: center;
 				}
@@ -114,7 +114,7 @@
 			.lower {
 				height: 45%;
 				.imageBox {
-					background-image: url("https://cdn2.hubspot.net/hubfs/3424896/saleshub/olderWomanSmile.png");
+					background-image: url("https://cdn2.hubspot.net/hubfs/3424896/saleshub/3.jpg");
 					background-size: cover;
 					background-position: center;
 				}
@@ -145,67 +145,72 @@
 	}
 }
 
-.imageSlider .container {
-	background-color: $lightBlue;
-	padding: 20px;
-	position: relative;
-	.slick-dots {
-		position: absolute;
-		bottom: 30px;
-		left: 24%;
-		// display: flex;
-		li {
-			list-style: none;
-			display: inline-block;
-			button {
-				margin-right: 10px;	
-				background-color: $lightBlue;
-				border: 1px solid $darkGrey;
-				color: transparent;	
-				padding: 7px 7px;
-				text-align: center;
-				text-decoration: none;
+.imageSlider {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	.container {
+		background-color: $lightBlue;
+		padding: 20px;
+		position: relative;
+		.slick-dots {
+			position: absolute;
+			bottom: 30px;
+			left: 24%;
+			// display: flex;
+			li {
+				list-style: none;
 				display: inline-block;
-				font-size: 1px;
-				border-radius: 50%;
+				button {
+					margin-right: 10px;	
+					background-color: $lightBlue;
+					border: 1px solid $darkGrey;
+					color: transparent;	
+					padding: 5px 5px;
+					text-align: center;
+					text-decoration: none;
+					display: inline-block;
+					font-size: 1px;
+					border-radius: 50%;
+				}
+				button:focus {
+					outline: none;	
+				}
 			}
-			button:focus {
-				outline: none;	
+
+			li.slick-active button {
+				background-color: $darkGrey;
 			}
 		}
+		.slide {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.textBox {
+				width: 50%;
+				padding-left: 30px;
+				padding-right: 30px;
 
-		li.slick-active button {
-			background-color: $darkGrey;
+				h2 {
+					// font-size: 38px;
+					font-size: 3.8em;
+					margin-bottom: 30px;
+				}
+
+				h3 {
+					font-size: 2.2em;
+				}
+			}
+		
+			.imageBox {
+				width: 40%;
+				img {
+					width: 100%;
+				}
+			}
 		}
 	}
-	.slide {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		.textBox {
-			width: 50%;
-			padding-left: 30px;
-			padding-right: 30px;
 
-			h2 {
-				// font-size: 38px;
-				font-size: 3.8em;
-				margin-bottom: 30px;
-			}
-
-			h3 {
-				font-size: 2.2em;
-			}
-		}
-	
-		.imageBox {
-			width: 40%;
-			img {
-				width: 100%;
-			}
-		}
-	}
-}
+} 
 
 .imageTwoTextSections {
 	padding-top: 60px;
@@ -293,7 +298,8 @@
 	;	h1 {
 			color: white;
 			font-size: 4.8em;
-			font-weight: 300
+			font-weight: 300;
+			margin-bottom: 40px;
 		}	
 		h2 {
 			color: white;
@@ -307,6 +313,11 @@
 			font-size: 2em;
 			width: 50%;
 			margin: 30px auto;
+		}
+
+		a.button {
+			margin-right: 20px;
+			margin-bottom: 20px;
 		}
 
 

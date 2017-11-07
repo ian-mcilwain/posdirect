@@ -154,6 +154,17 @@ a {
 	color: $fontGrey;
 }
 
+.button.whiteGreen {
+	background-color: white;
+	color: $green;
+}
+
+.button.whiteGreen:hover {
+	background-color: $green;
+	border: 1px solid white;
+	color: white;
+}
+
 .bookAppointment {
 	color: $turqoise;
 	text-decoration: none;
