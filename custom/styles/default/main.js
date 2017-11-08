@@ -77,9 +77,9 @@ app.formFieldCount = function () {
 		console.log('is even');
 	} else {
 		console.log('is odd');
+		$(".hs-form-field").last().addClass("fullWidth");
 	}
 	console.log("there are " + numFields + " form fields");
-	$(".hs-form-field").last().addClass("fullWidth");
 };
 
 app.mobileMenu = function () {
@@ -90,7 +90,15 @@ app.mobileMenu = function () {
 };
 
 app.exampleImage = function () {
-	$("input[type='file']").parent().siblings("label").append('<img src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/teeth.jpg" alt=""><img class="uploadPreview" src="#">');
+	$(".hs_face_front_smile input[type='file']").parent().siblings("label").append('<img class="uploadPreview" src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/teeth.jpg" alt="">');
+	$(".hs_face_side_smile input[type='file']").parent().siblings("label").append('<img class="uploadPreview" src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/teeth.jpg" alt="">');
+	$(".hs_teeth_right_side input[type='file']").parent().siblings("label").append('<img class="uploadPreview" src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/teeth.jpg" alt="">');
+	$(".hs_teeth_left_side input[type='file']").parent().siblings("label").append('<img class="uploadPreview" src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/teeth.jpg" alt="">');
+	$(".hs_top_teeth input[type='file']").parent().siblings("label").append('<img class="uploadPreview" src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/teeth.jpg" alt="">');
+	$(".hs_bottom_teeth input[type='file']").parent().siblings("label").append('<img class="uploadPreview" src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/teeth.jpg" alt="">');
+	$(".hs_pediatric_area_of_concern input[type='file']").parent().siblings("label").append('<img class="uploadPreview" src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/teeth.jpg" alt="">');
+	$(".hs_pediatric_other_pictures input[type='file']").parent().siblings("label").append('<img class="uploadPreview" src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/teeth.jpg" alt="">');
+
 	$("input[type='file']").parent().siblings("label").addClass("exampleImg");
 	$("input[type='file']").parent().parent().addClass("imgUpload");
 };
@@ -118,13 +126,12 @@ app.getPreview = function (input, imgLink) {
 };
 
 app.dependantForm = function () {
-	console.log("forms");
+	// console.log("forms");
 
 	$(".hs-input").change(function () {
 		$("input[type='file']").each(function () {
 			//  console.log($(this).val());
 			var fullFile = $(this).val();
-
 			var fullFile = fullFile.slice(12);
 			console.log(fullFile);
 			$(this).parent().siblings("label").children().children(".fileName").html(fullFile);
@@ -134,7 +141,6 @@ app.dependantForm = function () {
 		var orthoOrPediatric = $(".hs_yes_no ").find(":selected").text();
 		var orthoForYouOrChild = $(".hs_ortho_for_you_or_your_child").find(":selected").text();
 
-		// console.log("orthoOrPediatric is " + orthoOrPediatric);
 
 		if (orthoForYouOrChild == "Myself") {
 			$(".child").removeClass("active");
@@ -144,14 +150,12 @@ app.dependantForm = function () {
 			$(".hs_how_old_is_your_child.hs-form-field, .hs_parent_guardian_s_name").addClass("active ortho child");
 		}
 		if (orthoOrPediatric == "Orthodontics") {
-			//console.log("lisa needs braces");
 			$(".pediatric").removeClass("active");
 			$(".pediatric").removeClass("pediatric");
 			$(".hs_ortho_for_you_or_your_child.hs-form-field, .hs_primary_concerns_yourself, .hs_email, .hs_patient_first_name, .hs_patient_last_name, .hs_city, .hs_province, .hs_phone, .hs_face_front_smile, .hs_face_side_smile, .hs_teeth_right_side, .hs_teeth_left_side, .hs_top_teeth, .hs_bottom_teeth,").addClass("active ortho");
 			$(".pediatricInstructions").removeClass("active");
 			$(".orthoInstructions").addClass("active");
 		} else if (orthoOrPediatric == "Pediatrics") {
-			//console.log("baby!");
 			$(".ortho").removeClass("active");
 			$(".ortho").removeClass("ortho");
 			$(".hs_how_old_is_your_child.hs-form-field .hs_primary_concerns_yourself, .hs_email, .hs_patient_first_name, .hs_patient_last_name, .hs_parent_guardian_s_name, .hs_city, .hs_province, .hs_phone, .hs_pediatric_area_of_concern, .hs_pediatric_other_pictures").addClass("active pediatric");
@@ -159,8 +163,6 @@ app.dependantForm = function () {
 			$(".orthoInstructions").removeClass("active");
 			$(".pediatricInstructions").addClass("active");
 		};
-		//var value = $(this).val();
-		// console.log(value);
 	});
 };
 

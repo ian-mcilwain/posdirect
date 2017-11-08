@@ -296,6 +296,8 @@ form.hs-form {
         padding-left: 15px;
         height: 2.4em;
         border-radius: 5px; }
+      form.hs-form .field .input .error {
+        border: 1px solid red; }
     form.hs-form .field .hs-error-msgs li {
       list-style: none; }
       form.hs-form .field .hs-error-msgs li label {
@@ -1324,39 +1326,223 @@ p.itemTag {
   #hs_cos_wrapper_ourTeamFlexibleColumn .teamMember.lastTwo {
     margin-left: 16.65%; }
 
+.smileAssessment form.hs-form .field {
+  width: 100%; }
+
+.smileAssessment .orthoInstructions, .smileAssessment .pediatricInstructions {
+  height: 0;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 1s; }
+
+.smileAssessment .orthoInstructions.active, .smileAssessment .pediatricInstructions.active {
+  height: auto;
+  max-height: 800px; }
+
+.smileAssessment .hs_ortho_for_you_or_your_child.hs-form-field,
+.smileAssessment .hs_how_old_is_your_child.hs-form-field,
+.smileAssessment .hs_how_old_is_your_child,
+.smileAssessment .hs_have_they_ever_been_to_the_dentist,
+.smileAssessment .hs_primary_concerns_yourself,
+.smileAssessment .hs_email,
+.smileAssessment .hs_patient_first_name,
+.smileAssessment .hs_patient_last_name,
+.smileAssessment .hs_parent_guardian_s_name,
+.smileAssessment .hs_city,
+.smileAssessment .hs_province,
+.smileAssessment .hs_phone,
+.smileAssessment .hs_face_front_smile,
+.smileAssessment .hs_face_side_smile,
+.smileAssessment .hs_teeth_right_side,
+.smileAssessment .hs_teeth_left_side,
+.smileAssessment .hs_top_teeth,
+.smileAssessment .hs_bottom_teeth,
+.smileAssessment .hs_pediatric_area_of_concern,
+.smileAssessment .hs_pediatric_other_pictures {
+  height: 0;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 1s; }
+
+.smileAssessment .hs_patient_first_name,
+.smileAssessment .hs_patient_last_name,
+.smileAssessment .hs_city,
+.smileAssessment .hs_province {
+  width: 50% !important; }
+
+.smileAssessment .active.hs-form-field {
+  max-height: 500px;
+  height: auto;
+  /*background-color: pink;*/ }
+
+.smileAssessment .hs-form-field.imgUpload {
+  /*background-color: purple;*/
+  width: 150px;
+  margin-bottom: 10px; }
+
+.smileAssessment .hs-form-field .exampleImg {
+  /*background-color: blue;*/
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  transition: all 0.5s;
+  position: relative; }
+
+.smileAssessment .hs-form-field .exampleImg:hover {
+  /*background-color: green;*/
+  border: 1px solid black; }
+
+.smileAssessment .hs-form-field .exampleImg img {
+  /*border: 1px solid green;*/
+  width: 150px;
+  height: auto; }
+
+.smileAssessment .hs-form-field input[type='file'] {
+  background-color: pink;
+  display: none; }
+
+.smileAssessment .exampleImg:after {
+  content: "\f0ee";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: lightgrey;
+  display: -ms-flexbox;
+  display: flex;
+  /*display:none;*/
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  opacity: 0;
+  transition: all 0.5s; }
+
+.smileAssessment .exampleImg:hover:after {
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0.5; }
+
 /* BLOG */
 .blog .banner {
   position: relative;
   text-align: center;
-  background: grey; }
+  background-size: cover;
+  background-position: center; }
   .blog .banner .container {
     max-width: 1000px;
     position: relative;
     padding: 10% 8%;
     z-index: 1; }
+    .blog .banner .container p {
+      color: white; }
+    .blog .banner .container .bannerDate {
+      margin: 0 auto 40px;
+      color: white;
+      text-transform: uppercase; }
+    .blog .banner .container .bannerTag {
+      display: inline-block;
+      background: white;
+      padding: 5px 10px;
+      text-transform: uppercase;
+      font-size: 12px;
+      box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5); }
 
 .blog h1 {
-  text-transform: uppercase;
   color: white;
-  font-size: 40px;
-  letter-spacing: 1px;
-  font-weight: 600; }
+  font-size: 4em; }
 
-.bannerDate {
-  margin: 0 auto 40px;
-  color: white;
-  font-weight: 600;
-  text-transform: uppercase; }
-
-.bannerTag {
-  display: inline-block;
-  background: white;
-  padding: 5px 10px;
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 1px;
-  font-weight: 600;
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5); }
+.blog .listingPageContent {
+  margin-top: 60px; }
+  .blog .listingPageContent .container {
+    display: -ms-flexbox;
+    display: flex; }
+    .blog .listingPageContent .container .blog-section {
+      width: 66.6%; }
+      .blog .listingPageContent .container .blog-section .post-listing .post-group {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+      .blog .listingPageContent .container .blog-section .post-listing .post-item {
+        width: 47%;
+        margin: 1%; }
+        .blog .listingPageContent .container .blog-section .post-listing .post-item .postImg {
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 300px;
+          display: block;
+          position: relative; }
+          .blog .listingPageContent .container .blog-section .post-listing .post-item .postImg span {
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: center;
+                justify-content: center;
+            -ms-flex-align: center;
+                align-items: center;
+            transition: all 0.3s ease;
+            color: #464646;
+            font-size: 2.4em; }
+        .blog .listingPageContent .container .blog-section .post-listing .post-item .postText {
+          display: block;
+          padding: 5% 5% 0 0;
+          transition: all 0.2s ease; }
+        .blog .listingPageContent .container .blog-section .post-listing .post-item h3 {
+          text-transform: initial;
+          padding-bottom: 0;
+          transition: all 0.3s ease;
+          margin: 0; }
+        .blog .listingPageContent .container .blog-section .post-listing .post-item a {
+          color: black;
+          text-decoration: none;
+          display: block; }
+        .blog .listingPageContent .container .blog-section .post-listing .post-item a:hover .postImg span,
+        .blog .listingPageContent .container .blog-section .post-listing .post-item a:focus .postImg span {
+          opacity: 1; }
+        .blog .listingPageContent .container .blog-section .post-listing .post-item .postDate {
+          margin: 0;
+          font-size: 12px;
+          color: grey;
+          text-transform: uppercase; }
+    .blog .listingPageContent .container .sidebar {
+      width: 33.3%; }
+      .blog .listingPageContent .container .sidebar h3 {
+        font-size: 2.6em;
+        margin-bottom: 20px; }
+      .blog .listingPageContent .container .sidebar .sidebar-subscribe {
+        margin-top: 2%; }
+        .blog .listingPageContent .container .sidebar .sidebar-subscribe .hbspt-form form.hs-form {
+          -ms-flex-direction: column;
+              flex-direction: column; }
+          .blog .listingPageContent .container .sidebar .sidebar-subscribe .hbspt-form form.hs-form .field {
+            width: 100%; }
+      .blog .listingPageContent .container .sidebar .sidebar-posts {
+        margin-top: 40px; }
+        .blog .listingPageContent .container .sidebar .sidebar-posts a {
+          text-decoration: none;
+          color: #464646;
+          display: block;
+          margin-bottom: 20px; }
+          .blog .listingPageContent .container .sidebar .sidebar-posts a p.postTitle {
+            font-size: 1.8em; }
+          .blog .listingPageContent .container .sidebar .sidebar-posts a p.postDate {
+            font-size: 1.5em; }
+      .blog .listingPageContent .container .sidebar .sidebar-topic {
+        margin-top: 40px; }
 
 h2.hs-author-name {
   font-size: 24px;
@@ -1373,56 +1559,6 @@ h3.specialListingHeader {
   margin-top: 50px;
   font-size: 22px;
   font-size: black; }
-
-.post-group {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-
-.post-item {
-  width: 29%;
-  margin: 2%; }
-
-.post-item .postImg {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 200px;
-  display: block;
-  position: relative; }
-
-.post-item .postText {
-  display: block;
-  padding: 5% 5% 0 0;
-  transition: all 0.2s ease; }
-
-.post-item h3 {
-  text-transform: initial;
-  padding-bottom: 0;
-  transition: all 0.3s ease;
-  margin: 0; }
-
-.post-item a {
-  color: black;
-  text-decoration: none; }
-
-.post-item a:hover,
-.post-item a:focus {
-  text-decoration: none; }
-  .post-item a:hover h3,
-  .post-item a:focus h3 {
-    color: grey; }
-
-.post-item a:hover h3,
-.post-item a:focus h3 {
-  color: black; }
-
-.post-item .postDate {
-  margin: 0;
-  font-size: 12px;
-  color: grey;
-  text-transform: uppercase; }
 
 .authorPageSection {
   display: -ms-flexbox;
@@ -1483,23 +1619,6 @@ ul.pagination li.active a {
   border: 1px solid black; }
 
 /* Post Detail Page */
-.postFeaturedImage {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  height: initial;
-  min-height: initial;
-  text-shadow: 0 0 30px rgba(0, 0, 0, 0.3); }
-  .postFeaturedImage:after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.5); }
-
 .postHeader {
   display: -ms-flexbox;
   display: flex;
@@ -1550,90 +1669,23 @@ ul.pagination li.active a {
   max-width: 1200px; }
 
 .blogSubscribeBar {
-  position: relative;
-  top: 0;
-  background: #fcfcfc;
   text-align: center;
-  z-index: 4;
-  transition: all 0.3s ease; }
-  .blogSubscribeBar .container {
-    padding: 3% 8%;
-    transition: all 0.3s ease; }
+  margin-top: 30px; }
   .blogSubscribeBar p {
-    display: inline-block;
-    text-transform: uppercase;
-    color: grey;
-    border-bottom: 2px solid #98ca3b;
-    padding-bottom: 5px;
-    margin-bottom: 30px;
-    font-size: 1.1em;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: all 0.3s ease; }
-    .blogSubscribeBar p .fa {
-      display: none; }
-  .blogSubscribeBar.stickyBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); }
-    .blogSubscribeBar.stickyBar .container {
-      padding: 10px 8%; }
-    .blogSubscribeBar.stickyBar p {
-      font-size: 12px;
-      margin-bottom: 15px; }
-  .blogSubscribeBar form {
-    display: -ms-flexbox;
-    display: flex;
+    font-size: 2.4em;
+    margin-bottom: 20px; }
+  .blogSubscribeBar .container .hbspt-form form {
     -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-align: start;
-        align-items: flex-start;
-    margin: 0 auto;
-    max-width: 900px; }
-  .blogSubscribeBar label {
-    display: none !important; }
-  .blogSubscribeBar ul.hs-error-msgs {
-    text-align: left; }
-    .blogSubscribeBar ul.hs-error-msgs li {
-      list-style: none; }
-    .blogSubscribeBar ul.hs-error-msgs label {
-      display: block !important;
-      color: red;
-      font-size: 12px; }
-  .blogSubscribeBar .hs_email,
-  .blogSubscribeBar .hs_notification_frequency {
-    width: calc(35% - 20px);
-    margin: 0 10px !important; }
-  .blogSubscribeBar .hs_email input,
-  .blogSubscribeBar .hs_notification_frequency select {
-    -webkit-appearance: none;
-    font-family: "Open Sans", sans-serif !important;
-    padding: 10px !important;
-    box-shadow: none !important;
-    height: auto !important;
-    width: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.2); }
-  .blogSubscribeBar .hs_notification_frequency .input {
-    position: relative; }
-    .blogSubscribeBar .hs_notification_frequency .input:after {
-      position: absolute;
-      font-family: 'FontAwesome';
-      content: "\f0d7";
-      right: 15px;
-      top: 10px;
-      color: darkgrey; }
-  .blogSubscribeBar .hs_submit {
-    margin-top: 7px; }
+        justify-content: center; }
+    .blogSubscribeBar .container .hbspt-form form .field {
+      width: 35%; }
+    .blogSubscribeBar .container .hbspt-form form .hs_submit {
+      width: auto; }
+      .blogSubscribeBar .container .hbspt-form form .hs_submit .actions input {
+        margin-top: 0; }
 
 .full-blog-section img {
   max-width: 100%; }
-
-.full-blog-section .postDate {
-  text-transform: uppercase;
-  color: white;
-  font-weight: 600; }
 
 .about-author-sec {
   display: -ms-flexbox;
