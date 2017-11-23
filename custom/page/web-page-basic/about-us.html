@@ -1,0 +1,81 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ html_lang }}" {{ html_lang_dir }}> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="{{ html_lang }}" {{ html_lang_dir }}>        <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="{{ html_lang }}" {{ html_lang_dir }}>               <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ html_lang }}" {{ html_lang_dir }}> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="{{ meta_author }}">
+	<meta name="description" content="{{ page_meta.meta_description }}">
+	<meta name="generator" content="HubSpot">
+	<title>{{ page_meta.html_title }}</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+	<link rel="stylesheet" href="/custom/styles/default/styles.css">
+	{% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+
+	{{ standard_header_includes }}
+	{% style include_default_custom_css="true" %}
+
+</head>
+<body class="home">
+	{% include 'custom/system/global/header.html' %}
+
+	<div class="hero">
+		<div class="container">
+			<div class="overlay">
+			<h1>{% text "heroHeader" label="Hero Header Text", no_wrapper=True, value="Edmonton’s Orthodontic and Pediatric Dentistry Practice" %}</h1>
+
+			<h2>{% text "heroSubHeader" label="Hero Subheader Text", no_wrapper=True, value="City Orthodontics and Pediatric Dentistry is a specialty clinic that provides the services of two specialists in one location." %}</h2>				
+			</div>
+		</div>
+	</div>
+
+	<div class="ctaLeftTextRight">
+		<div class="container">
+			<div class="ctaText">
+				<h2>Book an Appointment</h2>
+				<p>Meeting any of our orthodontic or pediatric dentistry specialists is just a click away!</p>
+				<a href="/book-an-appointment" class="button whiteGreen">Book Now</a>
+			</div>
+			<div class="textBox">
+				<h2>Why Choose City Orthodontics and Pediatric Dentistry?</h2>
+				<p>We’re committed to creating a practice that engages, comforts, and educates patients during their oral care journey. Helping you achieve a healthy, beautiful smile is our passion. </p>
+				<p>Since we have both pediatric dentists and orthodontists in one location, you can stay with our practice throughout your child’s entire oral care journey.    </p>
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="ourTeam">
+		<div class="container">
+			{% widget_container "ourTeamFlexibleColumn" label="Our Team" %}
+
+			{% end_widget_container %}
+
+		</div>
+	</div>
+
+
+	<div class="videoBanner">
+		<div class="container">
+			<script src="https://fast.wistia.com/embed/medias/snw9nvx73f.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><span class="wistia_embed wistia_async_snw9nvx73f popover=true popoverContent=link" style=""><h2>Office Tour</h2><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>
+			</a></span>
+		</div>
+	</div>
+	<div class="turqoiseBanner">
+		<div class="container">
+			<h2 class="large">Referral Program</h2>
+			<p>Know other parents in need of dental services for their kids?</p>
+			<a href="/refer-a-friend" class="button white">Refer a Friend</a>
+		</div>
+	</div>
+
+	
+
+	{% include 'custom/system/global/footer.html' %}
+	{{ standard_footer_includes }}
+</body>
+</html>

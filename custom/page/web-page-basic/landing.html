@@ -1,0 +1,67 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ html_lang }}" {{ html_lang_dir }}> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="{{ html_lang }}" {{ html_lang_dir }}>        <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="{{ html_lang }}" {{ html_lang_dir }}>               <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ html_lang }}" {{ html_lang_dir }}> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="{{ meta_author }}">
+	<meta name="description" content="{{ page_meta.meta_description }}">
+	<meta name="generator" content="HubSpot">
+	<title>{{ page_meta.html_title }}</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+	<link rel="stylesheet" href="{{ get_public_template_url("custom/page/saleshub/styles.css") }}">
+	{% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+
+	{{ standard_header_includes }}
+	{% style include_default_custom_css="true" %}
+
+</head>
+<body class="virtualSmileAnalysis">
+	{% include 'custom/page/saleshub/landingHeader.html' %}
+
+	<div class="hero">
+		<div class="container">
+			<div class="overlay">
+			<h1>{% text "heroHeader" label="Hero Header Text", no_wrapper=True, value="Virtual Smile Analysis" %}</h1>
+				
+			</div>
+		</div>
+	</div>
+
+
+	<div class="ourTeam">
+		<div class="container">
+			<div class="leftSide">
+				{% rich_text "leftColumnLanding" label="Body Text" html='
+				<!-- <div>My rich text default content</div> -->
+				<h2>Landing Page Placholder Content</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus officiis alias, saepe cumque numquam, aut suscipit officia reprehenderit aliquid tempora repellendus sapiente eligendi ab deleniti illo quae molestias nulla incidunt quis. Veniam magni natus laudantium excepturi suscipit quia iste quas.</p>
+				<p>Temporibus quasi, facere repudiandae maiores amet totam neque, quam cum consectetur odio ea optio aliquid quis nulla ut sapiente praesentium fuga, omnis eaque distinctio. Debitis nam voluptate iure at accusantium atque perferendis! Tenetur voluptatum cupiditate dolorem provident alias culpa, vitae.</p>
+				<p>Quasi magnam expedita itaque illo consequuntur, numquam corporis asperiores! Assumenda quasi consequuntur voluptatem sequi adipisci ullam perspiciatis obcaecati ad autem at. Quae laborum mollitia, quo ratione molestias, at temporibus tempore ipsam adipisci sunt est enim. Ullam nostrum voluptas architecto qui!</p>
+				' %}
+			</div>
+			<div class="rightSide">
+				{% form "landingForm" label="Landing Page Form" %}
+			</div>
+
+		</div>
+	</div>
+
+	<!--<div class="turqoiseBanner">-->
+	<!--	<div class="container">-->
+	<!--		<h2 class="large">Referral Program</h2>-->
+	<!--		<p>Know other parents in need of dental services for their kids?</p>-->
+	<!--		<a href="/refer-a-friend" class="button white">Refer a Friend</a>-->
+	<!--	</div>-->
+	<!--</div>-->
+
+	
+
+	{% include 'custom/page/saleshub/landingFooter.html' %}
+	{{ standard_footer_includes }}
+</body>
+</html>

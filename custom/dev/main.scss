@@ -19,7 +19,7 @@
 /*Import fonts, plugins here*/
 /*@import url('http://example.com/example_style.css');*/
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Playfair+Display:400,700');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
 
 /*--------
@@ -27,13 +27,19 @@
 ----------*/
 
 /*Typography*/
-$fontTitle: 'Open Sans', sans-serif;
-$fontMain: 'Lato', sans-serif;
+$fontTitle: 'Playfair Display', serif;
+$fontMain: 'Open Sans', sans-serif;
 $transition: all 0.3s ease;
+
 
 /*Colours*/
 /*$variable: value;*/
-
+$turqoise: #1bbab9;
+$green: #98ca3b;
+$fontGrey: #464646;
+$lightGrey: #f9f9f9;
+$darkGrey: #8c989c;
+$lightBlue: #d4e6ed;
 /*--------
 3. General Styles
 ----------*/
@@ -42,6 +48,7 @@ $transition: all 0.3s ease;
 body,
 html {
 	font-family: $fontMain;
+	font-size: 10px;
 }
 
 h1,
@@ -50,6 +57,14 @@ h3,
 h4,
 h5 {
 	font-family: $fontTitle;
+	color: $fontGrey;
+	// font-weight: 400;
+	font-weight: 300;
+}
+
+p {
+	font-size: 1.6em;
+	max-width: 100%;
 }
 
 a {
@@ -57,9 +72,250 @@ a {
 }
 
 .container {
-	padding: 6% 8%;
-	max-width: 1400px;
+	// padding: 6% 8%;
+	max-width: 1200px;
 	margin: auto;
+}
+
+.button {
+	font-size: 1.7em;
+	color: white;
+	padding: 8px 32px;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 10px;
+	border: 1px solid transparent;
+	min-width: 240px;
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
+	text-align: center;
+	font-weight: 300;
+}
+
+.button.turqoise {
+	background-color: $turqoise;
+}
+
+.button.turqoise:hover {
+	background-color: white;
+	color: $turqoise;
+	border: 1px solid $turqoise;
+}
+
+.button.turqoiseReverse {
+	background-color: white;
+	color: $turqoise;
+	border: 1px solid $turqoise;
+}
+
+.button.turqoiseReverse:hover {
+	background-color: $turqoise;
+	color: white;
+	border: 1px solid white;
+}
+
+.button.turqoiseWhite {
+	background-color: $turqoise;
+	border: 1px solid white;
+	color: white;
+}
+
+.button.turqoiseWhite:hover {
+	color: $turqoise;
+	background-color: white;
+}
+
+.button.black {
+	background-color: black;
+}
+
+.button.black:hover {
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+}
+
+.button.green {
+	background-color: $green;
+}
+
+.button.green:hover {
+	background-color: white;
+	color: $green;
+	border: 1px solid $green;
+}
+
+.button.white {
+	border: 1px solid white;
+}
+
+.button.white:hover {
+	// border: 1px solid black;
+	background-color: white;
+	color: $fontGrey;
+}
+
+.button.whiteGreen {
+	background-color: white;
+	color: $green;
+}
+
+.button.whiteGreen:hover {
+	background-color: $green;
+	border: 1px solid white;
+	color: white;
+}
+
+.bookAppointment {
+	color: $turqoise;
+	text-decoration: none;
+	border-bottom: 1px dashed $turqoise;
+	padding-bottom: 5px;	
+	font-size: 1.8em;
+}
+
+.bookAppointment:hover {
+	color: $green;
+	border-bottom: 1px dashed $green;
+}
+
+.hbspt-form {
+	.submitted-message {
+		font-size: 1.6em;
+	}
+}
+
+
+form.hs-form {
+	display: flex;
+	flex-wrap: wrap;
+	.field.fullWidth {
+		width: 100%;
+	}
+	.field {
+		width: 50%;
+		padding-right: 20px;
+
+		label {
+			display: none;
+		}
+		.input {
+			width: 100%;
+			margin-bottom: 10px;
+			input, select, textarea {
+				width: 100%;
+				border: none;
+				background-color: $lightGrey;
+				font-size: 1.6em;
+				color: $fontGrey;
+				padding-left: 15px;
+				height: 2.4em;
+				border-radius: 5px;
+				// text-transform: capitalize;
+			}
+			textarea {
+				height: 4.8em;
+			}
+			.inputs-list {
+				padding-left: 0 !important;
+				li{
+					list-style: none;
+					label {
+						display: flex;
+						justify-content: flex-start;
+						align-items: center;
+						input {
+							width: 10%;
+						}
+					}
+				} 
+			}
+			.error {
+				// background-color: red;
+				border: 1px solid red;
+			}
+			
+		}
+
+		.hs-error-msgs {
+			li {
+				list-style: none;
+				label {
+					display: block;
+					padding-left: 15px;
+					padding-bottom: 10px;
+				}
+			}
+		}
+	}
+
+	.hs_submit {
+		width: 100%;
+		.actions input {
+			font-size: 1.7em;
+			color: white;
+			padding: 8px 32px;
+			text-decoration: none;
+			display: inline-block;
+			border-radius: 10px;
+			border: 1px solid transparent;
+			min-width: 240px;
+			text-align: center;
+			font-weight: 300;
+			background-color: $turqoise;
+			transition: all 0.3s ease;
+			margin-top: 20px;
+		}
+
+		.actions input:hover {
+			background-color: white;
+			color: $turqoise;
+			border: 1px solid $turqoise;
+		}
+	}
+}
+
+#hs_form_target_contactForm form.hs-form .field {
+	// width: 50%;	
+}
+
+.textBox {
+	// background-color: pink;
+	ul {
+		padding-left: 20px;
+		margin-top: 20px;
+
+		li {
+			font-size: 1.6em;
+			margin-bottom: 10px;
+		}
+	}
+
+}
+
+.imageBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img {
+		width: 90%;
+		max-width: 420px;
+	}
+}
+
+.slide .textBox {
+	padding-bottom: 30px;
+	.nextSlide {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		padding: 8px 24px;
+		min-width: 80px;
+	}
+}
+
+.slick-arrow {
+	display: none !important;
 }
 
 

@@ -1,3 +1,389 @@
+.innerPage .hero {
+	height: 350px;
+	.container {
+		height: 100%;
+		.overlay {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			flex-direction: column;
+			text-align: center;
+			h1 {
+				padding: 0;
+				max-width: none;
+				margin-bottom: 30px;
+			}
+			h2 {
+				padding-bottom: 0;
+			}
+		}
+
+	} 
+}
+
+// about us starts
+
+.aboutUs {
+
+	.ctaLeftTextRight {
+		margin-top: 10px;
+		margin-bottom: 5px;
+
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 400px;
+			padding-right: 5px;
+			padding-left: 5px;
+			.ctaText,
+			.textBox {
+				width: 50%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				text-align: center;	
+				padding: 0 20px;
+				h2 {
+					font-size: 2.4em;
+					margin-bottom: 20px;
+				}
+				p {
+					margin-bottom: 20px;
+				}
+			}
+
+			.ctaText {
+				background-color: $green;
+				h2, p {
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+// about us ends
+
+// pediatric dentistry starts
+
+.pediatricDentistry, .orthodontics {
+	.whiteBanner {
+		p {
+			max-width: none;	
+		}
+	}
+
+
+
+	.imageLeftTextRight, .imageRightTextLeft {
+		.container .textBox {
+			text-align: left;
+			align-items: flex-start;
+			h2 {
+				font-size: 3.8em;
+				margin-bottom: 20px;
+			}
+
+			h2.large {
+				font-size: 4em;
+			}
+			h3 {
+				font-size: 2.2em;
+			}
+			p {
+				margin-top: 20px;
+				font-size: 1.8em;
+			}
+			ul {
+				padding-left: 20px;
+			}
+
+			li {
+				font-size: 1.8em;
+			}
+
+		} 
+
+		.container .imageBox {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	.thisOrThat {
+		margin: 80px 0;
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			.transition {
+				width: 70%;
+				display: flex;
+				span {
+					width: 50%;
+					display: flex;
+					justify-content: center;
+					align-items: center;	
+				}
+			}
+			h2.transition {
+				font-size: 3em;
+			}
+			p.transition {
+				font-size: 2.4em;
+				margin-top: 15px;
+			}
+		}
+	}
+
+	.imageSlider .container .slide .textBox h2 {
+		font-size: 2.8em;
+	}
+
+	.imageSlider .container .slide .textBox {
+		ul {
+			padding-left: 20px;
+		}
+
+		li {
+			font-size: 1.8em;
+		}
+	}
+
+	.twoPhotoLeftTextRight {
+		margin-top: 30px;
+		margin-bottom: 30px;
+		.container .textBox {
+			text-align: center;
+			h2.large {
+				font-size: 4em;
+
+			}
+		}
+
+	} 
+
+}
+
+// pediatric dentistry ends
+
+// orthodontics starts 
+
+.imageSlider.reverse .container .slick-dots {
+    position: absolute;
+    bottom: 30px;
+    right: 24%;
+    left: initial;
+}
+
+.orthodontics {
+	#dentofacialOrthopedics {
+
+	}
+}
+
+// orthodontics ends
+
+
+// Contact Page
+
+.addressForm {
+	.container {
+		display: flex;
+		.leftSide, .rightSide {
+			width: 50%;
+			padding: 30px;
+		}
+
+		.leftSide {
+			// padding-left: 30px;
+			ul {
+				li {
+					list-style: none;
+					position: relative;
+					padding-left: 40px;
+					margin-bottom: 20px;
+					font-size: 1.6em;
+					color: $fontGrey;
+					max-width: 300px;
+
+
+					.liLogo {
+						position: absolute;
+						left: 0;
+						width: 20px;
+						top: 5px;
+					}
+					a {
+						text-decoration: none;
+						color: $fontGrey;
+					}
+					span {
+							font-weight: 600;
+						}
+				}
+			}
+		}
+
+		.rightSide {
+			h3 {
+				font-size: 3.4em;
+				text-align: center;
+				margin-bottom: 20px;
+
+			}
+
+		}
+	}
+}
+
+.map {
+	padding-bottom: 60px;
+	#map {
+		height: 300px;
+	}
+}
+
+// Contact Page Ends
+
+// Invisalign Page
+
+.linkBar {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		.button {
+			// margin-right: 20px;
+			margin-bottom: 20px;
+			color: $fontGrey;
+			border: 1px solid $fontGrey;
+			width: 31%;
+			margin-right: 1%;
+			margin-right: 1%;
+			padding-top: 8px;
+			padding-bottom: 8px;
+			padding-left: 0;
+			padding-right: 0;
+
+		}
+
+		.button:hover {
+			background-color: $turqoise;
+			color: white;
+			border: 1px solid $turqoise;
+		}
+	}
+}
+
+.imageRightTextLeft {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	.textBox, .imageBox {
+		width: 50%;
+	}
+}
+
+.twoPhotoLeftTextRight {
+	padding-top: 30px;
+	.container {
+		display: flex;
+		.imageBox{
+			width: 50%;
+			position: relative;
+			margin-right: 30px;
+			img {
+				width: 60%;
+				height: auto;
+				position: absolute;
+			}
+
+			img:nth-child(1) {
+				top: 0;
+				left: 10%;
+			}
+
+			img:nth-child(2) {
+				bottom: 0;
+				right: 10%;
+			}
+		}
+		.textBox {
+			width: 50%;
+				margin-left: 30px;
+				h2 {
+					font-size: 2.4em;
+					margin-bottom: 30px;
+				}
+				p {
+					font-size: 1.6em;
+					margin-bottom: 20px;
+				}
+
+				.button {
+					margin-top: 30px;
+				}
+		}
+	}
+}
+
+.imageSlider.white {
+	.container {
+		background-color: white;
+		.slick-dots li button {
+			background-color: white;
+		}
+		.slick-dots li.slick-active button {
+			background-color: $darkGrey;
+		}
+	}
+}
+
+.imageLeftTextRight {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	.container {
+		display: flex;
+		.textBox, .imageBox {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			width: 50%;
+			// margin-left: 30px;
+			h2 {
+				font-size: 3.2em;
+				margin-bottom: 30px;
+			}
+			p {
+				font-size: 1.8em;
+				margin-bottom: 20px;
+				max-width: 100%;
+			}
+			img {
+				// width: 80%;
+			}
+
+			.button {
+				margin-top: 30px;
+			}
+		}
+
+		.textBox {
+			margin-left: 30px;
+		}
+	}
+}
+
 /* LANDING PAGE */
 
 .landingPage {
@@ -278,7 +664,7 @@ p.itemTag {
 
 .thankYou {
 	text-align: center;
-	min-height: 70vh;
+	height: 300px;
 	display: flex;
 	align-items: center;
 	color: grey;
@@ -300,4 +686,731 @@ p.itemTag {
 	.mainBtn {
 		margin-top: 20px;
 	}
+}
+
+
+
+#hs_cos_wrapper_ourTeamFlexibleColumn {
+	display: flex;
+	flex-wrap: wrap;
+	.teamMemberDoctor {
+		width: 100%;
+		.teamMemberInner {
+			border: 5px solid white;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+			height: 400px;
+			.overlay {
+				height: 100%;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				justify-content: flex-end;
+				padding-bottom: 30px;
+				.textSection {
+					h2, p {
+						color: white;
+					}
+				}
+			}
+		}
+		.doctorDescription {
+			height: 0;
+			max-height: 0;
+			overflow: hidden;
+			width: 100%;
+			transition: all 1s;	
+		}
+	}
+
+	.descriptionOpen {
+		.doctorDescription {
+			height: auto;
+			max-height: 600px;
+			overflow: scroll
+		}
+	}
+
+	.teamMember {
+		width: 33.3%;
+		// background-color: blue;
+		height: 440px;
+		.teamMemberInner {
+			border: 5px solid white;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+			.overlay {
+				background-color: rgba(0,0,0,0.3);
+				height: 100%;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				justify-content: center;
+				padding-bottom: 30px;
+				.textSection {
+					h2, p {
+						color: white;
+					}
+				}
+			}
+		} 
+
+	}
+
+	.teamMember.lastOne {
+		margin-left: 33.3%;
+		margin-right: 33.3%;
+		width: 100%;
+	}
+
+	.teamMember.secondLastTwo {
+		margin-right: 16.65%
+	}
+	.teamMember.lastTwo {
+		// width: 50%;
+		margin-left: 16.65%
+	}
+
+
+}
+
+// virtual smile analysis
+
+.virtualSmileAnalysis {
+	.hero {
+		.container {
+			.overlay {
+				height: 300px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				h1 {
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+
+.smileAssessment {
+	h3 {
+		font-size: 3em;
+		text-align: center;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	form.hs-form {
+		justify-content: space-between;
+		width: 60%;
+		margin: 0 auto;
+
+		.field {
+			width: 100%;
+			padding-right: 0;
+		}
+		.field.imgUpload {
+			width: 46%;
+			background-color: $lightGrey;
+			.input {
+				margin-bottom: 0;
+			}
+		}
+
+		.imgUpload:nth-of-type(2) {
+			background-color: blue;
+		}
+
+		.hs_submit input {
+			display: inherit;
+			margin: 0 auto;
+		}
+		
+	}
+
+	.orthoInstructions, .pediatricInstructions {
+	    height: 0;
+	    overflow: hidden;
+	    max-height: 0;
+	    transition: all 1s;
+	}
+
+	.orthoInstructions.active, .pediatricInstructions.active {
+	    height: auto;
+	    max-height: 800px;
+	}
+
+	.hs_ortho_for_you_or_your_child.hs-form-field,
+	.hs_how_old_is_your_child.hs-form-field,
+	.hs_how_old_is_your_child,
+	.hs_have_they_ever_been_to_the_dentist,
+	.hs_primary_concerns_yourself,
+	.hs_email,
+	.hs_patient_first_name,
+	.hs_patient_last_name,
+	.hs_parent_guardian_s_name,
+	.hs_city,
+	.hs_province,
+	.hs_phone,
+	.hs_face_front_smile,
+	.hs_face_side_smile,
+	.hs_teeth_right_side,
+	.hs_teeth_left_side,
+	.hs_top_teeth,
+	.hs_bottom_teeth,
+	.hs_pediatric_area_of_concern,
+	.hs_pediatric_other_pictures,
+	.hs_email_consent
+	{
+	    height: 0;
+	    overflow: hidden;
+	    max-height: 0;
+	    transition: all 1s;
+	}
+
+	.hs_patient_first_name,
+	.hs_patient_last_name,
+	.hs_city,
+	.hs_province {
+		width: 49% !important;
+		// padding-right: 10px;
+		// padding-left: 10px;
+	}
+
+	.hs_phone.active {
+		// position: relative;
+		margin-bottom: 60px;
+	}
+
+	.hs_phone.active:after {
+		content: "Upload the Following Photos";
+		position: absolute;
+		left: 50%;
+		font-size: 3em;
+		transform: translateX(-50%);
+		font-family: $fontTitle;
+	}
+
+	.active.hs-form-field {
+	    max-height: 500px;
+	    height: auto;
+	    /*background-color: pink;*/
+	}
+
+	.hs-form-field.imgUpload.active {
+		margin-bottom: 10px;
+	}
+
+	.hs-form-field.imgUpload {
+	    /*background-color: purple;*/
+	    // width: 150px;
+	    // margin-bottom: 10px;
+	}
+
+	.hs-form-field .exampleImg {
+	    /*background-color: blue;*/
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    flex-direction: column;
+	    transition: all 0.5s;
+	    position: relative;
+	    img {
+	    	margin-top: 20px;
+	    }
+	    span {
+	    	font-size: 2.4em;
+	    	margin-top: 20px;
+	    	margin-bottom: 20px;
+	    }
+	}
+
+	.hs-form-field .exampleImg:hover {
+	    /*background-color: green;*/
+	    // border: 1px solid black;
+	}
+
+	.hs-form-field .exampleImg img {
+	    /*border: 1px solid green;*/
+	    width: 70%;
+	    height: auto;
+	    max-width: 220px;
+	}
+
+	.hs-form-field input[type='file'] {
+	    // background-color: pink;
+	    display: none;
+	}
+	.exampleImg {
+		// width: 150px;
+	}
+
+	.exampleImg:after {
+	    content: "\f0ee";
+	    font-family: FontAwesome;
+	    position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    right: 0;
+	    left: 0;
+	    font-size: 8em;
+	    width: 100%;
+	    height: 100%;
+	    background-color: black;
+	    color: white;
+	    display: flex;
+	    /*display:none;*/
+	    justify-content: center;
+	    align-items: center;
+	    opacity:0;
+	    transition: all 0.5s;
+	    cursor: pointer;
+	}
+
+	.exampleImg:hover:after {
+	    display: flex;
+	    opacity: 0.7;
+	}
+
+} 
+
+
+
+
+// financial information page
+
+
+// emergency care page 
+
+.emergencyCare .hero .container {
+	background-image: url("https://cdn2.hubspot.net/hubfs/3424896/saleshub/headgear.jpg");
+}
+
+.emergencyCare {
+	.imageLeftTextRight .imageBox {
+		// background-image: url("https://cdn2.hubspot.net/hubfs/3424896/saleshub/general-soreness.jpg");
+	}
+}
+
+// payment calculator
+
+.paymentCalculator {
+	margin-top: 60px;
+
+	.calculatorGroup {
+	  max-width: 900px;
+	  margin: auto;
+	  display: flex;
+	  flex-direction: row-reverse;
+	  justify-content: center;
+	  align-items: flex-start;
+	}
+
+	.calculatorSidebar {
+	  width: 30%;
+	  margin-left: 5%;
+	}
+
+	h2 {
+	  font-size: 16px;
+	  color: $fontGrey;
+	}
+
+	ol {
+	  padding-left: 1em;
+	}
+
+	li {
+	  font-size: 14px;
+	  padding: 5px;
+	}
+
+	p.footnote {
+	  font-size: 12px;
+	}
+
+	.calculator {
+	  width: 65%;
+	  max-width: 550px;
+	  background: #efefef;
+	  border-radius: 5px;
+	}
+
+	form {
+	  padding: 4%;
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  flex-wrap: wrap;
+	}
+
+	fieldset {
+	  position: relative;
+	  width: 45%;
+	  border: none;
+	  padding: 0;
+	  margin: 5px 0;
+	}
+
+	fieldset:after {
+	  position: absolute;
+	  content: "$";
+	  left: 8px;
+	  bottom: 24px;
+	  font-size: 14px;
+	}
+
+	fieldset:nth-child(4):after {
+	  display: none;
+	}
+
+	fieldset:nth-child(1),
+	fieldset:nth-child(4) {
+	  width: 100%;
+	}
+
+	fieldset:nth-child(1) input {
+	  width: calc(45% - 30px);
+	}
+
+	fieldset:nth-child(2) input,
+	fieldset:nth-child(3) input {
+	  width: calc(100% - 30px);
+	}
+
+	fieldset:nth-child(4) input {
+	  width: calc(100% - 140px);
+	  padding: 0;
+	}
+
+	label {
+	  display: block;
+	  padding-bottom: 8px;
+	  color: $fontGrey;
+	}
+
+	input {
+	  padding: 8px 8px 8px 20px;
+	  margin-bottom: 15px;
+	  font-size: 14px;
+	  border-radius: 5px;
+	  border: 1px solid rgba(0,0,0,0.2);
+	}
+
+	input[type="range"] {
+	  -webkit-appearance: none;
+	  margin: 10px 0;
+	  width: 100%;
+	  border: 0;
+	  border-radius: 30px;
+	}
+
+	input[type="range"]:focus {
+	  outline: none;
+	}
+
+	input[type="range"]::-webkit-slider-runnable-track {
+	  width: 100%;
+	  height: 20px;
+	  cursor: pointer;
+	  animate: 0.2s;
+	  box-shadow: none;
+	  background: rgba(0,0,0,0.2);
+	  border-radius: 30px;
+	  border: 0;
+	}
+
+	input[type="range"]::-webkit-slider-thumb {
+	  box-shadow: none;
+	  border: 0;
+	  height: 20px;
+	  width: 30px;
+	  border-radius: 30px;
+	  background: $turqoise;
+	  cursor: pointer;
+	  -webkit-appearance: none;
+	  margin-top: 0;
+	}
+
+	input[type="range"]:focus::-webkit-slider-runnable-track {
+	  background: rgba(0,0,0,0.2);
+	}
+
+	input[type="range"]::-moz-"range"-track {
+	  width: 100%;
+	  height: 20px;
+	  cursor: pointer;
+	  animate: 0.2s;
+	  box-shadow: 0;
+	  background: rgba(0,0,0,0.2);
+	  border-radius: 30px;
+	  border: 0px solid #000101;
+	}
+
+	input[type="range"]::-moz-"range"-thumb {
+	  box-shadow: 0;
+	  border: 0px solid #000000;
+	  height: 20px;
+	  width: 30px;
+	  border-radius: 30px;
+	  background: $turqoise;
+	  cursor: pointer;
+	}
+
+	input[type="range"]::-ms-track {
+	  width: 100%;
+	  height: 20px;
+	  cursor: pointer;
+	  animate: 0.2s;
+	  background: transparent;
+	  border-color: transparent;
+	  border-width: 30px 0;
+	  color: transparent;
+	}
+
+	input[type="range"]::-ms-fill-lower {
+	  background: rgba(0,0,0,0.2);
+	  border: 0px solid #000101;
+	  border-radius: 30px;
+	  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+	}
+
+	input[type="range"]::-ms-fill-upper {
+	  background: rgba(0,0,0,0.2);
+	  border: 0px solid #000101;
+	  border-radius: 30px;
+	  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+	}
+
+	input[type="range"]::-ms-thumb {
+	  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+	  border: 0px solid #000000;
+	  height: 20px;
+	  width: 30px;
+	  border-radius: 30px;
+	  background: $turqoise;
+	  cursor: pointer;
+	}
+
+	input[type="range"]:focus::-ms-fill-lower {
+	  background: rgba(0,0,0,0.2);
+	}
+
+	input[type="range"]:focus::-ms-fill-upper {
+	  background: rgba(0,0,0,0.2);
+	}
+
+	.rangeValue {
+	  position: absolute;
+	  right: 0;
+	  bottom: 4px;
+	  background: $turqoise;
+	  border-radius: 5px;
+	  color: white;
+	  font-size: 20px;
+	  padding: 5px 10px;
+	  text-align: right;
+	  min-width: 95px;
+	}
+
+	.rangeValue:after {
+	  position: absolute;
+	  content: "";
+	  width: 0;
+	  height: 0;
+	  left: -8px;
+	  top: 8px;
+	  border-top: 8px solid transparent;
+	  border-bottom: 8px solid transparent;
+	  border-right: 8px solid $turqoise;
+	}
+
+	.calculatorResult {
+	  background: $turqoise;
+	  color: white;
+	  font-size: 26px;
+	  text-align: right;
+	  padding: 2% 4%;
+	  border-bottom-right-radius: 5px;
+	  border-bottom-left-radius: 5px;
+	}
+
+	.resultBlock {
+	  display: inline-block;
+	  background: $turqoise;
+	  padding: 10px;
+	  border-radius: 5px;
+	}
+
+	.monthlyCost {
+	  margin-left: 20px;
+	}
+
+	@media screen and (max-width: 767px) {
+	  .calculatorGroup {
+	    display: block;
+	  }
+
+	  .calculator {
+	    width: 100%;
+	  }
+
+	  .calculatorSidebar {
+	    width: 100%;
+	    margin: 0 0 40px;
+	  }
+	}
+
+	@media screen and (max-width: 530px) {
+	  form {
+	    display: block;
+	  }
+
+	  fieldset {
+	    width: 100%;
+	  }
+
+	  fieldset:nth-child(1) input {
+	    width: calc(100% - 30px);
+	  }
+
+	  fieldset:nth-child(4) input {
+	    width: calc(100% - 10px);
+	  }
+
+	  .rangeValue {
+	    display: inline-block;
+	    position: relative;
+	    bottom: 0;
+	    left: 0;
+	    min-width: 0;
+	    font-size: 18px;
+	  }
+
+	  .rangeValue:after {
+	    transform: rotate(90deg);
+	    top: -12px;
+	    left: 15px;
+	  }
+
+	  .calculatorResult {
+	    text-align: left;
+	    font-size: 22px;
+	  }
+
+	  .resultBlock {
+	    display: block;
+	    margin-top: 10px;
+	  }
+	}
+}
+
+// landing Page
+
+.hero.landingPage {
+	.container .overlay {
+		height: 400px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		h1 {
+			padding: 0;
+		}
+	}
+}
+
+.landingPage {
+	.hero .container .overlay h1 {
+		padding-top: 200px;
+		padding-bottom: 200px;
+	}
+
+	.landing {
+		.container {
+			display: flex;
+			.leftSide,
+			.rightSide {
+				// width: 50%;
+				padding: 20px;
+				h2 {
+					font-size: 2.2em;
+					margin-bottom: 30px;
+				}
+
+				h3 {
+					font-size: 2em;
+					margin-bottom: 20px;
+				}
+
+				p {
+					margin-bottom: 20px;
+				}
+				ul, ol {
+					margin-bottom: 20px;
+					padding-left: 22px;
+				}
+
+				li {
+					font-size: 1.8em;
+				}
+			}
+
+			.leftSide {
+				padding-top: 20px;
+				width: 60%;	
+				h2 {
+					font-size: 2.2em;
+					margin-bottom: 30px;
+				}
+
+				h3 {
+					font-size: 2em;
+					margin-bottom: 20px;
+				}
+
+				p {
+					margin-bottom: 20px;
+				}
+				ul, ol {
+					margin-bottom: 20px;
+					padding-left: 22px;
+				}
+
+				li {
+					font-size: 1.8em;
+				}
+			}
+
+			.rightSide {
+				width: 40%;
+				background-color: white;
+				border-radius: 10px;
+				// display: flex;
+				// justify-content: center;
+				// align-items: center;
+				.hs_cos_wrapper_type_form {
+					box-shadow: -2px 2px 2px 1px rgba(0,0,0,0.4);
+					display: block;
+					width: 90%;
+					margin: 0 auto;
+					margin-top: -150px;
+					background-color: white;
+					padding: 20px;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					border: 2px solid $lightGrey;
+					form.hs-form .field {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	
 }

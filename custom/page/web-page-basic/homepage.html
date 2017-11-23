@@ -10,16 +10,251 @@
 	<meta name="description" content="{{ page_meta.meta_description }}">
 	<meta name="generator" content="HubSpot">
 	<title>{{ page_meta.html_title }}</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+	<link rel="stylesheet" href="/custom/styles/default/styles.css">
 	{% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
 
 	{{ standard_header_includes }}
 	{% style include_default_custom_css="true" %}
 
 </head>
+
 <body class="home">
 	{% include 'custom/system/global/header.html' %}
 
-	
+				{% widget_container "my_flexible_column" label="Hero Section" %}
+
+				<div class="hero">
+					<div class="container">
+						<div class="overlay">
+						<h1>{% text "heroHeader" label="Hero Header Text", no_wrapper=True, value="Edmonton’s Orthodontic and Pediatric Dentistry Practice" %}</h1>
+
+						<h2>{% text "heroSubHeader" label="Hero Subheader Text", no_wrapper=True, value="As a caring parent, you want what’s best for your family’s teeth. We prioritize the comfort of our patients, ensuring everyone leaves our practice with a bright smile." %}</h2>				
+						</div>
+					</div>
+				</div>
+
+				{% end_widget_container %}
+
+				<div class="whiteBanner">
+					<div class="container">
+						<h2 class="large">{% text "whiteBannerCopy" label="White Banner Copy", no_wrapper=True, value="Healthy, Beautiful Teeth <br>Start Here" %}</h2>
+					</div>
+				</div>
+
+				<div class="imageGrid">
+					<div class="container">
+						<div class="leftColumn">
+							<div class="textBox">
+								<h2>{% text "gridLeftTextHeader" label="Grid Left Header", no_wrapper=True, value="Pediatric Dentistry" %}</h2>
+								<p>
+								{% text "gridLeftText" label="Grid Left Copy Upper", no_wrapper=True, value="
+								 Visit our pediatric dentist for regular check-ups and get tips for daily oral care at home. Rest assured your child feels comfortable at our relaxing practice environment." %}
+								</p>
+								<p>
+								{% text "gridLeftText2" label="Grid Left Copy Lower", no_wrapper=True, value="
+								 Pave the way for a lifetime of healthy teeth. Our doctors are specially trained to treat children, so you can remain confident your child’s preventive dental care is in good hands." %}
+								</p>
+
+								<a href="/book-an-appointment" class="bookAppointment">Book an Appointment</a>
+							</div>
+							<div class="imageBox">
+							</div>
+						</div>
+						<div class="rightColumn">
+							<div class="upper">
+								<div class="imageBox">
+								</div>
+								<div class="textBox">
+									<h2>{% text "gridRightUpperHeader" label="Grid Right Upper", no_wrapper=True, value="Orthodontics" %}</h2>
+									<p>
+									{% text "gridRightUpperTextUpper" label="Grid Right Upper Copy Upper", no_wrapper=True, value="
+															 Help your child or teenager achieve a perfect smile. We offer a range of orthodontic treatments to straighten their teeth, improve their overall health, and prevent future dental problems." %}							
+									</p>
+									<p>
+									{% text "gridRightUpperTextLower" label="Grid Right Upper Copy Lower", no_wrapper=True, value="It’s never too late to start orthodontic treatment! Advances
+			technology make it easier than ever to gain a beautiful smile and
+			improve your overall health with little impact to your daily life." %}							
+									</p>
+									<a href="/book-an-appointment" class="bookAppointment">Book an Appointment</a>
+								</div>
+							</div>
+							<div class="lower">
+								<div class="textBox">
+								    <h2>{% text "gridRightlowerHeader" label="Grid Lower Upper", no_wrapper=True, value="Invisalign" %}</h2>
+
+									<p>
+									{% text "gridRightlowerText" label="Grid Right lower Copy", no_wrapper=True, value="
+															Rest assured your child feels comfortable at our relaxing practice environment. Visit our pediatric dentist for regular check-ups and get tips for daily oral care at home.
+										" %}	
+
+									</p>
+									<a href="/book-an-appointment" class="bookAppointment">Book an Appointment</a>
+								</div>
+								<div class="imageBox">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="whiteBanner">
+					<div class="container">
+						<h2>Book an Appointment</h2>
+						<p>{% text "bookAppointmentBanner" label="Book an Appointment Banner", no_wrapper=True, value="Does your child need to see one of our highly trained dentists or orthodontists?" %}</p>
+						<a href="/book-an-appointment" class="button black">Book Now</a>
+					</div>
+
+				</div>
+
+				<div class="imageSlider">
+					<div class="container slickContainer">
+						<div class="slide">
+							<div class="textBox">
+								{% widget_block rich_text "slider1Slide1Text" overrideable=True, no_wrapper=True, label='Slider 1 Slide 1 Text Box'  %}
+								    {% widget_attribute "html" %}
+									<h2>
+									Committed to Caring for Your Child’s Growing Smile</h2>
+									{% image "slider1Slide1Img" label='Slider 1 Slide 1 image', alt='', extra_classes="mobileSlideImage", src='https://cdn2.hubspot.net/hubfs/3424896/saleshub/family.jpg' %}
+									<!--<img class="mobileSlideImage" src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/family.jpg" alt="">-->
+									<h3>Dedicated Doctors</h3>
+									<p>Our pediatric dental specialists are trained to interact with children of all ages and provide the highest standard of care.</p>
+									<a class="nextSlide button green" href="">Next</a>
+				
+								    {% end_widget_attribute %}
+								{% end_widget_block %}
+							</div>
+							<div class="imageBox">
+								{% image "slider1Slide1Img" label='Slider 1 Slide 1 image', alt='', no_wrapper=True, src='https://cdn2.hubspot.net/hubfs/3424896/saleshub/family.jpg' %}
+							</div>
+						</div>
+						<div class="slide">
+							<div class="textBox">
+							    {% widget_block rich_text "slider1Slide2Text" overrideable=True, no_wrapper=True, label='Slider 1 Slide 2 Text Box'  %}
+								    {% widget_attribute "html" %}
+		                                <h2>Committed to Caring for Your Child’s Growing Smile</h2>
+								        {% image "slider1Slide2Img" label='Slider 1 Slide 2 image', alt='', extra_classes="mobileSlideImage", src='https://cdn2.hubspot.net/hubfs/3424896/saleshub/family.jpg' %}
+							        	<h3>Compassionate Service</h3>
+							        	<p>We’re committed to treating you and your children with the utmost compassion to provide positive dental specialist-patient relationships.</p>
+							        	<a class="nextSlide button green" href="">Next</a>
+								    {% end_widget_attribute %}
+								{% end_widget_block %}
+								
+							</div>
+							<div class="imageBox">
+								{% image "slider1Slide2Img" label='Slider 1 Slide 2 image', alt='', no_wrapper=True,  src='https://cdn2.hubspot.net/hubfs/3424896/saleshub/family.jpg' %}
+							</div>
+						</div>
+						<div class="slide">
+							<div class="textBox">
+								{% widget_block rich_text "slider1Slide3Text" overrideable=True, no_wrapper=True, label='Slider 1 Slide 3 Text Box'  %}
+								    {% widget_attribute "html" %}
+										<h2>Committed to Caring for Your Child’s Growing Smile</h2>
+										{% image "slider1Slide3Img" label='Slider 1 Slide 3 image', alt='', extra_classes="mobileSlideImage", src='https://cdn2.hubspot.net/hubfs/3424896/saleshub/family.jpg' %}
+										<h3>Customized to Your Needs</h3>
+										<p>We’re happy to answer all your oral care questions and help you find the best solution to improve your child’s smile.</p>
+										<a class="nextSlide button green" href="">Next</a>
+								
+								    {% end_widget_attribute %}
+								{% end_widget_block %}
+							            
+							</div>
+							<div class="imageBox">
+								{% image "slider1Slide3Img" label='Slider 1 Slide 1 image', alt='', no_wrapper=True, src='https://cdn2.hubspot.net/hubfs/3424896/saleshub/family.jpg' %}
+							</div>
+						</div>
+						<div class="slide">
+							<div class="textBox">
+								{% widget_block rich_text "slider1Slide4Text" overrideable=True, no_wrapper=True, label='Slider 1 Slide 4 Text Box'  %}
+								    {% widget_attribute "html" %}
+										<h2>Committed to Caring for Your Child’s Growing Smile</h2>
+										{% image "slider1Slide4Img" label='Slider 1 Slide 4 image', alt='', extra_classes="mobileSlideImage", src='https://cdn2.hubspot.net/hubfs/3424896/saleshub/family.jpg' %}
+										<h3>Child-Friendly Office</h3>
+										<p>With gaming station, televisions, and a baby play area, we ensure that your children are comfortable in our fun and interactive practice.</p>
+										<a class="nextSlide button green" href="">Next</a>
+								
+								    {% end_widget_attribute %}
+								{% end_widget_block %}
+							</div>
+							<div class="imageBox">
+								{% image "slider1Slide4Img" label='Slider 1 Slide 1 image', alt='', no_wrapper=True, src='https://cdn2.hubspot.net/hubfs/3424896/saleshub/family.jpg' %}
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="imageTwoTextSections">
+					<div class="container">
+						<div class="imageBox">
+							{% image "imageTwoTextImage" label='Image and two text sections image', alt='', no_wrapper=True, src='https://cdn2.hubspot.net/hubfs/3424896/saleshub/modern-office.jpg' %}
+						</div>
+						<div class="textBox">
+							<div class="upperText">
+								{% widget_block rich_text "imageTwoTextUpperText" overrideable=True, no_wrapper=True, label='Image and Two Text Sections Upper Text '  %}
+								    {% widget_attribute "html" %}
+										<h2>Convenient Location</h2>
+										<p>Our conveniently located practice on the south side is just south of the Whitemud on Gateway Blvd. Our location is easy to find and there is plenty of free parking.</p>
+								    {% end_widget_attribute %}
+								{% end_widget_block %}
+							</div>
+							<div class="lowerText">
+								{% widget_block rich_text "imageTwoTextLowerText" overrideable=True, no_wrapper=True, label='Image and Two Text Sections Lower Text '  %}
+								    {% widget_attribute "html" %}
+										<h2>Flexible Payment Options</h2>
+										<p>Getting dental and orthodontic treatment has never been easier—take advantage of our direct billing and no-interest, easy financing options.</p>
+								    {% end_widget_attribute %}
+								{% end_widget_block %}
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- <div class="imageRightTextLeft"> -->
+				<div class="whiteBanner">
+					<div class="container">
+						{% widget_block rich_text "virtualSmileAnalysis" overrideable=True, no_wrapper=True, label='Virtual Smile Assessment Text '  %}
+						    {% widget_attribute "html" %}
+						    	<h2>Virtual Smile Assesment</h2>
+						    	<p>Too busy to book an appointment or not sure if braces are for you?</p>
+						    	<a href="/virtual-smile-analysis" class="button turqoise">Start Your Assessment</a>
+						    {% end_widget_attribute %}
+						{% end_widget_block %}
+						
+						<!-- <div class="textBox">
+							<h2>Virtual Smile Assesment</h2>
+							<p>Too busy to book an appointment or not sure if braces are for you?</p>
+							<a href="/virtual-smile-assessment" class="button turqoise">Start Your Assessment</a>
+						</div>
+						<div class="imageBox">
+							<img src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/lookBackSmile.png" alt="">
+						</div> -->
+					</div>
+				</div>
+
+				<div class="videoBanner">
+					<div class="container">
+						{% widget_block rich_text "videoBanner" overrideable=True, no_wrapper=True, label='Video Banner Content '  %}
+						    {% widget_attribute "html" %}
+						    	<script src="https://fast.wistia.com/embed/medias/ffzg1ddp5i.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><span class="wistia_embed wistia_async_ffzg1ddp5i popover=true popoverContent=link" style=""><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>
+						    	</a></span>
+						    {% end_widget_attribute %}
+						{% end_widget_block %}
+						
+					</div>
+				</div>
+				<div class="turqoiseBanner">
+					<div class="container">
+						{% widget_block rich_text "bottomTurqoiseBanner" overrideable=True, no_wrapper=True, label='Bottom Turqoise Banner Content '  %}
+						    {% widget_attribute "html" %}
+								<h2 class="large">Referral Program</h2>
+								<p>Know other parents in need of dental services for their kids?</p>
+								<a href="/refer-a-friend" class="button white">Refer a Friend</a>
+						    {% end_widget_attribute %}
+						{% end_widget_block %}
+					</div>
+				</div>
 
 	{% include 'custom/system/global/footer.html' %}
 	{{ standard_footer_includes }}

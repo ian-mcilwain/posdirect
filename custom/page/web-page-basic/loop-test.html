@@ -27,6 +27,19 @@
 		</div>
 	</div>
 
+
+	{% choice "number_of_slides1" label='Choose the number of slides', export_to_template_context=True, value='About', choices='[[\"value1\", \"Label 1\"], [\"value2\", \"Label 2\"]]' %}
+
+
+	{% set slides = number_of_slides1.widget_data %}
+
+	<h1>slides</h1>
+	<ul>
+	{% for slide in slides %}
+	<li>{{ slide }}</li>
+	{% endfor %}
+	</ul>
+
 	<div class="thankYou">
 		<div class="container">
 			<h1>{% text "tyTitle" overrideable=true, cell=false, cells='[]', ending_html='', root=false, row=false, starting_html='', value='Thank You!', label='Title' %}</h1>
