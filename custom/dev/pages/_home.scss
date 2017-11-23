@@ -14,7 +14,7 @@
 				color: white;
 				font-weight: 400;
 				max-width: 640px;
-				padding-top: 300px;
+				padding-top: 200px;
 				padding-left: 60px;
 				padding-bottom: 30px;
 
@@ -28,7 +28,23 @@
 				max-width: 600px;
 				// font-size: 22px;
 				font-size: 2.2em;
-				padding-bottom: 100px;
+				padding-bottom: 20px;
+			}
+			a.bookAppointment {
+				margin-bottom: 80px;
+				margin-left: 60px;
+				display: inline-block;
+				// color: $green;
+				// border-bottom: none;
+				border-style: none;
+				color: white;
+				border: 1px solid $green;
+			}
+
+			a.bookAppointment:hover {
+				color: white;
+				background-color: transparent;
+				border: 1px solid white;
 			}
 			
 		}
@@ -36,13 +52,14 @@
 }
 
 .whiteBanner {
-	padding-top: 80px;
-	padding-bottom: 80px;
+	padding-top: 60px;
+	padding-bottom: 60px;
 	.container {
 		text-align: center;
 		h2 {
 			// font-size: 40px;
 			font-size: 4em;
+			margin-bottom: 20px;
 		}
 
 		p {
@@ -62,6 +79,19 @@
 			font-weight: 400;
 		}
 
+	}
+}
+
+.whiteBanner.noBottom {
+	padding-bottom: 0;
+}
+
+.whiteBanner.fullWidth {
+	// background-color: pink;
+	.container p {
+		max-width: 80%;
+		margin: 0 auto;
+		font-weight: 400;
 	}
 }
 
@@ -181,6 +211,11 @@
 				background-color: $darkGrey;
 			}
 		}
+		// .slick-next {
+		// 	position: absolute;
+		// 	bottom: 50px;
+		// 	left: 25%;
+		// }
 		.slide {
 			display: flex;
 			justify-content: center;
@@ -195,6 +230,9 @@
 					font-size: 3.8em;
 					margin-bottom: 30px;
 				}
+				.mobileSlideImage {
+					display: none;
+				}
 
 				h3 {
 					font-size: 2.2em;
@@ -204,7 +242,9 @@
 			.imageBox {
 				width: 40%;
 				img {
-					width: 100%;
+					// width: 80%;
+
+					margin: 0 auto;
 				}
 			}
 		}
@@ -237,7 +277,7 @@
 .imageRightTextLeft {
 	.container {
 		display: flex;
-		.textBox {
+		.textBox, .imageBox {
 			display: flex;
 			justify-content: center;
 			align-items: flex-start;	
@@ -252,7 +292,10 @@
 				margin-top: 30px;
 				margin-bottom: 30px;
 				// font-size: 20px;
-				font-size: 2em;
+				font-size: 1.8em;
+			}
+			img {
+				// width: 80%;
 			}
 		}
 	}
@@ -261,7 +304,8 @@
 .videoBanner {
 	.container {
 		height: 580px;
-		background-image: url("https://cdn2.hubspot.net/hubfs/3424896/saleshub/brushingTeeth.png");
+		background-image: url("https://cdn2.hubspot.net/hubfs/3424896/saleshub/BrushingTeeth.jpg");
+		background-size: cover;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -294,8 +338,8 @@
 	.container {
 		background-color: $turqoise;
 		text-align: center;
-		padding: 80px 0	;
-	;	h1 {
+		padding: 80px 0;
+		h1 {
 			color: white;
 			font-size: 4.8em;
 			font-weight: 300;

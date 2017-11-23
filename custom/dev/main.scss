@@ -63,7 +63,8 @@ h5 {
 }
 
 p {
-	font-size: 1.6em
+	font-size: 1.6em;
+	max-width: 100%;
 }
 
 a {
@@ -111,6 +112,7 @@ a {
 .button.turqoiseReverse:hover {
 	background-color: $turqoise;
 	color: white;
+	border: 1px solid white;
 }
 
 .button.turqoiseWhite {
@@ -178,9 +180,14 @@ a {
 	border-bottom: 1px dashed $green;
 }
 
+.hbspt-form {
+	.submitted-message {
+		font-size: 1.6em;
+	}
+}
+
 
 form.hs-form {
-	// background-color: pink;
 	display: flex;
 	flex-wrap: wrap;
 	.field.fullWidth {
@@ -189,13 +196,14 @@ form.hs-form {
 	.field {
 		width: 50%;
 		padding-right: 20px;
+
 		label {
 			display: none;
 		}
 		.input {
 			width: 100%;
 			margin-bottom: 10px;
-			input, select {
+			input, select, textarea {
 				width: 100%;
 				border: none;
 				background-color: $lightGrey;
@@ -205,6 +213,23 @@ form.hs-form {
 				height: 2.4em;
 				border-radius: 5px;
 				// text-transform: capitalize;
+			}
+			textarea {
+				height: 4.8em;
+			}
+			.inputs-list {
+				padding-left: 0 !important;
+				li{
+					list-style: none;
+					label {
+						display: flex;
+						justify-content: flex-start;
+						align-items: center;
+						input {
+							width: 10%;
+						}
+					}
+				} 
 			}
 			.error {
 				// background-color: red;
@@ -253,6 +278,44 @@ form.hs-form {
 
 #hs_form_target_contactForm form.hs-form .field {
 	// width: 50%;	
+}
+
+.textBox {
+	// background-color: pink;
+	ul {
+		padding-left: 20px;
+		margin-top: 20px;
+
+		li {
+			font-size: 1.6em;
+			margin-bottom: 10px;
+		}
+	}
+
+}
+
+.imageBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img {
+		width: 90%;
+		max-width: 420px;
+	}
+}
+
+.slide .textBox {
+	padding-bottom: 30px;
+	.nextSlide {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		padding: 8px 24px;
+		min-width: 80px;
+	}
+}
+
+.slick-arrow {
+	display: none !important;
 }
 
 

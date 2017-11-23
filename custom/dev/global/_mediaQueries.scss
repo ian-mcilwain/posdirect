@@ -7,16 +7,30 @@
 }
 
 @media screen and (max-width: 1070px) {
-	body {
-		// font-size: 11px;
+	header {
+		font-size: 8px;
 	}
 
 	.button	{
 		min-width: 200px;
 	}
+
+	.pediatricDentistry .thisOrThat .container .transition,
+	.orthodontics .thisOrThat .container .transition {
+		width: 90%;
+		// flex-wrap: wrap;
+		// span {
+		// 	width: 100%;
+		// }
+
+
+	}
+	form.hs-form .field .input .inputs-list li label input {
+		width: 20%;
+	}
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 970px) {
 	header {
 		display: none;
 	}
@@ -24,13 +38,239 @@
 		display: block;
 	}
 
-	body {
-		// padding-top: 60px;
-		font-size: 9px;
+	.turqoiseBanner {
+		padding-top: 0;
+	}	
+
+	.container {
+		padding-left: 10px;
+		padding-right: 10px;
 	}
+
+	.hero .container {
+		padding: 0;
+	}
+
 }
 
 @media screen and (max-width: 850px) {
+
+	header {
+		font-size: 10px;
+	}
+
+	.hero .container {
+		padding: 0;
+		.overlay {
+			height: 500px;
+			padding: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			h1 {
+				padding: 0;
+				margin-bottom: 20px;
+			}
+			h2 {
+				padding: 0;
+			}
+		}
+	}
+
+	.imageGrid .container {
+		flex-wrap: wrap;
+		height: auto;
+	}
+
+
+	.imageGrid .container .leftColumn,
+	.imageGrid .container .rightColumn {
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
+
+	.imageGrid .container .leftColumn {
+		flex-direction: column-reverse;
+	}
+
+	.imageGrid .container .leftColumn .textBox,
+	.imageGrid .container .leftColumn .imageBox {
+		height: 400px;
+		padding: 20px;
+		p {
+			max-width: none;
+
+		}
+	}
+
+	.imageGrid .container .rightColumn .upper,
+	.imageGrid .container .rightColumn .lower {
+		height: auto;
+		flex-wrap: wrap;
+		.textBox,
+		.imageBox {
+			width: 100%;
+			height: 400px;
+		}
+	}
+
+	.imageGrid .container .rightColumn .lower {
+		flex-direction: column-reverse;
+	}
+
+	.twoPhotoLeftTextRight .container,
+	.imageLeftTextRight .container,
+	.imageRightTextLeft .container,
+	.imageTwoTextSections .container {
+		flex-wrap: wrap;
+		.textBox {
+			padding-left: 10px;
+			padding-right: 10px;
+			width: 100%;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			// text-align: center !important;
+			p {
+				text-align: center;
+				width: 100%;
+			}
+
+			h2 {
+				text-align: center;
+				width: 100%;
+			}
+
+			h3 {
+				text-align: center;
+				width: 100%;
+			}
+			img {
+				width: 100%;
+			}
+			ul {
+
+			}
+		}
+	}
+
+	.imageRightTextLeft .container {
+		flex-direction: column-reverse;	
+	}
+
+	.videoBanner .container {
+		height: 300px;
+	}
+
+	.pediatricDentistry .thisOrThat .container .transition,
+	.orthodontics .thisOrThat .container .transition {
+		width: 90%;
+		flex-wrap: wrap;
+		span {
+			width: 100%;
+			text-align: center;
+		}
+
+		span.bulge {
+			color: $darkGrey;
+			// font-size: 9px;
+			// text-align: center;
+
+		}
+
+		span.bulge2 {
+			color: $fontGrey;
+		}
+
+
+	}
+
+	.twoPhotoLeftTextRight .container,
+	.imageLeftTextRight .container,
+	.imageRightTextLeft .container,
+	.imageTwoTextSections .container {
+		flex-wrap: wrap;
+		.imageBox {
+			padding-left: 10px;
+			padding-right: 10px;
+			width: 100%;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			img {
+				width: 60%;
+				margin: 0 auto;
+			}
+		}
+		
+	}
+
+	.imageSlider .container .slick-dots {
+	    left: 50%;
+	    transform: translateX(-50%);
+	}
+
+	.imageSlider .container .slide .textBox {
+	    width: 100%;
+	    padding-left: 30px;
+	    padding-right: 30px;
+	    text-align: center;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    flex-direction: column;
+
+	    .mobileSlideImage {
+	    	display: block;
+	    	margin: 0 auto;
+	    	width: 60%;
+	    	margin-bottom: 20px;
+	    }
+	    ul {
+	    	// width: 80%;
+	    	// margin: 0 auto;
+	    	text-align: left;
+	    }
+	}
+
+	.imageSlider .container .slide .imageBox {
+	    width: 100%;
+	    padding-left: 30px;
+	    padding-right: 30px;
+	    display: none;
+	}
+
+	.twoPhotoLeftTextRight .container .imageBox img {
+		position: static;
+	}
+
+	.twoPhotoLeftTextRight .container .imageBox img:nth-child(2){
+		display: none;
+	}
+
+	.turqoiseBanner .container h2 {
+		width: 100%;
+	}
+
+	.turqoiseBanner .container p {
+		width: 100%;
+	}
+
+	.landingPage .landing .container {
+		flex-wrap: wrap;
+		.leftSide,
+		.rightSide {
+			width: 100%;
+		}
+	}
+
+	.landingPage .landing .container .rightSide .hs_cos_wrapper_type_form {
+		margin-top: 20px;
+	}
+
+
+
+
 
 	/* Blog */
 	.post-item {
@@ -41,9 +281,62 @@
 	span#hs_cos_wrapper_Resources > div {
 		width: 47%;
 	}
+
+	footer {
+		.container {
+			.footerNav {
+				flex-wrap: wrap;
+				.box {
+					width: 50%;
+				}
+			}
+		}
+	}
+
 }
 
 @media screen and (max-width: 767px) {
+	
+	.imageSlider {
+		margin: 0;
+	}
+
+	.whiteBanner {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.imageRightTextLeft .container .textBox,
+	.imageRightTextLeft .container .imageBox,
+	.imageLeftTextRight .container .textBox,
+	.imageLeftTextRight .container .imageBox {
+		width: 100%;
+		a.button {
+			display: inline-block;
+			margin: 0 auto;
+		}
+	}
+	.textBox, .imageBox {
+		width: 100%;
+	}
+
+	.virtualSmileAnalysis {
+		.smileAssessment form.hs-form {
+			width: 100%;
+		}
+
+		.smileAssessment .hs_phone.active:after {
+			position: static;
+		}
+	}
+
+	.financialInformation {
+	.imageRightTextLeft {
+		.container {
+			flex-direction: column-reverse;
+		}
+	}
+}	
 
 	/* Blog */
 
@@ -143,6 +436,66 @@
 		max-width: 500px;
 	}
 } /* End max-width: 767px */
+
+@media screen and (max-width: 580px) {
+	.twoPhotoLeftTextRight .container,
+	.imageLeftTextRight .container,
+	.imageRightTextLeft .container {
+		flex-wrap: wrap;
+		.imageBox {
+			padding-left: 10px;
+			padding-right: 10px;
+			width: 100%;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			img {
+				width: 90%;
+				margin: 0 auto;
+			}
+		}
+		
+	}
+
+	.virtualSmileAnalysis {
+		.smileAssessment form.hs-form {
+			width: 100%;
+
+			.field.imgUpload {
+				width: 100%;
+				// margin-bottom: 20px;
+			}
+		}
+	}
+
+	footer {
+		.container {
+			.footerNav {
+				flex-wrap: wrap;
+				.box {
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin-bottom: 20px;
+					li {
+						text-align: center;
+					}	
+				}
+				.logins {
+					ul {
+						display: flex;
+						justify-content:center;
+						align-items: center;
+						flex-direction: column;
+					}
+				}
+			}
+		}
+	}
+
+	// footer .container .footerNav .box.nav li
+}
+
 
 @media screen and (max-width: 530px) {
 
