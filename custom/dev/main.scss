@@ -27,7 +27,7 @@
 ----------*/
 
 /*Typography*/
-$fontTitle: 'Playfair Display', serif;
+$fontTitle: 'Open Sans', sans-serif;
 $fontMain: 'Open Sans', sans-serif;
 $transition: all 0.3s ease;
 
@@ -123,7 +123,7 @@ a {
 
 .button.turqoiseWhite:hover {
 	color: $turqoise;
-	background-color: white;
+	background-color: transparent;
 }
 
 .button.black {
@@ -131,7 +131,7 @@ a {
 }
 
 .button.black:hover {
-	background-color: white;
+	background-color: transparent;
 	color: black;
 	border: 1px solid black;
 }
@@ -141,7 +141,7 @@ a {
 }
 
 .button.green:hover {
-	background-color: white;
+	background-color: transparent;
 	color: $green;
 	border: 1px solid $green;
 }

@@ -246,8 +246,18 @@ app.slide = function () {
 		cssEase: 'linear',
 		arrows: true,
 		adaptiveHeight: true
-		// 		nextArrow: '<i class="fa fa-chevron-right"></i>',
-		// 		prevArrow: '<i class="fa fa-chevron-left"></i>'
+
+	});
+
+	$('.sliderWrapper').slick({
+		dots: true,
+		infinite: true,
+		speed: 500,
+		fade: true,
+		cssEase: 'linear',
+		arrows: true,
+		nextArrow: '<a class="nextSlide button green" href="">Next</a>',
+		prevArrow: ''
 	});
 };
 
