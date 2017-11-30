@@ -995,7 +995,7 @@ footer .container {
         .imageSlider .container .slide .imageBox img {
           margin: 0 auto; }
 
-.homeSlider .container {
+.leftSlider .container {
   background: #d4e6ed;
   display: -ms-flexbox;
   display: flex;
@@ -1005,19 +1005,29 @@ footer .container {
       align-items: center;
   padding: 30px; }
 
-.homeSlider .leftText {
+.leftSlider .leftText {
   width: 50%;
   padding: 0 30px; }
 
-.homeSlider .rightImage {
+.leftSlider .rightImage {
   width: 45%; }
 
-.homeSlider h2 {
+.leftSlider h2 {
   font-size: 3.8em;
-  margin-bottom: 30px; }
+  margin-bottom: 25px; }
 
-.homeSlider h3 {
-  font-size: 2.2em; }
+.leftSlider h3 {
+  font-size: 2.2em;
+  margin-bottom: 10px; }
+
+.leftSlider.whiteBG .container {
+  background: transparent; }
+
+.leftSlider.whiteBG .sliderWrapper .slick-dots li button {
+  background: transparent; }
+
+.leftSlider.whiteBG .sliderWrapper .slick-dots li.slick-active button {
+  background-color: #8c989c; }
 
 .sliderWrapper .slick-dots {
   margin: 20px auto 0;
@@ -1091,7 +1101,7 @@ footer .container {
     .imageRightTextLeft .container .textBox p, .imageRightTextLeft .container .imageBox p {
       margin-top: 30px;
       margin-bottom: 30px;
-      font-size: 1.8em; }
+      font-size: 1.6em; }
 
 .smileAssessmentBanner .container {
   display: -ms-flexbox;
@@ -1182,7 +1192,8 @@ footer .container {
     .turqoiseBanner .container p {
       color: white;
       font-size: 2em;
-      width: 50%;
+      font-weight: 300;
+      max-width: 600px;
       margin: 30px auto; }
     .turqoiseBanner .container a.button {
       margin: 10px; }
@@ -1388,16 +1399,11 @@ footer .container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
     .linkBar .container .button {
-      margin-bottom: 20px;
       color: #464646;
-      border: 1px solid #464646;
-      width: 31%;
-      margin-right: 1%;
-      margin-right: 1%;
-      padding-top: 8px;
-      padding-bottom: 8px;
-      padding-left: 0;
-      padding-right: 0; }
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      min-width: 0;
+      padding: 5px 20px;
+      margin: 10px 15px; }
     .linkBar .container .button:hover {
       background-color: #1bbab9;
       color: white;
@@ -1448,8 +1454,7 @@ footer .container {
     background-color: #8c989c; }
 
 .imageLeftTextRight {
-  margin-top: 30px;
-  margin-bottom: 30px; }
+  margin-top: 30px; }
   .imageLeftTextRight .container {
     display: -ms-flexbox;
     display: flex; }
@@ -1466,14 +1471,42 @@ footer .container {
       .imageLeftTextRight .container .textBox h2, .imageLeftTextRight .container .imageBox h2 {
         font-size: 3.2em;
         margin-bottom: 30px; }
+      .imageLeftTextRight .container .textBox h3, .imageLeftTextRight .container .imageBox h3 {
+        font-size: 2.4em;
+        margin: 0 auto 20px;
+        width: 100%; }
       .imageLeftTextRight .container .textBox p, .imageLeftTextRight .container .imageBox p {
-        font-size: 1.8em;
+        font-size: 1.6em;
         margin-bottom: 20px;
         max-width: 100%; }
       .imageLeftTextRight .container .textBox .button, .imageLeftTextRight .container .imageBox .button {
         margin-top: 30px; }
     .imageLeftTextRight .container .textBox {
       margin-left: 30px; }
+
+.invisalign .imageLeftTextRight .container {
+  padding-bottom: 4%;
+  padding-top: 4%;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .invisalign .imageLeftTextRight .container .textBox {
+    display: block; }
+  .invisalign .imageLeftTextRight .container .button {
+    margin: 20px 5px 0; }
+
+.invisalign .whiteBanner {
+  padding: 4% 0 2%; }
+
+.invisalign .leftSlider.whiteBG {
+  margin-bottom: 50px; }
+  .invisalign .leftSlider.whiteBG .container {
+    -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse; }
+  .invisalign .leftSlider.whiteBG h3 {
+    font-size: 2.8em;
+    margin-bottom: 20px; }
 
 /* LANDING PAGE */
 .landingPage header {
@@ -2705,8 +2738,8 @@ ul.pagination li.active a {
   .hero .container {
     padding: 0; }
     .hero .container .overlay {
-      height: 500px;
-      padding: 20px;
+      min-height: 500px;
+      padding: 40px 20px;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: center;
@@ -2720,6 +2753,8 @@ ul.pagination li.active a {
         margin-bottom: 20px; }
       .hero .container .overlay h2 {
         padding: 0; }
+      .hero .container .overlay a.bookAppointment {
+        margin: 40px 0 0; }
   .imageGrid .container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2791,19 +2826,33 @@ ul.pagination li.active a {
       .imageRightTextLeft .container .textBox img,
       .imageTwoTextSections .container .textBox img {
         width: 100%; }
-  .homeSlider .container {
+  .leftSlider .container {
     -ms-flex-direction: column-reverse;
         flex-direction: column-reverse; }
-  .homeSlider .leftText,
-  .homeSlider .rightImage {
+  .leftSlider .leftText,
+  .leftSlider .rightImage {
     width: 100%;
-    text-align: center; }
-  .homeSlider .rightImage {
+    text-align: center;
+    padding: 0; }
+  .leftSlider .rightImage {
     max-width: 400px;
     margin-bottom: 30px; }
   .imageRightTextLeft .container {
     -ms-flex-direction: column-reverse;
         flex-direction: column-reverse; }
+  .smileAssessmentBanner .container {
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse; }
+    .smileAssessmentBanner .container .textBox,
+    .smileAssessmentBanner .container .imageBox {
+      width: 100%;
+      text-align: center;
+      padding: 0; }
+    .smileAssessmentBanner .container .imageBox {
+      max-width: 400px;
+      margin-bottom: 30px; }
+      .smileAssessmentBanner .container .imageBox img {
+        width: 100%; }
   .videoBanner .container {
     height: 300px; }
   .pediatricDentistry .thisOrThat .container .transition,

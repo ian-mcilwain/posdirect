@@ -62,8 +62,8 @@
 	.hero .container {
 		padding: 0;
 		.overlay {
-			height: 500px;
-			padding: 20px;
+			min-height: 500px;
+			padding: 40px 20px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -74,6 +74,9 @@
 			}
 			h2 {
 				padding: 0;
+			}
+			a.bookAppointment {
+				margin: 40px 0 0;
 			}
 		}
 	}
@@ -155,7 +158,7 @@
 		}
 	}
 
-	.homeSlider {
+	.leftSlider {
 		.container {
 			flex-direction: column-reverse;
 		}
@@ -164,6 +167,7 @@
 		.rightImage {
 			width: 100%;
 			text-align: center;
+			padding: 0;
 		}
 
 		.rightImage {
@@ -174,6 +178,26 @@
 
 	.imageRightTextLeft .container {
 		flex-direction: column-reverse;	
+	}
+
+	.smileAssessmentBanner .container {
+		flex-direction: column-reverse;
+
+		.textBox,
+		.imageBox {
+			width: 100%;
+			text-align: center;
+			padding: 0;
+		}
+
+		.imageBox {
+			max-width: 400px;
+			margin-bottom: 30px;
+
+			img {
+				width: 100%;
+			}
+		}
 	}
 
 	.videoBanner .container {

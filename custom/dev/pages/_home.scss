@@ -247,7 +247,7 @@
 
 }
 
-.homeSlider {
+.leftSlider {
 	.container {
 		background: $lightBlue;
 		display: flex;
@@ -267,11 +267,26 @@
 
 	h2 {
 		font-size: 3.8em;
-		margin-bottom: 30px;
+		margin-bottom: 25px;
 	}
 
 	h3 {
 		font-size: 2.2em;
+		margin-bottom: 10px;
+	}
+}
+
+.leftSlider.whiteBG {
+	.container {
+		background: transparent;
+	}
+
+	.sliderWrapper .slick-dots li button {
+		background: transparent;
+	}
+
+	.sliderWrapper .slick-dots li.slick-active button {
+	    background-color: #8c989c;
 	}
 }
 
@@ -365,7 +380,7 @@
 				margin-top: 30px;
 				margin-bottom: 30px;
 				// font-size: 20px;
-				font-size: 1.8em;
+				font-size: 1.6em;
 			}
 			img {
 				// width: 80%;
@@ -478,7 +493,8 @@
 			color: white;
 			// font-size: 20px;
 			font-size: 2em;
-			width: 50%;
+			font-weight: 300;
+			max-width: 600px;
 			margin: 30px auto;
 		}
 

@@ -24,17 +24,16 @@
 <body class="home">
 	{% include 'custom/system/global/header.html' %}
 
-				{% widget_container "my_flexible_column" label="Hero Section" %}
-
-				{% end_widget_container %}
-
 				<div class="hero">
 					<div class="container">
 						<div class="overlay">
-						<h1>Edmonton’s Orthodontic and Pediatric Dentistry Practice</h1>
-
-						<h2>As a caring parent, you want what’s best for your family’s teeth. We prioritize the comfort of our patients, ensuring everyone leaves our practice with a bright smile.</h2>
-						<a href="/book-an-appointment" class="bookAppointment button green">Book an Appointment</a>
+						{% widget_block rich_text "homeBannerText" overrideable=True, label='BannerText' %}
+							{% widget_attribute "html" %}
+								<h1>Edmonton’s Orthodontic and Pediatric Dentistry Practice</h1>
+								<h2>As a caring parent, you want what’s best for your family’s teeth. We prioritize the comfort of our patients, ensuring everyone leaves our practice with a bright smile.</h2>
+								<a href="/book-an-appointment" class="bookAppointment button green">Book an Appointment</a>
+							{% end_widget_attribute %}
+						{% end_widget_block %}
 						</div>
 					</div>
 				</div>
@@ -96,7 +95,7 @@
 					</div>
 				</div>
 
-				<div class="homeSlider">
+				<div class="leftSlider">
 					<div class="container">
 						<div class="leftText">
 							<h2>Committed to Caring for Your Child's Growing Smile</h2>
