@@ -2,27 +2,23 @@
 
 footer .container {
 	margin-top: 60px;
-	.dividerBar {
-		width: 100%;
-		height: 2px;
-		background-color: $darkGrey;
-		opacity: 0.4;	
-		width: 80%;
-		margin: 0 auto;
-		// margin-bottom: 20px;
-	}
+	margin-bottom: 20px;
 
 	.footerNav {
-		margin-top: 60px;
-		margin-bottom: 60px;
 		display: flex;
-		padding-left: 80px;
-		padding-right: 80px;
+		justify-content: space-between;
+		align-items: flex-start;
+		max-width: 1000px;
+		margin: 60px auto 40px;
+		padding-top: 40px;
+		border-top: 2px solid rgba(0,0,0,0.1);
+
 		a {
-			font-size: 1.5em;
+			font-size: 1.4em;
 		}
+
 		.box {
-			width: 25%;
+			width: 22%;
 			max-height: 300px;
 			ul {
 				li {
@@ -35,24 +31,32 @@ footer .container {
 				}
 			}
 		}
+		
+		.box.logo {
+			a {
+				display: block;
+				max-width: 200px;
+			}
+		}
 
 		.box.logins {
 			padding-right: 30px;
 			ul li {
 				position: relative;
-				padding-left: 30px;
+				padding-left: 40px;
 				margin-bottom: 30px;
 				img {
 					position: absolute;
 					top: 0;
-					left: -10px;
+					left: 0;
+					width: 25px;
 				}
 			}
 		}
 
 		.box.nav {
 			li {
-				margin-bottom: 15px;
+				margin-bottom: 10px;
 			}
 		}
 
@@ -67,44 +71,41 @@ footer .container {
 
 	.socialMedia {
 
-					ul {
-						display: flex;
-						height: 100%;
-						justify-content: center;
-						align-items: center;
-						li {
-							list-style: none;
-							// display: inline;
-							a {
-								background-color: $fontGrey;
-								color: white;
-								height: 30px;
-								width: 30px;
-								border-radius: 50%;
-								display: inline-block;
-								font-size: 20px;
-								display: flex;
-								justify-content: center;
-								align-items: center;
-								text-decoration: none;
-								margin-right: 10px;
-								border: 1px solid transparent;
-							}
+		ul {
+			display: flex;
+			height: 100%;
+			justify-content: center;
+			align-items: center;
+			li {
+				list-style: none;
+				a {
+					background-color: $fontGrey;
+					color: white;
+					height: 30px;
+					width: 30px;
+					border-radius: 50%;
+					display: inline-block;
+					font-size: 1.6em;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					text-decoration: none;
+					margin-left: 5px;
+					border: 1px solid transparent;
+				}
 
-							a:hover {
-								color: $fontGrey;
-								border: 1px solid $fontGrey;
-								background-color: white;
-								opacity: 0.5;	
-							}
-						}
-					}
+				a:hover {
+					background-color: $darkGrey;	
+				}
+			}
+		}
 	}
 	.copyright {
 		text-align: center;
 		margin-top: 20px;
 		p {
 			font-size: 12px;
+			opacity: 0.8;
 		}
 	}
 }
