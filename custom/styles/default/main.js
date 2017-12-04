@@ -257,7 +257,8 @@ app.slide = function () {
 		cssEase: 'linear',
 		arrows: true,
 		nextArrow: '<a class="nextSlide button green" href="">Next</a>',
-		prevArrow: ''
+		prevArrow: '',
+		adaptiveHeight: true
 	});
 };
 

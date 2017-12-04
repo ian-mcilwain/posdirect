@@ -229,7 +229,7 @@ a {
 
 .button.turqoiseWhite:hover {
   color: #1bbab9;
-  background-color: transparent; }
+  background-color: white; }
 
 .button.black {
   background-color: black; }
@@ -1001,8 +1001,8 @@ footer .container {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  -ms-flex-align: center;
-      align-items: center;
+  -ms-flex-align: start;
+      align-items: flex-start;
   padding: 30px; }
 
 .leftSlider .leftText {
@@ -1010,7 +1010,9 @@ footer .container {
   padding: 0 30px; }
 
 .leftSlider .rightImage {
-  width: 45%; }
+  width: 45%;
+  text-align: center;
+  padding-top: 2%; }
 
 .leftSlider h2 {
   font-size: 3.8em;
@@ -1022,6 +1024,12 @@ footer .container {
 
 .leftSlider p {
   padding: 10px 0; }
+
+.leftSlider ul {
+  padding-left: 20px; }
+
+.leftSlider li {
+  font-size: 1.6em; }
 
 .leftSlider.leftSliderReverse .container {
   -ms-flex-direction: row-reverse;
@@ -2282,7 +2290,7 @@ p.itemTag {
       padding-left: 22px; }
     .landingPage .landing .container .leftSide li,
     .landingPage .landing .container .rightSide li {
-      font-size: 1.8em; }
+      font-size: 1.6em; }
   .landingPage .landing .container .leftSide {
     padding-top: 20px;
     width: 60%; }
@@ -2317,6 +2325,7 @@ p.itemTag {
           flex-direction: column;
       -ms-flex-pack: center;
           justify-content: center;
+      text-align: center;
       border: 2px solid #f9f9f9; }
       .landingPage .landing .container .rightSide .hs_cos_wrapper_type_form form.hs-form .field {
         width: 100%; }

@@ -1406,7 +1406,7 @@ p.itemTag {
 				}
 
 				li {
-					font-size: 1.8em;
+					font-size: 1.6em;
 				}
 			}
 
@@ -1454,6 +1454,7 @@ p.itemTag {
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
+					text-align: center;
 					border: 2px solid $lightGrey;
 					form.hs-form .field {
 						width: 100%;

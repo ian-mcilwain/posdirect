@@ -252,7 +252,7 @@
 		background: $lightBlue;
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 		padding: 30px;
 	}
 
@@ -263,6 +263,8 @@
 
 	.rightImage {
 		width: 45%;
+		text-align: center;
+		padding-top: 2%;
 	}
 
 	h2 {
@@ -277,6 +279,14 @@
 
 	p {
 		padding: 10px 0;
+	}
+
+	ul {
+		padding-left: 20px;
+	}
+
+	li {
+		font-size: 1.6em;
 	}
 }
 
