@@ -253,8 +253,7 @@ app.slide = function () {
 	$('.sliderWrapper').slick({
 		dots: true,
 		infinite: true,
-		speed: 500,
-		fade: true,
+		speed: 250,
 		cssEase: 'linear',
 		arrows: true,
 		nextArrow: '<a class="nextSlide button green" href="">Next</a>',

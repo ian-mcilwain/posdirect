@@ -158,7 +158,8 @@
 		}
 	}
 
-	.leftSlider {
+	.leftSlider,
+	.leftSlider.leftSliderReverse {
 		.container {
 			flex-direction: column-reverse;
 		}

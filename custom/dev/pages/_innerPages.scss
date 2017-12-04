@@ -72,14 +72,23 @@
 
 .pediatricDentistry, .orthodontics {
 	.whiteBanner {
+		padding: 0;
+
 		p {
 			max-width: none;	
 		}
 	}
 
+	.linkBar {
+		margin-bottom: 6%;
+	}
 
+	.leftSlider {
+		margin-bottom: 6%;
+	}
 
 	.imageLeftTextRight, .imageRightTextLeft {
+		margin: 0 0 6%;
 		.container .textBox {
 			text-align: left;
 			align-items: flex-start;
@@ -92,21 +101,25 @@
 				font-size: 4em;
 			}
 			h3 {
-				font-size: 2.2em;
+				font-size: 2.6em;
+				margin: 20px 0 10px;
 			}
 			p {
-				margin-top: 20px;
-				font-size: 1.8em;
+				margin: 10px 0;
+				font-size: 1.6em;
 			}
 			ul {
 				padding-left: 20px;
 			}
 
 			li {
-				font-size: 1.8em;
+				font-size: 1.6em;
 			}
+		}
 
-		} 
+		.button {
+			margin-top: 30px;
+		}
 
 		.container .imageBox {
 			display: flex;
@@ -169,6 +182,14 @@
 
 	} 
 
+}
+
+.pediatricDentistry {
+	.linkBar .container {
+		.button {
+			width: 30%;
+		}
+	}
 }
 
 // pediatric dentistry ends
@@ -264,7 +285,7 @@
 		flex-wrap: wrap;
 		.button {
 			color: $fontGrey;
-			border: 1px solid rgba(0,0,0,0.3);
+			border: 1px solid rgba(0,0,0,0.1);
 			min-width: 0;
 			padding: 5px 20px;
 			margin: 10px 15px;
@@ -406,9 +427,6 @@
 	.leftSlider.whiteBG {
 		margin-bottom: 50px;
 
-		.container {
-			flex-direction: row-reverse;
-		}
 		h3 {
 			font-size: 2.8em;
 			margin-bottom: 20px;
