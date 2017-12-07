@@ -17,6 +17,7 @@ app.init = function () {
 	app.doctorDescription();
 	app.nextSlide();
 	app.paymentCalculator();
+	app.smoothScroll();
 };
 
 app.paymentCalculator = function () {
@@ -246,8 +247,18 @@ app.slide = function () {
 		cssEase: 'linear',
 		arrows: true,
 		adaptiveHeight: true
-		// 		nextArrow: '<i class="fa fa-chevron-right"></i>',
-		// 		prevArrow: '<i class="fa fa-chevron-left"></i>'
+
+	});
+
+	$('.sliderWrapper').slick({
+		dots: true,
+		infinite: true,
+		speed: 250,
+		cssEase: 'linear',
+		arrows: true,
+		nextArrow: '<a class="nextSlide button green" href="">Next</a>',
+		prevArrow: '',
+		adaptiveHeight: true
 	});
 };
 
@@ -350,6 +361,23 @@ app.blogSubscribe = function () {
 			$('.blogSubscribeBar p').toggleClass('formOpen');
 		});
 	}
+};
+
+app.smoothScroll = function () {
+	$('a[href*=#]:not([href=#])').click(function () {
+
+		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			if (target.length) {
+				$('html,body').animate({
+					scrollTop: target.offset().top - 40
+				}, 1000);
+				return false;
+			}
+		}
+	});
 };
 
 $(window).load(function () {

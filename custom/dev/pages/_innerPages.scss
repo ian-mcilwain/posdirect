@@ -72,14 +72,23 @@
 
 .pediatricDentistry, .orthodontics {
 	.whiteBanner {
+		padding: 0;
+
 		p {
 			max-width: none;	
 		}
 	}
 
+	.linkBar {
+		margin-bottom: 6%;
+	}
 
+	.leftSlider {
+		margin-bottom: 6%;
+	}
 
 	.imageLeftTextRight, .imageRightTextLeft {
+		margin: 0 0 6%;
 		.container .textBox {
 			text-align: left;
 			align-items: flex-start;
@@ -92,21 +101,25 @@
 				font-size: 4em;
 			}
 			h3 {
-				font-size: 2.2em;
+				font-size: 2.6em;
+				margin: 20px 0 10px;
 			}
 			p {
-				margin-top: 20px;
-				font-size: 1.8em;
+				margin: 10px 0;
+				font-size: 1.6em;
 			}
 			ul {
 				padding-left: 20px;
 			}
 
 			li {
-				font-size: 1.8em;
+				font-size: 1.6em;
 			}
+		}
 
-		} 
+		.button {
+			margin-top: 30px;
+		}
 
 		.container .imageBox {
 			display: flex;
@@ -169,6 +182,14 @@
 
 	} 
 
+}
+
+.pediatricDentistry {
+	.linkBar .container {
+		.button {
+			width: 30%;
+		}
+	}
 }
 
 // pediatric dentistry ends
@@ -263,18 +284,11 @@
 		align-items: center;
 		flex-wrap: wrap;
 		.button {
-			// margin-right: 20px;
-			margin-bottom: 20px;
 			color: $fontGrey;
-			border: 1px solid $fontGrey;
-			width: 31%;
-			margin-right: 1%;
-			margin-right: 1%;
-			padding-top: 8px;
-			padding-bottom: 8px;
-			padding-left: 0;
-			padding-right: 0;
-
+			border: 1px solid rgba(0,0,0,0.1);
+			min-width: 0;
+			padding: 5px 20px;
+			margin: 10px 15px;
 		}
 
 		.button:hover {
@@ -350,7 +364,6 @@
 
 .imageLeftTextRight {
 	margin-top: 30px;
-	margin-bottom: 30px;
 	.container {
 		display: flex;
 		.textBox, .imageBox {
@@ -364,8 +377,13 @@
 				font-size: 3.2em;
 				margin-bottom: 30px;
 			}
+			h3 {
+				font-size: 2.4em;
+				margin: 0 auto 20px;
+				width: 100%;
+			}
 			p {
-				font-size: 1.8em;
+				font-size: 1.6em;
 				margin-bottom: 20px;
 				max-width: 100%;
 			}
@@ -380,6 +398,38 @@
 
 		.textBox {
 			margin-left: 30px;
+		}
+	}
+}
+
+.invisalign {
+	.imageLeftTextRight {
+		.container {
+			padding-bottom: 4%;
+			padding-top: 4%;
+			align-items: flex-start;
+			justify-content: space-between;
+
+			.textBox {
+				display: block;
+			}
+
+			.button {
+				margin: 20px 5px 0;
+			}
+		}
+	}
+
+	.whiteBanner {
+		padding: 4% 0 2%;
+	}
+
+	.leftSlider.whiteBG {
+		margin-bottom: 50px;
+
+		h3 {
+			font-size: 2.8em;
+			margin-bottom: 20px;
 		}
 	}
 }
@@ -1356,7 +1406,7 @@ p.itemTag {
 				}
 
 				li {
-					font-size: 1.8em;
+					font-size: 1.6em;
 				}
 			}
 
@@ -1404,6 +1454,7 @@ p.itemTag {
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
+					text-align: center;
 					border: 2px solid $lightGrey;
 					form.hs-form .field {
 						width: 100%;
