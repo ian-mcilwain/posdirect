@@ -2553,7 +2553,11 @@ ul.pagination li.active a {
   .orthodontics .thisOrThat .container .transition {
     width: 90%; }
   form.hs-form .field .input .inputs-list li label input {
-    width: 20%; } }
+    width: 20%; }
+  .twoPhotoLeftTextRight .container .imageBox img:nth-child(1) {
+    top: 10%; }
+  .twoPhotoLeftTextRight .container .imageBox img:nth-child(2) {
+    bottom: 10%; } }
 
 @media screen and (max-width: 970px) {
   header {
@@ -2566,7 +2570,11 @@ ul.pagination li.active a {
     padding-left: 10px;
     padding-right: 10px; }
   .hero .container {
-    padding: 0; } }
+    padding: 0; }
+  .twoPhotoLeftTextRight .container .imageBox img:nth-child(1) {
+    top: 20%; }
+  .twoPhotoLeftTextRight .container .imageBox img:nth-child(2) {
+    bottom: 20%; } }
 
 @media screen and (max-width: 850px) {
   header {
@@ -2636,7 +2644,8 @@ ul.pagination li.active a {
       padding-right: 10px;
       width: 100%;
       margin-top: 10px;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      margin-left: 0; }
       .twoPhotoLeftTextRight .container .textBox p,
       .imageLeftTextRight .container .textBox p,
       .imageRightTextLeft .container .textBox p,
@@ -2694,7 +2703,8 @@ ul.pagination li.active a {
       padding-right: 10px;
       width: 100%;
       margin-top: 10px;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      margin-right: 0; }
       .twoPhotoLeftTextRight .container .imageBox img,
       .imageLeftTextRight .container .imageBox img,
       .imageRightTextLeft .container .imageBox img,
