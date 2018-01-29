@@ -1,6 +1,13 @@
 /* BLOG */
 
 .blog {
+	header {
+		z-index: 9;
+	}
+	.wrapper {
+		padding-top: 140px;
+		overflow: visible;
+	}
 	.banner {
 		position: relative;
 		text-align: center;
@@ -8,10 +15,14 @@
 		background-size: cover;
 		background-position: center;
 
+		.bannerInner {
+			background-color: rgba(0,0,0,0.5);
+		}
+
 		.container {
 			max-width: 1000px;
 			position: relative;
-			padding: 10% 8%;
+			padding: 8% 0%;
 			z-index: 1;
 			p {
 				color: white;
@@ -33,19 +44,49 @@
 				// font-weight: 600;
 				box-shadow: 2px 2px 20px rgba(0,0,0,0.5);
 			}
+			.orangeButton {
+				margin-top: 0;
+			}
 		}
 	}
+
+	.banner.bannerListing .container {
+		padding: 3% 0;
+	}
+
+	form.hs-form {
+		.hs_submit .actions input {
+			margin: 0;
+		}
+		.field label {
+			display: block;
+			font-size: 1.6em;
+			text-transform: uppercase;
+			.hs-form-required {
+				display: none;
+			}
+			input {
+				height: 1.2em;
+			}
+		}
+
+		.field .input label {
+			text-transform: capitalize;
+		}
+	} 
 
 	h1 {
 		// text-transform: uppercase;
 		color: white;
 		font-size: 4em;
+		line-height: 1;
 		// letter-spacing: 1px;
 		// font-weight: 600;
 	}
 
 	.listingPageContent {
 		margin-top: 60px;
+		margin-bottom: 100px;
 		.container {
 			display: flex;
 			.blog-section {
@@ -59,6 +100,7 @@
 					.post-item {
 						width: 47%;
 						margin: 1%;
+						box-shadow: $boxShadow;
 						.postImg {
 							background-size: cover;
 							background-position: center;
@@ -83,10 +125,13 @@
 						}
 						.postText {
 							display: block;
-							padding: 5% 5% 0 0;
+							padding: 5% 5% 0 5%;
 							transition: all 0.2s ease;
 							.postTitle {
-								font-size: 2.2em;
+								padding-top: 10px;
+								padding-bottom: 10px;
+								font-size: 1.4em;
+								line-height: 26px;
 							}
 						}
 
@@ -105,7 +150,11 @@
 
 						a:hover .postImg span,
 						a:focus .postImg span{
-							opacity: 1;
+							opacity: 0;
+						}
+
+						a:hover .postText .postTitle {
+							color: $orange;
 						}
 
 						.postDate {
@@ -113,6 +162,11 @@
 							font-size: 12px;
 							color: grey;
 							text-transform: uppercase;
+							padding-left: 5%;
+							a {
+								font-size: 1em;
+								display: inline;
+							}
 						}
 
 
@@ -121,6 +175,7 @@
 			}
 			.sidebar {
 				width: 33.3%;
+				padding-left: 30px;
 				h3 {
 					font-size: 2.6em;
 					margin-bottom: 20px;
@@ -142,10 +197,11 @@
 						display: block;
 						margin-bottom: 20px;
 						p.postTitle {
-							font-size: 1.8em;
+							font-size: 1em;
+							line-height: 16px;
 						}
 						p.postDate {
-							font-size: 1.5em;
+							font-size: 1em;
 						}
 					}
 
@@ -156,7 +212,7 @@
 						padding-left: 0;
 						li {
 							list-style: none;
-							font-size: 1.8em;
+							font-size: 1em;
 							a {
 								color: $fontGrey;
 								text-decoration: none;
@@ -212,7 +268,7 @@ h3.specialListingHeader {
 	h2 {
 		display: inline-block;
 		margin-bottom: 15px;
-		border-bottom: 2px solid $green;
+		// border-bottom: 2px solid $green;
 		padding-bottom: 5px;
 	}
 }
@@ -238,7 +294,7 @@ ul.pagination li {
 		&:focus {
 			background: none;
 			border: 0;
-			color: $green;
+			// color: $green;
 		}
 	}
 }
@@ -299,10 +355,13 @@ ul.pagination li.active a {
 		font-size: 16px;
 		padding: 5px 0;
 		line-height: 1.4;
+		a {
+			font-size: 1em;
+		}
 	}
 
 	a {
-		color: blue;
+		color: $orange;
 		text-decoration: none;
 		line-height: 1.4;
 
@@ -350,7 +409,13 @@ ul.pagination li.active a {
 
 .blogSubscribeBar {
 	text-align: center;
-	margin-top: 30px;
+	padding-top: 30px;
+	box-shadow: 0px 3px 29px 0px rgba(93, 112, 142, 0.3);
+	padding-bottom: 30px;
+	position: sticky;
+	top: 0;
+	background-color: white;
+	z-index: 999999;
 	p {
 		font-size: 2.4em;
 		margin-bottom: 20px;
@@ -362,6 +427,9 @@ ul.pagination li.active a {
 			// padding-right: 0;
 			width: 35%;
 			// max-width: 280px;	
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 		.hs_submit {
 			width: auto;
@@ -369,6 +437,10 @@ ul.pagination li.active a {
 				margin-top: 0;
 			}
 		}
+	}
+
+	form.hs-form .field .input {
+		margin-bottom: 0;
 	}
 }
 
@@ -410,6 +482,11 @@ ul.pagination li.active a {
 		font-size: 18px;
 		text-transform: uppercase;
 		padding-bottom: 20px;
+	}
+
+	.hs-author-social-links {
+		display: inline;
+		padding-left: 10px;
 	}
 
 	.authorDesc {
@@ -488,7 +565,7 @@ ul.pagination li.active a {
 	}
 
 	a {
-		color: blue;
+		color: $orange;
 		text-decoration: none;
 		font-size: inherit;
 
@@ -502,24 +579,24 @@ ul.pagination li.active a {
 	h3,
 	h4,
 	h5 {
-		color: grey;
+		color: #062f68;
 		font-weight: 400;
 		font-size: 30px;
 		font-weight: 600;
-		text-align: initial;
+		text-align: left !important;
 		padding: 15px 0 5px;
 	}
 
 	h3 {
-		font-size: 26px;
+		// font-size: 26px;
 	}
 
 	h4 {
-		font-size: 22px;
+		// font-size: 22px;
 	}
 
 	h5 {
-		font-size: 18px;
+		// font-size: 18px;
 	}
 
 	ol,

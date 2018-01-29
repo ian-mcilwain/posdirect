@@ -10,132 +10,110 @@
 	<meta name="description" content="{{ page_meta.meta_description }}">
 	<meta name="generator" content="HubSpot">
 	<title>{{ page_meta.html_title }}</title>
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFY0K2rQYPGj3UdxVc1JyX_VsSUcFsE68"></script>
-
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-	<link rel="stylesheet" href="/custom/styles/default/styles.css">
 	{% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
-
+  <link rel = "stylesheet" type = "text/css" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJzIr4DnSasMDFxVMOgyIDS-4gx6IA6lI"></script>
+  <script src="https://use.typekit.net/kkh2qsb.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 	{{ standard_header_includes }}
 	{% style include_default_custom_css="true" %}
 
 </head>
-<body class="contactPage">
+<body>
+<!-- Start HTML layout here. -->
+<!-- wrapper starts -->
+<div class="wrapper">
 	{% include 'custom/system/global/header.html' %}
 
-	<div class="turqoiseBanner">
+<!-- contact banner starts -->
+    <div class="contactBanner">
+       	<div class="contactBannerInner" style="background-image: url({% image_src "contactBanner" label="contact banner image", src="//cdn2.hubspot.net/hub/53/file-733888614-jpg/assets/hubspot.com/about/management/dharmesh-home.jpg", no_wrapper=True %})">	
+	    </div> 
+    </div>
+
+<!-- contact banner ends -->
+<!-- contactCopy starts -->
+	<div class="contactCopy">
 		<div class="container">
-			<h1>Contact</h1>
+			<div class="contactCopyInner">
+				{% widget_block rich_text "ContactCopy" overrideable=True, label='Contact Copy' no_wrapper=True  %}
+				    {% widget_attribute "html" %}
+					    <h3>Contact Us</h3>
+					    <p>If you have any questions or would like further information about how Paymedia can help improve your business, contact us today.</p>
+					    <ul>
+					    	<li><i class="fa fa-phone"></i><a href="tel:973.428.9000">T:973.428.9000</a></li>
+					    	<li><i class="fa fa-fax"></i><a href="">F: 973.428.9120</a></li>
+					    	<li><i class="fa fa-envelope"></i><a href=""></a></li>
+					    	<li><i class="fa fa-envelope"></i><a href=""></a></li>
+					    </ul>
+				    {% end_widget_attribute %}
+				{% end_widget_block %}
+				
+			</div>
+			<div class="formBox">
+				{% form "contactForm" title='Contact Form', no_wrapper=True %}
+			</div>
 		</div>
 	</div>
-	<div class="addressForm">
-		<div class="container">
-		<div class="leftSide">
-			<ul>
-				<li class="address">
-					<div class="liLogo"><img src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/marker.png" alt=""></div>
-					<a target="_blank" href="https://www.google.ca/maps/place/4222+Gateway+Blvd+%23102,+Edmonton,+AB+T6J/@53.4785095,-113.4951817,17z/data=!3m1!4b1!4m5!3m4!1s0x53a01f3170415af1:0xd1ce70c6293082ad!8m2!3d53.4785063!4d-113.492993">	
-						<span>Address:</span> #102, 4222 Gateway Blvd Edmonton, Alberta T6J 7K1
-					</a>
-				</li>
-				<li class="phone">
-					<div class="liLogo"><img src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/phone.png" alt=""></div>
-					<a href="tel:7807571001">
-					<span>Phone:</span> (780) 757-1001
-					</a>
-				</li>
-				<li class="fax">
-					<div class="liLogo"><img src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/fax.png" alt=""></div>
-					<a href="">
-					<span>Fax:</span> (780) 758-1002
-				</a></li>
-				<li class="email">
-					<div class="liLogo"><img src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/envelope.png" alt=""></div>
-					<a href="">
-					<span>Email</span>
-				</a></li>
-				<li class="pediatricInquiries">
-					<div class="liLogo"><img src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/envelope.png" alt=""></div>
-					<a href="">
-					<span>Pediatric Inquiries</span>
-				</a></li>
-				<li class="officeHours">
-					<div class="liLogo"><img src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/clock.png" alt=""></div>
-					<span>Office Hours:</span><br>
-					Monday: 7:30am to 4:00pm<br>
-					Wednesday: 7:30am to 4:00pm<br>
-					Thursday: 7:30am to 4:00pm<br>
-					Friday: 7:30am to 4:00pm
-				</li>
-			</ul>
-		</div>
+<!-- contactCopy ends -->
+<!-- map starts -->
+<div id="map" style="height: 400px;"></div>
+<!-- map ends -->
 
-		<div class="rightSide">
-			{% form "contactForm" label="Contact Form", form_to_use='fa64b2ca-0b89-453c-8077-5aff79dc595c', no_wrapper="true" %}
-		</div>
-		</div>
-	</div>
-
-<!-- 	<div class="bookAppointmentBanner">
-		<div class="container">
-			<h2>Book an Appointment</h2>
-			<p>Does Your Child need to see one of our highly trained dentists or orthodontists?</p>
-			<a class="button green" href="/book-an-appointment">Book Now</a>
-		</div>
-	</div> -->
-	<div class="whiteBanner">
-		<div class="container">
-			<h2>Book an Appointment</h2>
-			<p>{% text "bookAppointmentBanner" label="Book an Appointment Banner", no_wrapper=True, value="Does your child need to see one of our highly trained dentists or orthodontists?" %}</p>
-			<a href="/book-an-appointment" class="button green">Book Now</a>
-		</div>
-
-	</div>
-
-	<div class="map">
-		<div id="map" class="container">
-			
-		</div>
-	</div>
 
 
 	{% include 'custom/system/global/footer.html' %}
+</div> <!-- wrapper ends -->
 	{{ standard_footer_includes }}
-        
-        <script type="text/javascript">
-            // When the window has finished loading create our google map below
-            google.maps.event.addDomListener(window, 'load', init);
-        
-            function init() {
-                // Basic options for a simple Google Map
-                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-                var mapOptions = {
-                    // How zoomed in you want the map to start at (always required)
-                    zoom: 15,
+	<script type="text/javascript">
+	    // When the window has finished loading create our google map below
+	    google.maps.event.addDomListener(window, 'load', init);
+	
+	    function init() {
+	        // Basic options for a simple Google Map
+	        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+	        var mapOptions = {
+	            // How zoomed in you want the map to start at (always required)
+	            zoom: 15,
 
-                    // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(53.4785063,-113.4951817), // New York
+	            // The latitude and longitude to center the map (always required)
+	            center: new google.maps.LatLng(40.825569, -74.351466), // New York
 
-                    // How you would like to style the map. 
-                    // This is where you would paste any style found on Snazzy Maps.
-                    styles: [{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"simplified"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"hue":"#f49935"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"hue":"#fad959"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#a1cdfc"},{"saturation":30},{"lightness":49}]}]
-                };
+	            // How you would like to style the map. 
+	            // This is where you would paste any style found on Snazzy Maps.
+	            styles: [{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"simplified"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"hue":"#f49935"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"hue":"#fad959"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#a1cdfc"},{"saturation":30},{"lightness":49}]}]
+	        };
 
-                // Get the HTML DOM element that will contain your map 
-                // We are using a div with id="map" seen below in the <body>
-                var mapElement = document.getElementById('map');
+	        // Get the HTML DOM element that will contain your map 
+	        // We are using a div with id="map" seen below in the <body>
+	        var mapElement = document.getElementById('map');
 
-                // Create the Google Map using our element and options defined above
-                var map = new google.maps.Map(mapElement, mapOptions);
+	        // Create the Google Map using our element and options defined above
+	        var map = new google.maps.Map(mapElement, mapOptions);
 
-                // Let's also add a marker while we're at it
-                var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(53.4785063,-113.4951817),
-                    map: map,
-                    title: 'Snazzy!'
-                });
-            }
-        </script>
+	        // Let's also add a marker while we're at it
+	        var marker = new google.maps.Marker({
+	            position: new google.maps.LatLng(40.824213, -74.362710),
+	            map: map
+	        });
+	        
+            var contentString = '<div id="content">'+'<p>Our Address</p>'+'<p>383 Ridgedale Avenue</p>'+'<p>East Hanover, NJ 07936</p>'+'</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+  
+  infowindow.open(map, marker);
+
+  marker.addListener('mouseover', function() {
+    infowindow.open(map, marker);
+  });
+  
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+	    }
+	</script>
 </body>
 </html>

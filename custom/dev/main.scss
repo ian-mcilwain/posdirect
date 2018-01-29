@@ -19,7 +19,7 @@
 /*Import fonts, plugins here*/
 /*@import url('http://example.com/example_style.css');*/
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Playfair+Display:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,500,600');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
 
 /*--------
@@ -30,16 +30,18 @@
 $fontTitle: 'Open Sans', sans-serif;
 $fontMain: 'Open Sans', sans-serif;
 $transition: all 0.3s ease;
+$borderRadius: 10px;
+$orange: #f09b63;
+$orangeGradient: linear-gradient(to right, #f09b63, #ffa834);
+$boxShadow: 0px 3px 29px 0px rgba(93, 112, 142, 0.3);
 
 
 /*Colours*/
 /*$variable: value;*/
-$turqoise: #1bbab9;
-$green: #98ca3b;
-$fontGrey: #464646;
+$fontGrey: #3f3f3f;
 $lightGrey: #f9f9f9;
-$darkGrey: #8c989c;
-$lightBlue: #d4e6ed;
+$darkGrey: #3e3e3e;
+
 /*--------
 3. General Styles
 ----------*/
@@ -49,6 +51,8 @@ body,
 html {
 	font-family: $fontMain;
 	font-size: 10px;
+	background-color: #F0F7FD;
+	// background-color: pink;
 }
 
 h1,
@@ -58,128 +62,104 @@ h4,
 h5 {
 	font-family: $fontTitle;
 	color: $fontGrey;
-	// font-weight: 400;
-	font-weight: 300;
-}
-
-p {
-	font-size: 1.6em;
+	font-weight: 600;
+	// font-weight: 300;
+	transition: $transition;
 	max-width: 100%;
 }
 
-a {
+h1 {
+	font-size: 6em;
+	line-height: 66px;
+	letter-spacing: -2px;
+	max-width: 100%;
+}
+
+h2 {
+	font-size: 3em;
+}
+
+h3 {
+	font-size: 2.8em;
+}
+
+p {
+	font-size: 2em;
+	max-width: 100%;
+	font-weight: 100;
+	line-height: 1.6;
 	transition: $transition;
 }
 
-.container {
-	// padding: 6% 8%;
-	max-width: 1200px;
-	margin: auto;
-}
-
-.button {
-	font-size: 1.7em;
-	color: white;
-	padding: 8px 32px;
-	text-decoration: none;
-	display: inline-block;
-	border-radius: 10px;
-	border: 1px solid transparent;
-	min-width: 240px;
-	// display: flex;
-	// justify-content: center;
-	// align-items: center;
-	text-align: center;
-	font-weight: 300;
-}
-
-.button.turqoise {
-	background-color: $turqoise;
-}
-
-.button.turqoise:hover {
-	background-color: white;
-	color: $turqoise;
-	border: 1px solid $turqoise;
-}
-
-.button.turqoiseReverse {
-	background-color: white;
-	color: $turqoise;
-	border: 1px solid $turqoise;
-}
-
-.button.turqoiseReverse:hover {
-	background-color: $turqoise;
-	color: white;
-	border: 1px solid white;
-}
-
-.button.turqoiseWhite {
-	background-color: $turqoise;
-	border: 1px solid white;
-	color: white;
-}
-
-.button.turqoiseWhite:hover {
-	color: $turqoise;
-	background-color: white;
-}
-
-.button.black {
-	background-color: black;
-}
-
-.button.black:hover {
-	background-color: transparent;
-	color: black;
-	border: 1px solid black;
-}
-
-.button.green {
-	background-color: $green;
-}
-
-.button.green:hover {
-	background-color: transparent;
-	color: $green;
-	border: 1px solid $green;
-}
-
-.button.white {
-	border: 1px solid white;
-}
-
-.button.white:hover {
-	// border: 1px solid black;
-	background-color: white;
-	color: $fontGrey;
-}
-
-.button.whiteGreen {
-	background-color: white;
-	color: $green;
-}
-
-.button.whiteGreen:hover {
-	background-color: $green;
-	border: 1px solid white;
-	color: white;
-}
-
-.bookAppointment {
-	color: $turqoise;
-	text-decoration: none;
-	border-bottom: 1px dashed $turqoise;
-	padding-bottom: 5px;	
+a {
 	font-size: 1.8em;
+	transition: $transition;
 }
 
-.bookAppointment:hover {
-	color: $green;
-	border-bottom: 1px dashed $green;
+img {
+	max-width: 100%;
+	width: 100%;
+	transition: $transition;
+	height: auto;
 }
 
+.container {
+	max-width: 1360px;
+	margin: 0 auto;
+	width: 100%;
+	padding-right: 100px;
+	padding-left: 100px;
+}
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	max-width: 1600px;
+	margin: 0 auto;
+	background-color: white;
+	z-index: 2;
+	overflow: hidden;
+}
+
+.innerWrapper {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    // background-color: pink;
+    z-index: -1;
+    .inner {
+    	width: 100%;
+    	height: 100%;
+    	// background-color: blue;
+    	position: relative;
+    }
+}
+
+.orangeButton {
+	background: #f09b63;
+	background: -webkit-linear-gradient(to left, #ffa834, #f09b63);
+	background: linear-gradient(to left, #ffa834, #f09b63);
+	color: white;
+	text-decoration: none;
+	font-size: 2em;
+	border-radius: 50px;
+	padding: .5em 2em;
+	margin-top: 40px;
+	display: inline-block;
+	transition: $transition;
+	transition: all 0.4s;
+	// opacity: 1;
+	border: 2px solid transparent;
+
+}
+
+.orangeButton:hover {
+	box-shadow: 0px 3px 29px 0px rgba(93, 112, 142, 0.6);
+}
+
+
+// form styles start
 .hbspt-form {
 	.submitted-message {
 		font-size: 1.6em;
@@ -187,9 +167,11 @@ a {
 }
 
 
+
 form.hs-form {
 	display: flex;
 	flex-wrap: wrap;
+
 	.field.fullWidth {
 		width: 100%;
 	}
@@ -206,7 +188,7 @@ form.hs-form {
 			input, select, textarea {
 				width: 100%;
 				border: none;
-				background-color: $lightGrey;
+				background-color: #E8E8E8;
 				font-size: 1.6em;
 				color: $fontGrey;
 				padding-left: 15px;
@@ -232,7 +214,6 @@ form.hs-form {
 				} 
 			}
 			.error {
-				// background-color: red;
 				border: 1px solid red;
 			}
 			
@@ -250,74 +231,64 @@ form.hs-form {
 		}
 	}
 
+	.hs_numemployees,
+	.hs_interested_in_,
+	.hs_interested_to_switch_,
+	.hs_i_would_like_to_see_a_demo_of_the_isolved_software,
+	.hs_comments,
+	.hs_current_payroll_provider {
+		width: 100%;
+		label {
+		    display: block;
+		    font-size: 1.6em;
+		}
+	}
+
+	.hs_phone,
+	.hs_referral_s_first_name,
+	.hs_referral_s_last_name_,
+	.hs_referral_s_company_name_,
+	.hs_referral_s_email_address_,
+	.hs_referral_s_phone_number_,
+	.hs_book_a_free_consultation,
+	.hs_website,
+	.hs_yes_please_send_me_additional_information_via_email_from_time_to_time {
+		width: 100%;
+	}
+
 	.hs_submit {
 		width: 100%;
 		.actions input {
-			font-size: 1.7em;
+			background: #f09b63;
+			background: -webkit-linear-gradient(to right, #ffa834, #f09b63);
+			background: linear-gradient(to right, #ffa834, #f09b63);
 			color: white;
-			padding: 8px 32px;
 			text-decoration: none;
-			display: inline-block;
-			border-radius: 10px;
-			border: 1px solid transparent;
-			min-width: 240px;
-			text-align: center;
-			font-weight: 300;
-			background-color: $turqoise;
-			transition: all 0.3s ease;
-			margin-top: 20px;
+			font-size: 2em;
+			border-radius: 50px;
+			padding: .5em 2em;
+			margin: 0 auto;
+			margin-top: 30px;
+			display: block;
+			transition: $transition;
+			transition: all 0.8s;
+			// opacity: 1;
+			border: 2px solid transparent;
 		}
 
 		.actions input:hover {
-			background-color: white;
-			color: $turqoise;
-			border: 1px solid $turqoise;
+			box-shadow: $boxShadow;
+			// color: black;
+			font-weight: 400;
 		}
 	}
 }
 
-#hs_form_target_contactForm form.hs-form .field {
-	// width: 50%;	
+// form styles end
+
+body {
+	// background-color: green;
 }
-
-.textBox {
-	// background-color: pink;
-	ul {
-		padding-left: 20px;
-		margin-top: 20px;
-
-		li {
-			font-size: 1.6em;
-			margin-bottom: 10px;
-		}
-	}
-
-}
-
-.imageBox {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	img {
-		width: 90%;
-		max-width: 420px;
-	}
-}
-
-.slide .textBox {
-	padding-bottom: 30px;
-	.nextSlide {
-		margin-top: 20px;
-		margin-bottom: 20px;
-		padding: 8px 24px;
-		min-width: 80px;
-	}
-}
-
-.slick-arrow {
-	display: none !important;
-}
-
 
 /*--------
 Partials
@@ -327,5 +298,7 @@ Partials
 @import 'global/footer';
 @import 'pages/home';
 @import 'pages/innerPages';
+@import 'pages/pillarPage';
+@import 'pages/backgroundDots';
 @import 'pages/blog';
 @import 'global/mediaQueries';

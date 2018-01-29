@@ -1,50 +1,42 @@
 <footer>
+    <div class="footerInner"></div>
 	<div class="container">
-		<div class="footerNav">
-			<div class="box logo">
-				<a href="/"><img src="https://cdn2.hubspot.net/hubfs/3424896/COPD-Logo-Horizontal.svg" alt="City Orthodontics & Pediatric Dentistry"></a>
-			</div>
-			<div class="box logins">
-				<ul>
-					<li><a href=""><img src="https://cdn2.hubspot.net/hubfs/3424896/saleshub/patientRewardsLoginLogo.png" alt="">Patient Rewards Hub Login</a></li>
-					
-				</ul>
-			</div>
-			<div class="box nav">
-				<ul>
-					<li><a href="/about-us">About Us</a></li>
-					<li><a href="/resources">Resources</a></li>
-					<li><a href="/contact">Contact</a></li>
-					<li><a href="/services">Services</a></li>
-					<li><a href="/blog">Blog</a></li>
-				</ul>
-			</div>
-			<div class="box twitter">
-				<a class="twitter-timeline" data-height="250" data-link-color="#1bbab9" href="https://twitter.com/CityBraces_Kids?ref_src=twsrc%5Etfw">Tweets by CityBraces_Kids</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-			</div>
-			
+		<div class="column">
+			<a href="/" class="logo"><img src='{% image_src "footerLogo" label="footer logo", src="https://cdn2.hubspot.net/hubfs/3805695/SalesHub/paymedia%20logo.png", no_wrapper=True %}' alt=""></a>
 		</div>
-		<div class="socialMedia">
+		<div class="column">
 			<ul>
-				<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-				<li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-				<li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-				<li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+				<li><a href="/payroll">Payroll</a></li>
+				<li><a href="/time-management">Time Management</a></li>
+				<li><a href="/human-resources">Human Resources</a></li>
+				<li><a href="/benefits-administration">Benefits Administration</a></li>
 			</ul>
 		</div>
-		<div class="copyright">
-			<p>©{{ local_dt.year }} City Orthodontics</p>
+		<div class="column">
+			<ul>
+				<li><a href="/platform">Platform</a></li>
+				<li><a href="/about-us">About Us</a></li>
+				<li><a href="/resources">Resources</a></li>
+				<li><a href="/contact">Contact</a></li>
+			</ul>
 		</div>
-
-
+		<div class="column">
+			<ul class="socialIcons">
+					<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					<li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+					<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+				</ul>
+		</div>
+		<div class="copyright">
+			<p>© {{ year }} Paymedia</p>
+		</div>
 	</div>
 </footer>
 
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
 <!-- Main.js : all custom js -->
 <script type="text/javascript" src='{{ get_public_template_url("custom/styles/default/main.js") }}'></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+<!-- Theme Foundation Javascript Package -->
+<script type="text/javascript" src='{{ get_public_template_url("hubspot_default/shared/responsive/theme-foundation-v1-0.js") }}'></script>
+

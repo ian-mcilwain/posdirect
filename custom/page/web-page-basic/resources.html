@@ -11,36 +11,53 @@
 	<meta name="generator" content="HubSpot">
 	<title>{{ page_meta.html_title }}</title>
 	{% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
-
+  <link rel = "stylesheet" type = "text/css" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJzIr4DnSasMDFxVMOgyIDS-4gx6IA6lI"></script>
+  <script src="https://use.typekit.net/kkh2qsb.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 	{{ standard_header_includes }}
 	{% style include_default_custom_css="true" %}
 
 </head>
 <body>
+<!-- Start HTML layout here. -->
+<!-- wrapper starts -->
+<div class="wrapper">
 	{% include 'custom/system/global/header.html' %}
 
-	{% custom_widget "Resource Banner" widget_name='Resource Banner', label='Resource Banner' %}
-
-	<div class="resourceTagsGroup">
-		<div class="container">
+<!-- resources banner starts -->
+	<div class="resourceBanner" style="background-image: url({% image_src "contactBanner" label="contact banner image", src="//cdn2.hubspot.net/hub/53/file-733888614-jpg/assets/hubspot.com/about/management/dharmesh-home.jpg", no_wrapper=True %})">	
+	</div>
+<!-- resources banner ends -->
+<div class="resourcesGroup">
+	<div class="container">
+		<div class="resourceFilter">
+			<p>Filter Resources</p>
 			<ul class="resourceTags">
 				<li><a href="#" class="all active" data-filter="all">All</a></li>
 				<li><a href="#" class="caseStudy" data-filter="caseStudy">Case Studies</a></li>
 				<li><a href="#" class="whitePaper" data-filter="whitePaper">White Papers</a></li>
-				<li><a href="#" class="video" data-filter="video">Videos</a></li>
+				<li><a href="#" class="successStory" data-filter="successStory">Success Stories</a></li>
+				<!--<li><a href="#" class="video" data-filter="video">Videos</a></li>-->
 			</ul>
-		</div> <!-- .container -->
-	</div> <!-- .resourcesTagsGroup -->
+		</div> <!-- .resourceFilter -->
 
-	<div class="resources">
-		<div class="container">
-			{% widget_container "Resources" %}
+		<div class="resources">
+			{% widget_container "Resource" label="resources"%}
 				<div class="content"></div>
 			{% end_widget_container %}
-		</div> <!-- .container -->
-	</div> <!-- .resources -->
+		</div>
+	</div> <!-- .container -->
+</div> <!-- .resourcesTagsGroup -->
 
 	{% include 'custom/system/global/footer.html' %}
+</div> <!-- wrapper ends -->
 	{{ standard_footer_includes }}
+	
 </body>
 </html>
+
+
+
+

@@ -10,58 +10,67 @@
 	<meta name="description" content="{{ page_meta.meta_description }}">
 	<meta name="generator" content="HubSpot">
 	<title>{{ page_meta.html_title }}</title>
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-	<link rel="stylesheet" href="{{ get_public_template_url("custom/page/saleshub/styles.css") }}">
 	{% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
-
+  <link rel = "stylesheet" type = "text/css" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJzIr4DnSasMDFxVMOgyIDS-4gx6IA6lI"></script>
+  <script src="https://use.typekit.net/kkh2qsb.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 	{{ standard_header_includes }}
 	{% style include_default_custom_css="true" %}
 
 </head>
-<body class="virtualSmileAnalysis">
-	{% include 'custom/page/saleshub/landingHeader.html' %}
+<body class="home">
+<!-- Start HTML layout here. -->
+<!-- wrapper starts -->
+<div class="wrapper">
+    <div class="innerWrapper">
+		<div class="inner">
+			<!-- <img src="https://cdn2.hubspot.net/hubfs/3805695/SalesHub/homepage%20images/circle.png" alt="" class="circle circle1">
+			<img src="https://cdn2.hubspot.net/hubfs/3805695/SalesHub/homepage%20images/blue%20dots/circleDot.png" alt="" class="circle circle2"> -->
+			<img src="https://cdn2.hubspot.net/hubfs/3805695/SalesHub/homepage%20images/blue%20dots/bluedot.png" alt="" class="circle circle3">
+			<img src="https://cdn2.hubspot.net/hubfs/3805695/SalesHub/homepage%20images/blue%20dots/smallDot.png" alt="" class="circle circle4">
+			<img src="https://cdn2.hubspot.net/hubfs/3805695/SalesHub/homepage%20images/blue%20dots/fullCircleDot.png" alt="" class="circle circle5">
+			
+		</div>
+	</div>
+	{% include 'custom/system/global/landingHeader.html' %}
 
-	<div class="hero">
+<!-- hero starts -->
+	<div class="landingHero">
+	    <div class="inner"></div>
 		<div class="container">
-			<div class="overlay">
-			<h1>{% text "heroHeader" label="Hero Header Text", no_wrapper=True, value="Virtual Smile Analysis" %}</h1>
-				
+			<div class="textBox">
+				{% widget_block rich_text "heroModule" overrideable=True, label='Hero Module' no_wrapper=True  %}
+				    {% widget_attribute "html" %}
+					    <h1>Book a Consultation</h1>
+					    <p>It’s time to take the stress out of payroll, time management, benefits administration, and human resources.</p>
+
+					    <p>Our experts work closely with you to truly understand your company and make your human capital management simple, efficient, and accurate.</p> 
+					    <h2>Wondering how we can help your business?</h2>
+					    <p>Learn how to get all your workforce management must-haves in a single solution.</p>
+					    <h2>Fill out the form to book a consultation.</h2>
+				    {% end_widget_attribute %}
+				{% end_widget_block %}
 			</div>
 		</div>
 	</div>
+<!-- Hero ends -->
 
-
-	<div class="ourTeam">
-		<div class="container">
-			<div class="leftSide">
-				{% rich_text "leftColumnLanding" label="Body Text" html='
-				<!-- <div>My rich text default content</div> -->
-				<h2>Landing Page Placholder Content</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus officiis alias, saepe cumque numquam, aut suscipit officia reprehenderit aliquid tempora repellendus sapiente eligendi ab deleniti illo quae molestias nulla incidunt quis. Veniam magni natus laudantium excepturi suscipit quia iste quas.</p>
-				<p>Temporibus quasi, facere repudiandae maiores amet totam neque, quam cum consectetur odio ea optio aliquid quis nulla ut sapiente praesentium fuga, omnis eaque distinctio. Debitis nam voluptate iure at accusantium atque perferendis! Tenetur voluptatum cupiditate dolorem provident alias culpa, vitae.</p>
-				<p>Quasi magnam expedita itaque illo consequuntur, numquam corporis asperiores! Assumenda quasi consequuntur voluptatem sequi adipisci ullam perspiciatis obcaecati ad autem at. Quae laborum mollitia, quo ratione molestias, at temporibus tempore ipsam adipisci sunt est enim. Ullam nostrum voluptas architecto qui!</p>
-				' %}
-			</div>
-			<div class="rightSide">
-				{% form "landingForm" label="Landing Page Form" %}
-			</div>
-
+<div class="form">
+	<div class="container">
+		<div class="formBox">
+			{% form "contactForm" title='Contact Form', form_to_use='3f5a21c5-d6d5-4364-b38e-ff46743d3695', no_wrapper=True %}
 		</div>
 	</div>
+</div>
 
-	<!--<div class="turqoiseBanner">-->
-	<!--	<div class="container">-->
-	<!--		<h2 class="large">Referral Program</h2>-->
-	<!--		<p>Know other parents in need of dental services for their kids?</p>-->
-	<!--		<a href="/refer-a-friend" class="button white">Refer a Friend</a>-->
-	<!--	</div>-->
-	<!--</div>-->
-
-	
-
-	{% include 'custom/page/saleshub/landingFooter.html' %}
+	{% include 'custom/system/global/landingFooter.html' %}
+</div> <!-- wrapper ends -->
 	{{ standard_footer_includes }}
 </body>
 </html>
+
+
+
+
