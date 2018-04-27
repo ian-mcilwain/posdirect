@@ -1,37 +1,51 @@
 <footer>
-    <div class="footerInner"></div>
-	<div class="container">
-		<div class="column">
-			<a href="/" class="logo"><img src='{% image_src "footerLogo" label="footer logo", src="https://cdn2.hubspot.net/hubfs/3805695/SalesHub/paymedia%20logo.png", no_wrapper=True %}' alt=""></a>
-		</div>
-		<div class="column">
-			<ul>
-				<li><a href="/payroll">Payroll</a></li>
-				<li><a href="/time-management">Time Management</a></li>
-				<li><a href="/human-resources">Human Resources</a></li>
-				<li><a href="/benefits-administration">Benefits Administration</a></li>
-			</ul>
-		</div>
-		<div class="column">
-			<ul>
-				<li><a href="/platform">Platform</a></li>
-				<li><a href="/about-us">About Us</a></li>
-				<li><a href="/resources">Resources</a></li>
-				<li><a href="/contact">Contact</a></li>
-			</ul>
-		</div>
-		<div class="column">
-			<ul class="socialIcons">
-					<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-					<li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-					<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					<li><a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-				</ul>
-		</div>
-		<div class="copyright">
-			<p>© {{ year }} Paymedia</p>
-		</div>
-	</div>
+    <div class="container">
+        <div class="column">
+            <a class="logo" href="/">
+                <img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/logo.svg" alt="POS Direct Logo">
+            </a>
+        </div>
+        <div class="column">
+            <ul>
+                <li>
+                    <a href="/elite">Elite</a>
+                </li>
+                <li>
+                    <a href="/echo">Echo</a>
+                </li>
+                <li>
+                    <a href="/compare">Compare</a>
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="column">
+                <div class="socialLinks">
+                    <a href="https://www.facebook.com/LibertyStaffingServicesInc/" target="_blank">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://twitter.com/StaffingLiberty" target="_blank">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://plus.google.com/+libertystaffing" target="_blank">
+                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/2111325" target="_blank">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </div>
+        </div>
+        <div class="copyright">
+            <p>© {{ year }} POS Direct</p>
+        </div>
+
+    </div>
 </footer>
 
 <!-- Main.js : all custom js -->
@@ -40,3 +54,4 @@
 <!-- Theme Foundation Javascript Package -->
 <script type="text/javascript" src='{{ get_public_template_url("hubspot_default/shared/responsive/theme-foundation-v1-0.js") }}'></script>
 
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>

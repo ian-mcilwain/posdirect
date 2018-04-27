@@ -1,0 +1,210 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ html_lang }}" {{ html_lang_dir }}> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="{{ html_lang }}" {{ html_lang_dir }}>        <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="{{ html_lang }}" {{ html_lang_dir }}>               <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ html_lang }}" {{ html_lang_dir }}> <!--<![endif]-->
+<!-- PRODUCTION HEAD -->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="{{ meta_author }}">
+	<meta name="description" content="{{ page_meta.meta_description }}">
+	<meta name="generator" content="HubSpot">
+	<title>{{ page_meta.html_title }}</title>
+	{% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+  <link rel = "stylesheet" type = "text/css" href = "https://maxcdn.bootstrapcdn.com/fo	nt-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="https://use.typekit.net/wer5gsn.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.8.0/slick.min.js"></script> -->
+
+	{{ standard_header_includes }}
+	{% style include_default_custom_css="true" %}
+
+</head>
+
+<body class="home services">
+	<div class="wrapper">
+	{% include 'custom/system/global/header.html' %}
+		<div class="hero eliteHero">
+		
+			<div class="container">
+				<div class="leftSide">
+					{% widget_block rich_text 'heroText' overrideable=True, label='Hero Text', no_wrapper=True %} {% widget_attribute 'html'
+					%}
+					<h1>Services</h1>
+					<p>Payment Solutions Guaranteed to Enhance Your Business Operations</p>
+					<div class="buttonBox">
+						<a href="/get-started-today" class="button white"> Get Started Today</a>
+						<a href="" class="playVideo">
+							<i class="fa fa-play"></i>Play Video</a>
+					</div>
+		
+					{% end_widget_attribute %} {% end_widget_block %}
+		
+				</div>
+				<div class="rightSide">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Services%20Assets/ServicesHero.png" alt="">
+				</div>
+			</div>
+		</div>
+		<!-- hero ends here -->
+
+<div class="twoImageLeft">
+<div class="background"></div>
+<div class="container">
+	<div class="imgBox">
+		<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/echo-front.png" alt="">
+	</div>
+	<div class="textBox">
+		{% widget_block rich_text 'textBox1' overrideable=True, label='Text Box 1', no_wrapper=True %} {% widget_attribute 'html'
+		%}
+		<h2>Payment Processing</h2>
+		<p>Whether you want to take advantage of Harbortouch’s free POS equipment or you have your own, establishing a merchant account
+		is easy! We accept all major credit and debit cards plus new technology such as Apple Pay™, Android Pay™, and other mobile
+		wallets.</p>
+		<p>Harbortouch also provides point-to-point encryption to keep cardholder data secure from breaches. Our tokenization solution
+		also enhances customer security by replacing sensitive data into random alphanumeric values.</p>
+		{% end_widget_attribute %} {% end_widget_block %}
+	</div>
+</div>
+</div>
+
+<div class="twoImageRight">
+	<div class="background"></div>
+	<div class="container">	
+		<div class="textBox">
+			{% widget_block rich_text 'textBox2' overrideable=True, label='Text Box 2', no_wrapper=True %} {% widget_attribute 'html'
+			%}
+			<h2>Lighthouse™</h2>
+			<p>You will never be unable to access your account information with Lighthouse technology. This online POS management system allows Harbortouch customers to view details such as real-time sales, labor, inventory, and financial reports while making live updates to menu or product offerings. </p>
+			{% end_widget_attribute %} {% end_widget_block %}
+		</div>
+		<div class="imgBox">
+			<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Services%20Assets/lighthouse.png" alt="">
+		</div>
+	</div>
+</div>
+
+<div class="twoImageLeft">
+<div class="background"></div>
+<div class="container">
+	<div class="imgBox">
+		<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Services%20Assets/gift-and-loyalty.png" alt="">
+	</div>
+	<div class="textBox">
+		{% widget_block rich_text 'textBox3' overrideable=True, label='Text Box 3', no_wrapper=True %} {% widget_attribute 'html'
+		%}
+		<h2>Gift and Loyalty Cards</h2>
+		<p>Choose from 50 free customized and full-color cards with a 60-day free trial! These professionally designed templates are available to all our merchants. Alternatively, you can show off your creativity with your own artwork. Our online interface allows you to upload your own images and customize your unique cards. </p>
+
+		{% end_widget_attribute %} {% end_widget_block %}
+	</div>
+</div>
+</div>
+
+<div class="twoImageRight">
+	<div class="background"></div>
+	<div class="container">
+		<div class="textBox">
+			{% widget_block rich_text 'textBox4' overrideable=True, label='Text Box 41', no_wrapper=True %} {% widget_attribute 'html'
+			%}
+			<h2>Check Services</h2>
+			<p>Avoid bounced checks and bank fees with our Check Guarantee. This system scans customer checks against our database to alert you to negative and NSF check risks. With this system, checks will also be automatically deposited into your account. No more trips to the bank. </p>
+
+			{% end_widget_attribute %} {% end_widget_block %}
+		</div>
+		<div class="imgBox">
+			<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Services%20Assets/check-services.png" alt="">
+		</div>
+	</div>
+</div>
+
+<div class="twoImageLeft">
+<div class="background"></div>
+<div class="container">
+	<div class="imgBox">
+		<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Services%20Assets/cash.png" alt="">
+	</div>
+	<div class="textBox">
+		{% widget_block rich_text 'textBox4' overrideable=True, label='Text Box 4', no_wrapper=True %} {% widget_attribute 'html'
+		%}
+		<h2>Cash Advance</h2>
+		<p>Harbortouch’s short-term financing options allow you to generate working capital without negotiating with your bank or worrying about credit card interest. You may qualify for a $1,000,000 cash advance by leveraging your future credit card receivables. </p>
+
+		{% end_widget_attribute %} {% end_widget_block %}
+	</div>
+</div>
+</div>
+
+<div class="twoImageRight">
+	<div class="background"></div>
+	<div class="container">
+		<div class="textBox">
+			{% widget_block rich_text 'textBox3' overrideable=True, label='Text Box 3', no_wrapper=True %} {% widget_attribute 'html'
+			%}
+			<h2>ATM Solutions</h2>
+			<p>If your business is in need of an ATM, Harbortouch has you covered. Our comprehensive ATM solution includes equipment, installation,
+			cash replenishment, and processing. ATMs are proven to increase food traffic and adds a new revenue stream to any business.</p>
+
+			{% end_widget_attribute %} {% end_widget_block %}
+		</div>
+		<div class="imgBox">
+			<img class="atm" src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Services%20Assets/atm.png" alt="">
+		</div>
+	</div>
+</div>
+
+<div class="twoImageLeft">
+<div class="background"></div>
+<div class="container">
+	<div class="imgBox">
+		<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Services%20Assets/e-comerce.png" alt="">
+	</div>
+	<div class="textBox">
+		{% widget_block rich_text 'textBox4' overrideable=True, label='Text Box 4', no_wrapper=True %} {% widget_attribute 'html'
+		%}
+		<h2>Authorize.Net E-Commerce Solution</h2>
+		<p>Take your business to the next level and start processing online transactions. Authorize.Net is the ideal solution for retailers
+		who are looking to add a new sales channel or get started as an online-only business. Integrating directly into your existing
+		website, setup is simple and seamless.</p>
+		{% end_widget_attribute %} {% end_widget_block %}
+	</div>
+</div>
+</div>
+
+			<div class="imageLeftTextRight">
+				<div class="container">
+					<div class="imageBox">
+					</div>
+					<div class="textBox">
+						<h2>Get Started with Your
+							<strong>FREE</strong> Harbortouch Elite POS System</h2>
+						<!--[if lte IE 8]>
+							<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+							<![endif]-->
+						<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+						<script>
+							hbspt.forms.create({
+								portalId: "4054565",
+								formId: "911f14ff-6289-4b42-a886-286abb36cad4",
+								css: ""
+							});
+						</script>
+					</div>
+				</div>
+			</div>
+			<!-- imageLeftTextRight ends -->
+
+	
+
+
+	{% include 'custom/system/global/footer.html' %}
+	{{ standard_footer_includes }}
+	</div> <!-- wrapper ends -->
+</body>
+</html>
+
+
+
+

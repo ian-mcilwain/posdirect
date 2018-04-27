@@ -3,6 +3,8 @@
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="{{ html_lang }}" {{ html_lang_dir }}>        <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="{{ html_lang }}" {{ html_lang_dir }}>               <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="{{ html_lang }}" {{ html_lang_dir }}> <!--<![endif]-->
+<!-- PRODUCTION HEAD -->
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -11,163 +13,327 @@
 	<meta name="generator" content="HubSpot">
 	<title>{{ page_meta.html_title }}</title>
 	{% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
-  <link rel = "stylesheet" type = "text/css" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJzIr4DnSasMDFxVMOgyIDS-4gx6IA6lI"></script>
-  <script src="https://use.typekit.net/kkh2qsb.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <link rel = "stylesheet" type = "text/css" href = "https://maxcdn.bootstrapcdn.com/fo	nt-awesome/4.7.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="https://use.typekit.net/wer5gsn.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.8.0/slick.min.js"></script> -->
 	{{ standard_header_includes }}
 	{% style include_default_custom_css="true" %}
 
 </head>
+
 <body class="home">
-<!-- Start HTML layout here. -->
-<!-- wrapper starts -->
-<div class="wrapper">
-    <div class="innerWrapper">
-		<div class="inner">
-			<img src="https://cdn2.hubspot.net/hubfs/3805695/SalesHub/homepage%20images/circle.png" alt="" class="circle circle1">
-			<img src="https://cdn2.hubspot.net/hubfs/3805695/SalesHub/homepage%20images/blue%20dots/circleDot.png" alt="" class="circle circle2">
-			<img src="https://cdn2.hubspot.net/hubfs/3805695/SalesHub/homepage%20images/blue%20dots/bluedot.png" alt="" class="circle circle3">
-			<img src="https://cdn2.hubspot.net/hubfs/3805695/SalesHub/homepage%20images/blue%20dots/smallDot.png" alt="" class="circle circle4">
-			<img src="https://cdn2.hubspot.net/hubfs/3805695/SalesHub/homepage%20images/blue%20dots/fullCircleDot.png" alt="" class="circle circle5">
-			
-		</div>
-	</div>
+	<div class="wrapper">
 	{% include 'custom/system/global/header.html' %}
+	<div class="hero heroHome">
 
-<!-- hero starts -->
-	<div class="hero">
-	    <div class="inner"></div>
 		<div class="container">
-				{% widget_block rich_text "heroModule" overrideable=True, label='Hero Module' no_wrapper=True  %}
-				    {% widget_attribute "html" %}
-					    <h1>Workforce<br> Management Made Easy</h1>
-					    <h2>Simplify complex business<br> functions to power your<br> people’s growth.</h2>
-					    <a href="/book-a-consultation" class="orangeButton">Book a Consultation</a>
-				    {% end_widget_attribute %}
+			<div class="leftSide">
+				{% widget_block rich_text 'heroText' overrideable=True, label='Hero Text', no_wrapper=True %} {% widget_attribute 'html'
+				%}
+				<h1>Streamline your business with
+					<br>
+					<span>Harbortouch POS technology</span>
+				</h1>
+				<p>Save time and money while increasing efficiency with a FREE Harbortouch POS System</p>
+				<div class="buttonBox">
+					<a href="/get-started-today" class="button white"> Get Started Today</a>
+					<a href="" class="playVideo"><i class="fa fa-play"></i>Play Video</a>
+				</div>
+				
+				{% end_widget_attribute %} {% end_widget_block %}
+		
+			</div>
+			<div class="rightSide">
+				<div class="column column1">
+					<div class="topImage image"></div>
+					<div class="bottomImage image"></div>
+				</div>
+				<div class="column column2">
+					<div class="topImage image"></div>
+					<div class="bottomImage image"></div>
+				</div>
+		
+			</div>
+		</div>
+	</div> <!-- hero ends here -->
+	<div class="twoSystems">
+		<div class="greyBox"></div>
+		<div class="container">
+			<div class="centeredText">
+				{% widget_block rich_text 'twoSystemsCentered Text' overrideable=True, label='Two Systems Centered Text', no_wrapper=True  %}
+				{% widget_attribute 'html' %}
+				<h2>Upgrade your payment processing with an award-winning POS system tailored to your business.</h2>
+				
+				{% end_widget_attribute %}
 				{% end_widget_block %}
-		</div>
-	</div>
-<!-- Hero ends -->
-<!-- All Your HR Needs Starts -->
-	<div class="hrNeeds">
-		<div class="container">
-			{% widget_block rich_text "HRNeeds" overrideable=True, label='All Your HR Needs' no_wrapper=True  %}
-			    {% widget_attribute "html" %}
-				    <h3>All Your HR Needs. One Platform.</h3>
-				    <p>Paymedia takes care of all your human capital needs including payroll, time management, human resources, and benefits administration. Use individual services, or take advantage of our entire integrated system.</p>
-				    <a href="/book-a-consultation" class="orangeButton">Book a Consultation</a>
-			    {% end_widget_attribute %}
-			{% end_widget_block %}
-			
-		</div>
-	</div>
-
-<!-- All Your HR needs ends -->
-<!-- services blocks start -->
-	<div class="servicesBlocks">
-		<div class="container">
-			{% widget_container "servicesBlocksFlexibleColumn" , label='Services Blocks' %}
-			{% end_widget_container %}
-		</div>
-	</div>
-<!-- services blocks end -->
-<!-- video section starts -->
-	<div class="videoSection">
-		<div class="container">
-			<div class="inner">
+			</div>
+			<div class="twoColumns">
 				<div class="leftSide">
-					<script src="https://fast.wistia.com/embed/medias/gjd5uldohe.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding"><div class="wistia_responsive_wrapper" ><span class="wistia_embed wistia_async_gjd5uldohe popover=true popoverAnimateThumbnail=true popoverContent=link videoFoam=true" style="display:inline"><a href="#"><i class="fa fa-play-circle-o" aria-hidden="true"></i></a></span></div></div>
-					
+					<div class="imageBox">
+						<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/echo-front.png" alt="">
+					</div>
+					<div class="description">
+						{% widget_block rich_text 'echoDescription' overrideable=True, label='Echo Description', no_wrapper=True  %}
+						{% widget_attribute 'html' %}
+						<a href=""><h3>Echo POS System</h3><i class="fa fa-play-circle"></i></a>
+						<p>Combines the functionality of a traditional POS system with a modern and sleek tablet design. <span class="blue">Perfect For:</span></p>
+						{% end_widget_attribute %}
+						{% end_widget_block %}
+					</div>
+					<div class="industries">
+						<div class="industryBox">
+							<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/1.svg" alt="">
+							<p>Boutiqes</p>
+						</div>
+						<div class="industryBox">
+							<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/2.svg" alt="">
+							<p>Concession Stands</p>
+						</div>
+						<div class="industryBox">
+							<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/3.svg" alt="">
+							<p>Frozen Yogurt & Ice Cream</p>
+						</div>
+						<div class="industryBox">
+							<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/4.svg" alt="">
+							<p>Coffee Shops</p>
+						</div>
+						<div class="industryBox">
+							<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/5.svg" alt="">
+							<p>Food Truck</p>
+						</div>
+						<div class="industryBox">
+							<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/6.svg" alt="">
+							<p>Convenience Stores</p>
+						</div>	
+
+					</div>
 				</div>
 				<div class="rightSide">
-					{% widget_block rich_text "videoCopy" overrideable=True, label='Video Section Copy' no_wrapper=True  %}
-					    {% widget_attribute "html" %}
-						    <h3>Do More with Less</h3>
-						    <p>Our powerful cloud-based workforce management solution, iSolved®, helps you manage the entire employee lifecycle from pre-hire to retire.</p>
-						    <script src="https://fast.wistia.com/embed/medias/gjd5uldohe.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;top:0;width:100%;"><span class="wistia_embed wistia_async_gjd5uldohe popover=true popoverAnimateThumbnail=true popoverContent=link videoFoam=true" style="display:inline"><a href="#"><i class="fa fa-play-circle" aria-hidden="true"></i> See How it Works</a></span></div></div>
-
-						  <!--   <a href="/book-a-consultation" class=""><i class="fa fa-play-circle" aria-hidden="true"></i>See How it all works</a> -->
-					    {% end_widget_attribute %}
-					{% end_widget_block %}
+					<div class="imageBox">
+						<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/elite-front.png" alt="">
+					</div>
+					<div class="description">
+						{% widget_block rich_text 'echoDescription' overrideable=True, label='Echo Description', no_wrapper=True %} {% widget_attribute
+						'html' %}
+						<a href="">
+							<h3>Elite POS System</h3>
+							<i class="fa fa-play-circle"></i>
+						</a>
+						<p>The ultimate POS solution with unmatched performance, sophisticated software, and advanced functionality.
+							<span class="blue">Perfect For:</span>
+						</p>
+						{% end_widget_attribute %} {% end_widget_block %}
+					</div>
+					<div class="industries">
+						<div class="industryBox">
+							<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/e1.svg" alt="">
+							<p>Restaurants</p>
+						</div>
+						<div class="industryBox">
+							<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/e2.svg" alt="">
+							<p>Bars</p>
+						</div>
+						<div class="industryBox">
+							<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/1.svg" alt="">
+							<p>Retail</p>
+						</div>
+						<div class="industryBox">
+							<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/e4.svg" alt="">
+							<p>Quick Service Restaurants</p>
+						</div>
+						<div class="industryBox">
+							<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/e5.svg" alt="">
+							<p>Food Delivery</p>
+						</div>
+						<div class="industryBox">
+							<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/e6.svg" alt="">
+							<p>Salon & Spas</p>
+						</div>
+					
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-<!-- video section ends -->
-<!-- not your average HCM starts -->
-	<div class="threeBoxes">
+	</div> <!-- two systems ends -->
+
+	<div class="imageLeftTextRight">
 		<div class="container">
-			<div class="leftSide">
-				{% widget_block rich_text "notYourAverageHCMLeft" overrideable=True, label='Not Your Average HCM Left Side' no_wrapper=True  %}
-				    {% widget_attribute "html" %}
-					    <h3>Not Your Average HCM Company</h3>
-					    <p>Frustrated by the service you’re getting from the big players like ADP and Paychex? We’re different. With Paymedia, you get an enterprise workforce management solution with personalized attention.</p>
-					    <a href="/book-a-consultation" class="orangeButton">Book a Consultation</a>
-				    {% end_widget_attribute %}
-				{% end_widget_block %}
+			<div class="imageBox">
+			</div>
+			<div class="textBox">
+				<h2>Take a closer look and find out which Harbortouch POS System is right for you</h2>
+				<a href="/compare" class="button blue">Compare</a>
+			</div>
+		</div>
+	</div> <!-- imageLeftTextRight ends -->
+	
+	<div class="hardware">
+		<div class="rightBackground">
+			<div class="inner"></div>
+		</div>
+		<div class="container">
+			<div class="hardwareListing">
+				<h2>Hardware</h2>
+				<p>Choose the FREE POS equipment that meets your business needs</p>
+				<div class="optionBox">
+					<a href="#" class="eliteOption activeLink">Elite POS System
+						<div class="underline"></div>
+					</a>
+					<a href="#" class="echoOption">Echo POS System
+						<div class="underline"></div>
+					</a>
+				</div>
+				<div class="devices">
+					<div class="device elite echo visible">
+						<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/cash%20drawer.jpg" alt="">
+						<p>Cash Drawer</p>
+					</div>
+					<div class="device elite echo visible">
+						<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/receipt%20printer.jpg" alt="">
+						<p>Receipt Printer</p>
+					</div>
+					<div class="device elite echo visible">
+						<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/integrated%20customer%20display.jpg" alt="">
+						<p>Integrated Customer Display</p>
+					</div>
+					<div class="device elite echo visible">
+						<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/keyboard.png" alt="">
+						<p>Keyboard</p>
+					</div>
+					<div class="device elite echo visible">
+						<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/home06.jpg" alt="">
+						<p>Employee Cards</p>
+					</div>
+					<div class="device elite visible">
+						<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/home04.jpg" alt="">
+						<p>Barcode Scanner (retail only)</p>
+					</div>
+					<div class="device elite visible">
+						<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/mouse.png" alt="">
+						<p>Mouse</p>
+					</div>
+					<div class="device elite visible">
+						<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/elite.png" alt="">
+						<p>15.5" Touch Screen Display</p>
+					</div>
+					<div class="device echo screen">
+						<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/echo.png" alt="">
+						<p>13.3" Touch Screen Display</p>
+					</div>
+					<div class="device elite echo visible">
+						<img style="visibility: hidden;" src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/elite.png" alt="">
+						<p style="visibility: hidden;">Touch Screen Display</p>
+					</div>
+				</div>
+			</div>
+			<div class="hardwareImage">
+				<img class="echoImage " src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/echo.png" alt="">
+				<img class="eliteImage visible" src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/elite.png" alt="">
+
+			</div>
+		</div>
+	</div> <!-- hardware ends -->
+	<div class="twoColumnsSection">
+		<div class="container">
+			<div class="column">
+				<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/echo.png" alt="">
+				<h3>Echo POS System</h3>
+					<p class="blue">
+					<span class="blue">For small businesses that are looking to streamline operations and get more from their payment solution</span>
+					</p>
+					<p>Customizable and easy-to-use software</p>
+					<p>Module-based so you only see the features you need</p>
+					<p>Cutting-edge integrations and mobile pay capability</p>
+					<p>Cloud-based reporting and on-demand inventory tracking</p>
+					<p>HTNET technology for a reliable and secure WiFi connection</p>
+					<p>Get started quickly with the simple setup wizard</p>
+					<a class="button blue" href="/echo">Learn More</a>
 				
 			</div>
-			<div class="rightSide">
-				<div class="box orange">
-					{% widget_block rich_text "notYourAverageHCMOrange" overrideable=True, label='Not Your Average HCM Orange Box' no_wrapper=True  %}
-					    {% widget_attribute "html" %}
-						    <img src="https://cdn2.hubspot.net/hubfs/3805695/SalesHub/homepage%20images/unparalledService.png" alt="">
-						    <h4>Unparalled Service</h4>
-						    <p>We’re always here to answer your questions and give you expert advice when you need it. No need to stress about switching</p>
-					    {% end_widget_attribute %}
-					{% end_widget_block %}
-				</div>
-				<div class="box red">
-					{% widget_block rich_text "notYourAverageHCMRed" overrideable=True, label='Not Your Average HCM Red Box' no_wrapper=True  %}
-					    {% widget_attribute "html" %}
-						    <img src="https://cdn2.hubspot.net/hubfs/3805695/SalesHub/homepage%20images/personalizedApproach.png" alt="">
-						    <h4>Personalized Approach</h4>
-						    <p>We take our role as your trusted advisor seriously. With Paymedia,
-you’re not just a client number; we pay attention to your needs. Your
-success is our passion.</p>
-					    {% end_widget_attribute %}
-					{% end_widget_block %}
-				</div>
-				<div class="box blue">
-					{% widget_block rich_text "notYourAverageHCMBlue" overrideable=True, label='Not Your Average HCM Blue Box' no_wrapper=True  %}
-					    {% widget_attribute "html" %}
-						    <img src="https://cdn2.hubspot.net/hubfs/3805695/SalesHub/homepage%20images/affordablePrices.png" alt="">
-						    <h4>Affordable Prices</h4>
-						    <p>We take our role as your trusted advisor seriously. With Paymedia,
-you’re not just a client number; we pay attention to your needs. Your
-success is our passion.</p>
-					    {% end_widget_attribute %}
-					{% end_widget_block %}
-				</div>
+			<div class="column">
+				<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/elite.png" alt="">
+				<h3>Elite POS System</h3>
+					<p class="blue">
+					<span class="blue">A robust and powerful POS system for businesses in need of industry-specific features and advanced reporting</span>
+					</p>
+					<p>Full-featured software packages customized to your industry</p>
+					<p>Advanced functionality to accommodate most businesses</p>
+					<p>Mobile pay, online order, and driver tracking capabilities</p>
+					<p>Automatic purchase order creation and multi-site reporting</p>
+					<p>On-site installation, training, and 24/7 support</p>
+					<p>Custom programming in-house by a Harbortouch representative</p>
+					<a class="button blue" href="/elite">Learn More</a>
+
 			</div>
 		</div>
-	</div>
-<!-- not your average HCM ends -->
-<!-- circleImage starts -->
-	<div class="circleImage">
+	</div> <!-- twoColumnsSection ends -->
+
+	<div class="awards">
 		<div class="container">
-			<div class="leftSide">
-				<img src='{% image_src "circleImage" label="circular image", src="https://cdn2.hubspot.net/hubfs/3805695/SalesHub/homepage%20images/circularGirl.png", no_wrapper=True %}' alt="">
+			<h2>Awards</h2>
+			<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/awards.png" alt="">
+		</div>
+	</div>
+	
+	<div class="solutionsList">
+		<div class="container">
+			<h2>Cutting-Edge Payment Solutions Designed to Meet Your Business Needs</h2>
+			<div class="imageGrid">
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/mobile.png" alt="">
+					<p>Mobile Pay</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/lighthouse.png" alt="">
+					<p>Lighthouse</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/gift.png" alt="">
+					<p>Gift & Loyalty Cards</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/payment.png" alt="">
+					<p>Basic Retail</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/check_services.png" alt="">
+					<p>Check Services</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/cash_advance.png" alt="">
+					<p>Cash Advance</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/atm.png" alt="">
+					<p>ATM Solutions</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/ecommerce.png" alt="">
+					<p>Ecommerce Solution</p>
+				</div>
 			</div>
-			<div class="rightSide">
-				{% widget_block rich_text "circleImageCopy" overrideable=True, label='Circular Image Copy' no_wrapper=True  %}
-				    {% widget_attribute "html" %}
-					    <h3>It’s Time to Stress Less and Live More<br>Ready to Get Started?</h3>
-					    <p>Take advantage of our all-in-one workforce management solution. Ready to get started?</p>
-					    <a href="/book-a-consultation" class="orangeButton">Book a Consultation</a>
-				    {% end_widget_attribute %}
-				{% end_widget_block %}
+			<a href="/" class="button blue">Learn More</a>
+		</div>
+	</div>
+
+
+	<div class="imageLeftTextRight reverse">
+		<div class="container">
+			<div class="imageBox">
+			</div>
+			<div class="textBox">
+				<h2>Join over 100,000 satisfied Harbortouch customers! Get started today with a FREE 30-day trial of the Echo or Elite POS Systems.</h2>
+				<a href="/Request-a-demo" class="button blue">Request a Demo</a>
 			</div>
 		</div>
 	</div>
-<!-- circleImage ends -->
+	<!-- imageLeftTextRight ends -->
 
 
 	{% include 'custom/system/global/footer.html' %}
-</div> <!-- wrapper ends -->
 	{{ standard_footer_includes }}
+	</div> <!-- wrapper ends -->
 </body>
 </html>
 

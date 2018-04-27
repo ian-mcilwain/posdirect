@@ -1,0 +1,343 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ html_lang }}" {{ html_lang_dir }}> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="{{ html_lang }}" {{ html_lang_dir }}>        <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="{{ html_lang }}" {{ html_lang_dir }}>               <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ html_lang }}" {{ html_lang_dir }}> <!--<![endif]-->
+<!-- PRODUCTION HEAD -->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="{{ meta_author }}">
+	<meta name="description" content="{{ page_meta.meta_description }}">
+	<meta name="generator" content="HubSpot">
+	<title>{{ page_meta.html_title }}</title>
+	{% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+  <link rel = "stylesheet" type = "text/css" href = "https://maxcdn.bootstrapcdn.com/fo	nt-awesome/4.7.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="https://use.typekit.net/wer5gsn.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.8.0/slick.min.js"></script> -->
+	{{ standard_header_includes }}
+	{% style include_default_custom_css="true" %}
+
+</head>
+
+<body class="home eliteHome">
+	<div class="wrapper">
+	{% include 'custom/system/global/header.html' %}
+	<div class="hero eliteHero">
+
+		<div class="container">
+			<div class="leftSide">
+				{% widget_block rich_text 'heroText' overrideable=True, label='Hero Text', no_wrapper=True %} {% widget_attribute 'html'
+				%}
+				<h1>The Harbortouch Elite®
+					<br>
+					<span>POS System</span>
+				</h1>
+				<p>Save time and money while increasing efficiency with a FREE Harbortouch POS System</p>
+				<div class="buttonBox">
+					<a href="/get-started-today" class="button white"> Start Your Free 30-Day Trial</a>
+					<a href="" class="playVideo"><i class="fa fa-play"></i>Play Video</a>
+				</div>
+				
+				{% end_widget_attribute %} {% end_widget_block %}
+		
+			</div>
+			<div class="rightSide">
+				<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Elite%20Page%20Assets/EliteHero-1.png" alt="">
+			</div>
+		</div>
+	</div> <!-- hero ends here -->
+	<div class="solutionsList threeWide eliteSolutions">
+		<div class="container">
+			<h2>Everything You Need in a POS Solution</h2>
+			<div class="imageGrid">
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Elite%20Page%20Assets/increasedEfficiency.png" alt="">
+					<p>Operate with increased efficiency</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Elite%20Page%20Assets/piggy-bank.png" alt="">
+					<p>Extensive time and money-saving features</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Elite%20Page%20Assets/medical-history.png" alt="">
+					<p>Valuable data at your fingertips with advanced reporting</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Elite%20Page%20Assets/like%20(1).png" alt="">
+					<p>Lifetime equipment warranty</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Elite%20Page%20Assets/clock%20(1).png" alt="">
+					<p>Custom programming for your business needs</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Elite%20Page%20Assets/settings.png" alt="">
+					<p>In-person installation and comprehensive training</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="twoImageRight barsAndRestaurants">
+		<div class="background"></div>
+		<div class="container">
+			<div class="textBox">
+				{% widget_block rich_text 'text1' overrideable=True, label='Text Box 1', no_wrapper=True  %}
+				{% widget_attribute 'html' %}
+					 <h2>Elite POS for Bars & Restaurants</h2>
+					 <p> Whether you have a fine dining establishment, a family restaurant, or a local pub, the
+					Harbortouch Elite POS system has features specifically designed to make running your business easier. With innovative software
+					tailored to the needs of restaurant and bar owners, the Elite POS solution is the undisputed leader in the industry.</p>
+
+				{% end_widget_attribute %}
+				{% end_widget_block %}
+			</div>
+			<div class="imgBox">
+				<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/echo-front.png" alt="">
+			</div>
+		</div>
+	</div>
+
+	<div class="greyLists">
+		<div class="container">
+			<div class="list">
+				<h3>Increase Efficiency with Time-Saving Features</h3>
+				<p>Harbortouch Tableside iPad® ordering</p>
+				<p>Online ordering</p>
+				<p>Online reservations</p>
+				<p>Simple order entry and ticketing</p>
+				<p>Table tracking and bar tab management</p>
+			</div>
+			<div class="list">
+				<h3>Stay up to Date with Instant Information Access</h3>
+				<p>Real-time inventory counts</p>
+				<p>Create discounts and coupons in seconds</p>
+				<p>Simply add and edit menu items </p>
+				<p>Menu and product mix reports</p>
+				<p>Instant access to sales, customer, and employee reporting</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="twoImageLeft retail">
+		<div class="background"></div>
+		<div class="container">
+			<div class="imgBox">
+				<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/echo-front.png" alt="">
+			</div>
+			<div class="textBox">
+				{% widget_block rich_text 'textBox2' overrideable=True, label='Text Box 2', no_wrapper=True %} {% widget_attribute 'html' %} 
+					<h2>Elite POS for Retail</h2>
+					<p>Harbortouch’s Elite POS solution for retail is built to work for you. It includes features designed specifically for the industry and, once you use it, you will soon see it’s more than just a payment processing system. </p>
+				{% end_widget_attribute
+				%} {% end_widget_block %}
+			</div>
+		</div>
+	</div>
+	
+	<div class="greyLists">
+		<div class="container">
+			<div class="list">
+				<h3>Innovative Retail-Specific Features to Save You Time and Money</h3>
+				<p>Color/size/style matrix</p>
+				<p>Built-in commission calculator</p>
+				<p>Gift registry capability</p>
+				<p>Real-time flexible pricing and discount creation</p>
+				<p>Consignment and layaway </p>
+			</div>
+			<div class="list">
+				<h3>Valuable Data at Your Fingertips</h3>
+				<p>Employee management and productivity tracker</p>
+				<p>Comprehensive customer database</p>
+				<p>Sales reporting</p>
+				<p>Vendor management and reporting</p>
+				<p>Inventory reports with automatic purchase order creation</p>
+
+			</div>
+		</div>
+	</div>
+
+
+	<div class="twoImageRight delivery">
+		<div class="background"></div>
+		<div class="container">
+			<div class="textBox">
+				{% widget_block rich_text 'textBox3' overrideable=True, label='Text Box 3', no_wrapper=True %} {% widget_attribute 'html' %} 
+					<h2>Elite POS for QSR & Delivery</h2>
+					<p>Quick service and delivery is becoming a huge part of the food service industry. QSR & Delivery POS systems need to meet the needs of this fast-moving sector, and the Harbortouch Elite is built to meet the high demand. </p>
+
+				{% end_widget_attribute
+				%} {% end_widget_block %}
+			</div>
+			<div class="imgBox">
+				<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/echo-front.png" alt="">
+			</div>
+		</div>
+	</div>
+	
+	<div class="greyLists">
+		<div class="container">
+			<div class="list">
+				<h3>Industry-Specific Features to Keep Your Business Moving</h3>
+				<p>Driver assignment, monitoring, and reporting</p>
+				<p>Directions and mapping</p>
+				<p>Caller ID integration</p>
+				<p>Simple setup and customization of menus, specials, and discounts</p>
+				<p>Set up employees with multiple jobs with different pay rates</p>	
+			</div>
+			<div class="list">
+				<h3>Custom Reports to Meet the Needs of This Unique Industry</h3>
+				<p>Driver timing and reimbursement reports</p>
+				<p>Sales by item, group, payment, and service</p>
+				<p>New customer credits report</p>
+				<p>Time management </p>
+				<p>Employee management and customer database</p>
+
+			</div>
+		</div>
+	</div>
+	
+	<div class="twoImageLeft salons">
+		<div class="background"></div>
+		<div class="container">
+			<div class="imgBox">
+				<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/echo-front.png" alt="">
+			</div>
+			<div class="textBox">
+				{% widget_block rich_text 'textBox4' overrideable=True, label='Text Box 4', no_wrapper=True %} {% widget_attribute 'html' %} 
+				<h2>Elite POS for Salon & Spas</h2>
+				<p>Whether you have a nail salon, a tattoo parlor, or a full-service spa, the Harbortouch Elite has the features you need to efficiently run your business. This service-oriented industry is unique and your POS system needs to be just as specialized.</p>
+				{% end_widget_attribute
+				%} {% end_widget_block %}
+			</div>
+		</div>
+	</div>
+	
+	<div class="greyLists">
+		<div class="container">
+			<div class="list">
+				<h3>Features to Make Your Business More Profitable</h3>
+				<p>Appointment calendar and walk-in management</p>
+				<p>Email and text reminders</p>
+				<p>Multi-station support and tracking</p>
+				<p>Full retail functionality</p>
+				<p>Membership program and package building</p>
+			</div>
+			<div class="list">
+				<h3>Powerful Reporting Capabilities to Keep You Organized</h3>
+				<p>Customer analysis, call lists, reward points, and walk-in reports</p>
+				<p>Employee metrics, commissions, and tips reporting</p>
+				<p>Gift cards, stock movement, and membership reports</p>
+				<p>Hourly, daily, and monthly sales reports</p>
+				<p>Sales by category, vendor, rep, location, SKU, and more</p>
+
+			</div>
+		</div>
+	</div>
+	<div class="solutionsList eliteSolutions fiveWide">
+		<div class="container">
+			<h2>What's Included with the Harbortouch Echo?</h2>
+			<div class="imageGrid">
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/elite.png" alt="">
+					<p>Elite POS system</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/integrated%20customer%20display.jpg" alt="">
+					<p>Integrated customer display</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/cash%20drawer.jpg" alt="">
+					<p>Cash drawer</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/receipt%20printer.jpg" alt="">
+					<p>Receipt printer</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/keyboard.png" alt="">
+					<p>Keyboard</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/home04.jpg" alt="">
+					<p>Barcode reader</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Elite%20Page%20Assets/installation.png" alt="">
+					<p>Onsite installation by a Harbortouch representative</p>
+				</div>
+				<!-- <div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/ecommerce.png" alt="">
+					<p>Comprehensive training</p>
+				</div> -->
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Elite%20Page%20Assets/247Support.png" alt="">
+					<p>24/7 in-house support and comprehensive training resources</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="solutionsList eliteSolutions fiveWide">
+		<div class="container">
+			<h2>Additional Accessories:</h2>
+			<div class="imageGrid">
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Elite%20Page%20Assets/remotePrinter.png" alt="">
+					<p>Remote printer</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Elite%20Page%20Assets/kitchenVideo.png" alt="">
+					<p>Kitchen video system</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Elite%20Page%20Assets/callerID.png" alt="">
+					<p>Caller ID</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/payment.png" alt="">
+					<p>Digital scale</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Elite%20Page%20Assets/nfc.png" alt="">
+					<p>NFC/EMV PIN pad</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="imageLeftTextRight">
+		<div class="container">
+			<div class="imageBox">
+			</div>
+			<div class="textBox">
+				<h2>Get Started with Your <strong>FREE</strong> Harbortouch Elite POS System</h2>
+				<!--[if lte IE 8]>
+				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+				<![endif]-->
+				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+				<script>
+					hbspt.forms.create({
+						portalId: "4054565",
+						formId: "911f14ff-6289-4b42-a886-286abb36cad4",
+						css: ""
+					});
+				</script>
+			</div>
+		</div>
+	</div>
+	<!-- imageLeftTextRight ends -->
+
+
+
+	{% include 'custom/system/global/footer.html' %}
+	{{ standard_footer_includes }}
+	</div> <!-- wrapper ends -->
+</body>
+</html>
+
+
+
+

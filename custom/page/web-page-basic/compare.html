@@ -1,0 +1,142 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ html_lang }}" {{ html_lang_dir }}> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="{{ html_lang }}" {{ html_lang_dir }}>        <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="{{ html_lang }}" {{ html_lang_dir }}>               <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ html_lang }}" {{ html_lang_dir }}> <!--<![endif]-->
+<!-- PRODUCTION HEAD -->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="{{ meta_author }}">
+	<meta name="description" content="{{ page_meta.meta_description }}">
+	<meta name="generator" content="HubSpot">
+	<title>{{ page_meta.html_title }}</title>
+	{% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+  <link rel = "stylesheet" type = "text/css" href = "https://maxcdn.bootstrapcdn.com/fo	nt-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="https://use.typekit.net/wer5gsn.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.8.0/slick.min.js"></script> -->
+	{{ standard_header_includes }}
+	{% style include_default_custom_css="true" %}
+
+</head>
+
+<body class="home">
+	<div class="wrapper">
+	{% include 'custom/system/global/header.html' %}
+	<div class="hero echoHero">
+
+		<div class="container">
+			<div class="leftSide">
+				{% widget_block rich_text 'heroText' overrideable=True, label='Hero Text', no_wrapper=True %} {% widget_attribute 'html'
+				%}
+				<h1>Compare</h1>
+				<p>Which POS system is the right fit for your business</p>
+
+				{% end_widget_attribute %} {% end_widget_block %}
+		
+			</div>
+			<div class="rightSide">
+				<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Compare%20Assets/compareHero.png" alt="">
+			</div>
+		</div>
+	</div> <!-- hero ends here -->
+
+	<div class="twoColumnsSection compare">
+		<div class="container">
+			<div class="column">
+				<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/elite-front.png" alt="">
+				<h3>Harbortouch Elite POS</h3>
+				<h2 class="price"><span class="blue">$49/mo</span></h2>
+				<p class="blue">
+					 The ultimate POS system with unmatched reliability, software capabilities, and industry-specific functionality
+				</p>
+				<p class="grey">No up-front costs</p>
+				<p class="grey">$49/month service fee</p>
+				<p class="grey">Ideal for mid-sized to large hospitality and retail businesses</p>
+				<p class="grey">Lifetime equipment warranty</p>
+				<p class="grey">15” touchscreen display</p>
+				<p class="grey">Includes cash drawer, receipt printer, integrated customer display, barcode scanner, 10 employee cards, keyboard, mouse</p>
+				<p class="grey">Optional accessories include remote printer(s), kitchen video display, caller ID, and digital scale</p>
+				<p class="grey">Full-featured software packages specifically designed for hospitality, retail, and QSR & delivery businesses </p>
+				<p class="grey">Advanced functionality to accommodate most businesses, including table management, bar tabs, age verification, driver tracking, and more</p>
+				<p class="grey">Lighthouse cloud-based reporting and POS management</p>
+				<p class="grey">Custom programmed for your business by a Harbortouch representative</p>
+				<p class="grey">24/7 support</p>
+				<p class="grey">Comprehensive training with on-site installation ***</p>
+				<p class="grey">Free equipment replacement if hardware breaks or malfunctions**</p>
+				<p class="grey">30-day FREE trial*</p>
+			</div>
+			<div class="column">
+				<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/echo-front.png" alt="">
+				<h3>Harbortouch Echo POS</h3>
+				<h2 class="price">
+					<span class="blue">$29/mo</span>
+				</h2>
+				<p class="blue">
+					 The power and functionality of a traditional POS system with a sleek and modern tablet design.
+				</p>
+				<p class="grey">No up-front costs</p>
+				<p class="grey">$29/month service fee</p>
+				<p class="grey">Ideal for small retail stores, cafes, kiosks, food trucks, and other small merchants</p>
+				<p class="grey">Lifetime equipment warranty</p>
+				<p class="grey">13.3” touchscreen display</p>
+				<p class="grey">Includes cash drawer, receipt printer, integrated customer display, 5 employee cards, and keyboard</p>
+				<p class="grey">Optional accessories include remote printer (1 per location), barcode reader, and digital scale</p>
+				<p class="grey">Customizable module-based software, only see what you use </p>
+				<p class="grey">No advanced functionality</p>
+				<p class="grey">Lighthouse cloud-based reporting </p>
+				<p class="grey">Simple step-by-step setup wizard</p>
+				<p class="grey">24/7 support</p>
+				<p class="grey">Comprehensive training with optional installation available***</p>
+				<p class="grey">Free equipment replacement if hardware breaks or malfunctions**</p>
+				<p class="grey">30-day FREE trial*</p>
+
+	
+			</div>
+		</div>
+	</div>
+	<!-- twoColumnsSection ends -->	
+	
+	<div class="imageLeftTextRight">
+		<div class="container">
+			<div class="imageBox">
+			</div>
+			<div class="textBox">
+				<h2>Take the Echo or Elite POS system for a test drive! Start your 30-day <strong>FREE</strong> trial</h2>
+				<!--[if lte IE 8]>
+				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+				<![endif]-->
+				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+				<script>
+					hbspt.forms.create({
+						portalId: "4054565",
+						formId: "911f14ff-6289-4b42-a886-286abb36cad4",
+						css: ""
+					});
+				</script>
+			</div>
+		</div>
+	</div>
+	<!-- imageLeftTextRight ends -->
+	<div class="disclaimer">
+		<div class="container">
+			<p>*All free equipment programs require a Merchant Transaction Processing Agreement. Additionally, the free POS program requires
+			a Harbortouch POS System Service Agreement. See Processing Agreement and Service Agreement terms and conditions for complete
+			details. **Shipping charges apply. Equipment malfunction must be as a result of normal usage. Harbortouch Merchant Account
+			must be in good standing to qualify. See Service Agreement terms and conditions for complete details. ***$150 installation
+			fee applies</p>
+		</div>
+	</div>
+
+
+	{% include 'custom/system/global/footer.html' %}
+	{{ standard_footer_includes }}
+	</div> <!-- wrapper ends -->
+</body>
+</html>
+
+
+
+

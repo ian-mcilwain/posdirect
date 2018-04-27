@@ -1,0 +1,208 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ html_lang }}" {{ html_lang_dir }}> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="{{ html_lang }}" {{ html_lang_dir }}>        <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="{{ html_lang }}" {{ html_lang_dir }}>               <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ html_lang }}" {{ html_lang_dir }}> <!--<![endif]-->
+<!-- PRODUCTION HEAD -->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="{{ meta_author }}">
+	<meta name="description" content="{{ page_meta.meta_description }}">
+	<meta name="generator" content="HubSpot">
+	<title>{{ page_meta.html_title }}</title>
+	{% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+  <link rel = "stylesheet" type = "text/css" href = "https://maxcdn.bootstrapcdn.com/fo	nt-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="https://use.typekit.net/wer5gsn.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.8.0/slick.min.js"></script> -->
+	{{ standard_header_includes }}
+	{% style include_default_custom_css="true" %}
+
+</head>
+
+<body class="home">
+	<div class="wrapper">
+	{% include 'custom/system/global/header.html' %}
+	<div class="hero echoHero">
+
+		<div class="container">
+			<div class="leftSide">
+				{% widget_block rich_text 'heroText' overrideable=True, label='Hero Text', no_wrapper=True %} {% widget_attribute 'html'
+				%}
+				<h1>The Harbortouch Echo®
+					<br>
+					<span>Harbortouch POS technology</span>
+				</h1>
+				<p>For small businesses looking for a powerful and functional POS solution with a sleek aluminum tablet design</p>
+				<div class="buttonBox">
+					<a href="/get-started-today" class="button white">Start Your Free 30-Day Trial</a>
+					<a href="" class="playVideo"><i class="fa fa-play"></i>Play Video</a>
+				</div>
+				
+				{% end_widget_attribute %} {% end_widget_block %}
+		
+			</div>
+			<div class="rightSide">
+				<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Echo%20Page%20Assets/echoHero.png" alt="">
+			</div>
+		</div>
+	</div> <!-- hero ends here -->
+	<div class="solutionsList threeWide">
+		<div class="container">
+			<h2>Everything You Need in a POS Solution</h2>
+			<div class="imageGrid">
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/check_services.png" alt="">
+					<p>Operate with increased efficiency</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/cash_advance.png" alt="">
+					<p>Extensive time and money-saving features</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/atm.png" alt="">
+					<p>Valuable data at your fingertips with advanced reporting</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/ecommerce.png" alt="">
+					<p>Lifetime equipment warranty</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/atm.png" alt="">
+					<p>Custom programming for your business needs</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/ecommerce.png" alt="">
+					<p>In-person installation and comprehensive training</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="fourBoxes">
+		<div class="upper">
+			<div class="backgroundLeft"></div>
+			<div class="backgroundRight"></div>
+			<div class="container">
+				<div class="leftSide">
+					<h3>Simple and Intuitive Software</h3>
+					<p>Fully customizable</p>
+					<p>Quick onboarding with simple setup wizard</p>
+					<p>Meets the needs of a growing buisiness with three modes of functionality</p>
+					<p>Module-based software allows you to see only the features you need</p>
+					<p>Unlimited categories, items, and modifiers to support any type of business</p>
+				</div>
+				<div class="rightSide">
+					<h3>Increased Operational Efficiency</h3>
+					<p>Simplified interface for training and daily use</p>
+					<p>Universal search function to quickly find inventory</p>
+					<p>Built-in time clock for employee management</p>
+					<p>Complete customer database with loyalty functionality</p>
+				</div>
+			</div>
+		</div>
+		<div class="lower">
+			<div class="backgroundLeft"></div>
+			<div class="backgroundRight"></div>
+			<div class="container">
+				<div class="leftSide">
+					<h3>Simple and Intuitive Software</h3>
+					<p>Fully customizable</p>
+					<p>Quick onboarding with simple setup wizard</p>
+					<p>Meets the needs of a growing buisiness with three modes of functionality</p>
+					<p>Module-based software allows you to see only the features you need</p>
+					<p>Unlimited categories, items, and modifiers to support any type of business</p>
+				</div>
+				<div class="rightSide">
+					<h3>Top-of-the-line Hardware</h3>
+					<p>Lifetime equipment warranty</p>
+					<p>Cast aluminum body and thin tablet design</p>
+					<p>A 13.3" touchscreen, larger than most tablets</p>
+					<p>180° screen rotation</p>
+					<p>Dual-hinged stadn for flexible screen display</p>
+					<p>Ultra-fast flash storage</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="solutionsList">
+		<div class="container">
+			<h2>What's Included with the Harbortouch Echo?</h2>
+			<div class="imageGrid">
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/check_services.png" alt="">
+					<p>Check Services</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/cash_advance.png" alt="">
+					<p>Cash Advance</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/atm.png" alt="">
+					<p>ATM Solutions</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/ecommerce.png" alt="">
+					<p>Ecommerce Solution</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="solutionsList">
+		<div class="container">
+			<h2>Additional Accessories:</h2>
+			<div class="imageGrid">
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/mobile.png" alt="">
+					<p>Mobile Pay</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/lighthouse.png" alt="">
+					<p>Lighthouse</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/gift.png" alt="">
+					<p>Gift & Loyalty Cards</p>
+				</div>
+				<div class="imageBox">
+					<img src="https://cdn2.hubspot.net/hubfs/4054565/SalesHub/Home%20Page%20Assets/payment.png" alt="">
+					<p>Basic Retail</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="imageLeftTextRight">
+		<div class="container">
+			<div class="imageBox">
+			</div>
+			<div class="textBox">
+				<h2>Get Started with Your <strong>FREE</strong> Harbortouch Echo POS System</h2>
+				<!--[if lte IE 8]>
+				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+				<![endif]-->
+				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+				<script>
+					hbspt.forms.create({
+						portalId: "4054565",
+						formId: "911f14ff-6289-4b42-a886-286abb36cad4",
+						css: ""
+					});
+				</script>
+			</div>
+		</div>
+	</div>
+	<!-- imageLeftTextRight ends -->
+	
+
+	{% include 'custom/system/global/footer.html' %}
+	{{ standard_footer_includes }}
+	</div> <!-- wrapper ends -->
+</body>
+</html>
+
+
+
+
